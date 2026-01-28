@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EveryMatch Case Study | 김서현</title>
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body class="theme-everymatch">
+    <nav class="top-bar">
+        <a href="../index.html" class="back-btn">← BACK</a>
+    </nav>
+
+    <!-- HEADER: HERO -->
+    <header class="hero-split theme-everymatch">
+        <div class="hero-top">
+            <div class="hero-slogan reveal">
+                <span class="slide-tag">SPORTS CALENDAR</span>
+                <h4>당신의 모든<br>경기</h4>
+            </div>
+            <div class="hero-logo-side reveal">
+                <h2>EVERYMATCH</h2>
+                <div style="height: 4px; background: var(--accent); width: 60px; margin-left: auto;"></div>
+            </div>
+        </div>
+
+        <div class="hero-mockups reveal">
+            <img src="../assets/everymatch/mockup.png" alt="EveryMatch Dashboard" class="mockup-bridge bridge-center scale-laptop" style="border-radius: 12px;">
+        </div>
+
+        <div class="hero-bottom">
+            <div class="hero-detail-left reveal">
+                <div class="meta-item"><label>PROJECT</label><span>EveryMatch</span></div>
+                <div class="meta-item"><label>OVERVIEW</label><span>프로스포츠 경기일정 통합관리 캘린더</span></div>
+                <div class="meta-item"><label>PERIOD</label><span>2024.11.18 - 11.27 (10 Days)</span></div>
+                <div class="meta-item"><label>MEMBERS</label><span>2명</span></div>
+                <div class="meta-item"><label>ROLE</label><span>풀스택, UI/UX 디자인</span></div>
+            </div>
+            <div class="hero-detail-right reveal">
+                <h2>프로스포츠 경기 일정 캘린더</h2>
+                <p>좋아하는 팀의 경기 일정을 한눈에 확인하고, AI 추천과 알림 서비스를 제공하는 통합 캘린더 플랫폼입니다.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- SLIDE 1: SERVICE LOGIC (CALENDAR & NOTI) -->
+    <section class="slide feature-slide bg-light">
+        <div class="slide-container">
+            <span class="slide-tag">01. SERVICE LOGIC</span>
+            <div class="quote-box reveal">
+                <h3>"단순한 달력이 아니라,<br><span style="color:var(--accent);">팀을 향한 애정</span>을 시각화했습니다."</h3>
+            </div>
+            
+            <div class="feature-grid reveal">
+                <div class="feature-card">
+                    <div class="f-media">
+                        <img src="../assets/everymatch/home_view.png" alt="Calendar View">
+                    </div>
+                    <div class="f-content">
+                        <h4>경기 일정 히트맵</h4>
+                        <p>FullCalendar를 커스터마이징하여, 일자별 경기 밀도에 따라 색상의 농자가 변하는 직관적인 UI를 구현했습니다.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="f-media">
+                        <img src="../assets/everymatch/like_team_list.png" alt="Team Setting">
+                    </div>
+                    <div class="f-content">
+                        <h4>관심 팀 맞춤 설정</h4>
+                        <p>야구, 축구, 농구 등 종목에 관계없이 내가 응원하는 팀만을 골라 나만의 캘린더를 구성할 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="f-media">
+                        <img src="../assets/everymatch/mail_notification2.png" alt="Notification">
+                    </div>
+                    <div class="f-content">
+                        <h4>경기 임박 알림 서비스</h4>
+                        <p>경기 시작 1시간 전, 놓치지 않도록 이메일 알림을 자동 발송하는 스케줄링 시스템을 구축했습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 2: AI INTEGRATION -->
+    <section class="slide vision-slide">
+        <div class="slide-container">
+            <span class="slide-tag">02. AI INTEGRATION</span>
+            <h2 class="slide-title">데이터 기반 AI 추천</h2>
+            
+            <div class="vision-grid reveal">
+                <div class="vision-text">
+                    <div class="tech-point">
+                        <strong>AI 팀 추천</strong>
+                        <p>"응원 팀이 없어도 괜찮습니다."<br>
+                        사용자의 성향을 분석하여 ChatGPT API가 가장 적합한 스포츠 팀을 추천해줍니다.</p>
+                    </div>
+                    <div class="tech-point" style="margin-top: 40px;">
+                        <strong>스포츠 전문 챗봇</strong>
+                        <p>경기 규칙부터 선수 정보까지, 궁금한 점은 언제든 챗봇에게 물어볼 수 있도록 프롬프트 엔지니어링을 적용했습니다.</p>
+                    </div>
+                </div>
+                <div class="f-media" style="border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.15);">
+                    <img src="../assets/everymatch/chat_bot.png" alt="AI Chatbot Interaction" style="width: 100%; height: 100%; object-fit: contain; background: #fff;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3: SECURITY & TECH -->
+    <section class="slide tech-slide bg-light">
+        <div class="slide-container">
+            <span class="slide-tag">03. SECURITY & AUTH</span>
+            <div class="quote-box reveal">
+                <h3>"로그인부터 데이터 보호까지,<br><span style="color:var(--accent);">사용자의 신뢰</span>를 설계했습니다."</h3>
+            </div>
+
+            <div class="tech-focus-grid reveal">
+                <div class="tech-card-large" style="background: #2D2420;">
+                    <div class="code-header">
+                        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+                        <span>SecurityConfig.java</span>
+                    </div>
+                    <pre><code class="language-java">@Bean
+public SecurityFilterChain filterChain(HttpSecurity http) {
+    http
+        .csrf().disable()
+        .sessionManagement()
+        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+        .and()
+        .authorizeRequests()
+        .antMatchers("/api/auth/**").permitAll()
+        .anyRequest().authenticated()
+        .and()
+        .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider), 
+                         UsernamePasswordAuthenticationFilter.class);
+    
+    return http.build();
+}</code></pre>
+                </div>
+                <div class="tech-desc-side">
+                    <div class="desc-item">
+                        <h5>🔐 Spring Security + JWT</h5>
+                        <p>Session 대신 <strong>JWT(Json Web Token)</strong> 기반의 Stateless 인증을 구현하여 확장성 있는 인가(Authorization) 처리를 설계했습니다.</p>
+                    </div>
+                    <div class="desc-item">
+                        <h5>🛡️ BCrypt 암호화</h5>
+                        <p>사용자 비밀번호는 <strong>BCrypt</strong> 해싱 알고리즘을 적용하여 DB 유출 시에도 복호화가 불가능하도록 강력하게 보호했습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 4: UI/UX & GROWTH -->
+    <section class="slide role-slide" style="background: linear-gradient(135deg, #f1654c 0%, #d94e35 100%);">
+        <div class="slide-container">
+            <span class="slide-tag white">04. UI/UX & GROWTH</span>
+            <h2 class="slide-title white">10일간의 몰입</h2>
+            
+            <div class="grid-2col reveal">
+                <div class="culture-box" style="text-align: left; padding: 40px;">
+                    <h4 style="font-size: 1.5rem; margin-bottom: 20px; font-weight: 800;">🎨 실전형 UI/UX 설계</h4>
+                    <p style="opacity: 0.9; line-height: 1.7; margin-bottom: 20px;">
+                        "이해하지 못하면 쓰지 말자."<br>
+                        기존 라이브러리에 의존하던 방식에서 벗어나, <strong>Flexbox와 Grid</strong> 등 CSS의 핵심 속성을 직접 다루며 기획한 UI를 그대로 화면에 구현해냈습니다.
+                    </p>
+                    <div class="culture-tags">
+                        <span>Vue.js Component</span>
+                        <span>Responsive</span>
+                    </div>
+                </div>
+                <div class="culture-box" style="text-align: left; padding: 40px;">
+                    <h4 style="font-size: 1.5rem; margin-bottom: 20px; font-weight: 800;">💪 "된다"는 자신감</h4>
+                    <p style="opacity: 0.9; line-height: 1.7; margin-bottom: 20px;">
+                        짧은 기간, 풀스택 개발이라는 압박 속에서도<br>
+                        <strong>"뭐가 안 돼도, 어떻게든 해낼 수 있다"</strong>는<br>
+                        강한 자신감과 문제 해결력을 얻었습니다.
+                    </p>
+                    <div class="culture-tags">
+                        <span>Full Stack</span>
+                        <span>Debugging</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUTRO -->
+    <section class="slide outro-slide" style="background: #A64D3D;">
+        <div class="slide-container full-height align-center-vh">
+            <div class="outro-content reveal">
+                <div class="award-badge" style="background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 100px; color: white; margin-bottom: 20px; font-weight: 800;">SSAFY 우수상 🏆</div>
+                <h2 class="slide-title white" style="margin-bottom: 30px;">당신의 모든 경기, EveryMatch</h2>
+                <div class="link-row">
+                    <a href="https://github.com/seohye-ki/EVERY-MATCH" target="_blank" class="btn btn-outline white-border">GitHub</a>
+                </div>
+            </div>
+            
+            <div class="footer-copy" style="margin-top: 80px; color: white; opacity: 0.4;">
+                © 2024 EveryMatch Team. All rights reserved.
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Footer -->
+    <footer class="project-nav">
+        <a href="docshund.html" class="nav-prev">
+            <span class="nav-label">Previous Project</span>
+            <span class="nav-name">DocshunD</span>
+        </a>
+        <a href="42seoul.html" class="nav-next">
+            <span class="nav-label">Next Step</span>
+            <span class="nav-name">42 Seoul</span>
+        </a>
+    </footer>
+
+    <style>
+        .theme-everymatch { --accent: #f1654c; --accent-soft: #fff7ed; }
+        .bg-light { background-color: #fff7ed; }
+        
+        /* Layout Utilities */
+        .slide-container { max-width: 1200px; margin: 0 auto; padding: 100px 5%; }
+        
+        .slide-tag {
+            display: inline-block; color: var(--accent); font-family: 'Outfit'; font-weight: 800;
+            font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; position: relative; padding-left: 20px;
+        }
+        .slide-tag::before { content: ''; position: absolute; left: 0; top: 50%; width: 12px; height: 2px; background: var(--accent); }
+        .slide-tag.white { color: white; }
+        .slide-tag.white::before { background: white; }
+
+        .slide-title { font-size: 3rem; margin-bottom: 40px; }
+        .slide-title.white { color: white; }
+        .slide-p { font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; max-width: 700px; }
+
+        .quote-box h3 { font-size: 2.2rem; line-height: 1.4; margin-bottom: 50px; font-weight: 700; word-break: keep-all; }
+        .quote-box h3.white { color: white; }
+
+        /* Grids */
+        .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .feature-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .f-media { height: 200px; background: #fff1f2; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .f-media img { width: 100%; height: 100%; object-fit: cover; }
+        .f-content { padding: 25px; }
+        .f-content h4 { font-size: 1.1rem; margin-bottom: 10px; font-weight: 800; }
+        .f-content p { font-size: 0.9rem; color: #64748b; line-height: 1.6; word-break: keep-all; }
+
+        /* Vision Grid (AI) */
+        .vision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .tech-point strong { font-size: 1.3rem; color: var(--accent); display: block; margin-bottom: 15px; }
+        .tech-point p { font-size: 1rem; color: var(--text-muted); line-height: 1.7; }
+
+        /* Tech Focus */
+        .tech-focus-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; align-items: center; }
+        .tech-card-large { border-radius: 16px; overflow: hidden; color: white; box-shadow: 0 20px 50px rgba(0,0,0,0.2); }
+        .code-header { background: rgba(0,0,0,0.3); padding: 15px 20px; display: flex; gap: 8px; align-items: center; }
+        .code-header .dot { width: 10px; height: 10px; border-radius: 50%; }
+        .dot.red { background: #ef4444; } .dot.yellow { background: #eab308; } .dot.green { background: #22c55e; }
+        .code-header span { margin-left: auto; font-family: monospace; font-size: 0.8rem; opacity: 0.7; }
+
+        .desc-item { margin-bottom: 40px; }
+        .desc-item h5 { font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 10px; }
+        .desc-item p { color: var(--text-muted); line-height: 1.7; }
+
+        /* Role & Culture */
+        .grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .culture-box { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 24px; border: 1px solid rgba(255,255,255,0.3); color: white; }
+        .culture-tags span { display: inline-block; background: rgba(0,0,0,0.2); padding: 6px 15px; border-radius: 100px; margin-right: 8px; font-size: 0.85rem; font-weight: 600; }
+
+        /* Outro */
+        .align-center-vh { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+        .full-height { min-height: 70vh; }
+        .award-badge { background: rgba(255,255,255,0.2); color: white; padding: 8px 20px; border-radius: 100px; font-weight: 800; margin-bottom: 20px; display: inline-block; }
+        .btn-outline.white-border { border-color: white; color: white; }
+        .btn-outline.white-border:hover { background: white; color: var(--accent); }
+        .footer-copy { margin-top: 80px; color: white; opacity: 0.4; font-size: 0.8rem; }
+
+        @media (max-width: 900px) {
+            .feature-grid, .vision-grid, .tech-focus-grid, .grid-2col { grid-template-columns: 1fr; }
+            .hero-mockups { height: auto; position: relative; margin: 40px 0; }
+            .scale-laptop { width: 100%; position: static; transform: none; }
+        }
+    </style>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

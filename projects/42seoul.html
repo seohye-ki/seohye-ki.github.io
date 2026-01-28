@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>42 Seoul | 김서현</title>
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/nord.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body class="theme-seoul42">
+    <nav class="top-bar">
+        <a href="../index.html" class="back-btn">← BACK</a>
+    </nav>
+
+    <!-- HEADER: HERO (TERMINAL STYLE) -->
+    <header class="hero-split theme-seoul42">
+        <div class="hero-top">
+            <div class="hero-slogan reveal">
+                <span class="slide-tag">CS FOUNDATION</span>
+                <h4>기술의 근간을<br>탐구하다</h4>
+            </div>
+            <div class="hero-logo-side reveal">
+                <h2>42 Seoul</h2>
+                <div style="height: 4px; background: var(--accent); width: 60px; margin-left: auto;"></div>
+            </div>
+        </div>
+
+        <div class="hero-mockups reveal">
+            <!-- Custom Terminal Mockup -->
+            <div class="mockup-bridge bridge-center" style="background: rgba(30, 41, 59, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); width: 600px; height: 380px; border-radius: 12px; display: flex; flex-direction: column; box-shadow: 0 40px 80px rgba(0,0,0,0.3);">
+                <div style="background: #0f172a; width: 100%; padding: 12px 20px; border-radius: 12px 12px 0 0; display: flex; align-items: center; gap: 8px;">
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f;"></div>
+                    <div style="margin-left: auto; color: #64748b; font-family: monospace; font-size: 0.8rem;">bash — 80x24</div>
+                </div>
+                <div style="flex: 1; padding: 30px; font-family: 'Fira Code', monospace; color: #e2e8f0; font-size: 1.1rem; line-height: 1.6;">
+                    <div><span style="color: #4ade80;">user@42seoul</span>:<span style="color: #3b82f6;">~</span>$ cd seoul42/logic</div>
+                    <div><span style="color: #4ade80;">user@42seoul</span>:<span style="color: #3b82f6;">~/seoul42/logic</span>$ cat solve.c</div>
+                    <div style="margin-top: 15px; color: #94a3b8;">// 42 Logic Problem Solving...</div>
+                    <div style="margin-top: 10px;">
+                        <span style="color: #c084fc;">#include</span> &lt;stdio.h&gt;<br>
+                        <span style="color: #c084fc;">#include</span> &lt;unistd.h&gt;<br>
+                        <br>
+                        <span style="color: #fca5a5;">int</span> main(<span style="color: #fca5a5;">void</span>) {<br>
+                        &nbsp;&nbsp;printf(<span style="color: #fcd34d;">"Hello, 42 Logic!\n"</span>);<br>
+                        &nbsp;&nbsp;<span style="color: #fca5a5;">return</span> (0);<br>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-bottom">
+            <div class="hero-detail-left reveal">
+                <div class="meta-item"><label>PROJECT</label><span>42Seoul inner circle</span></div>
+                <div class="meta-item"><label>OVERVIEW</label><span>C로 배우는 구조와 시스템</span></div>
+                <div class="meta-item"><label>PERIOD</label><span>2024.03 - Present</span></div>
+            </div>
+            <div class="hero-detail-right reveal">
+                <h2>자기주도 학습의 정점</h2>
+                <p>프랑스 에꼴42의 교육 철학을 기반으로, 교수, 교재, 학비 없이 동료 학습(Peer Learning)과 프로젝트 해결을 통해 소프트웨어의 본질을 탐구했습니다.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- SLIDE 1: ALGORITHMS (PUSH_SWAP) -->
+    <section class="slide feature-slide bg-light">
+        <div class="slide-container">
+            <span class="slide-tag">01. ALGORITHM</span>
+            <div class="quote-box reveal">
+                <h3>"효율적인 자원 관리,<br><span style="color:var(--accent);">최적의 해</span>를 찾아가는 과정."</h3>
+            </div>
+            
+            <div class="vision-grid reveal">
+                <div class="vision-text">
+                    <h2 class="slide-title">Push_Swap</h2>
+                    <p class="slide-p">
+                        한정된 2개의 스택(Stack A, B)과 제한된 명령어 집합만을 사용하여, 무작위로 섞인 데이터를 최소한의 동작 횟수로 정렬하는 알고리즘 과제입니다.
+                        <br><br>
+                        <strong>퀵 정렬(Quick Sort)</strong>과 <strong>그리디 알고리즘</strong>을 응용하여 복잡도(Complexity)를 최적화하는 훈련을 수행했습니다.
+                    </p>
+                </div>
+                <div class="f-media" style="border-radius: 12px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
+                    <img src="../assets/42seoul/pushswap.gif" alt="Push Swap" style="width: 100%; height: 100%; object-fit: contain; background: #282c34;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 2: CONCURRENCY (PHILOSOPHERS) -->
+    <section class="slide feature-slide">
+        <div class="slide-container">
+            <span class="slide-tag">02. SYSTEM & CONCURRENCY</span>
+            <h2 class="slide-title">Philosophers</h2>
+            
+            <div class="vision-grid reveal" style="grid-template-columns: 1.2fr 1fr;">
+                 <div class="f-media" style="border-radius: 12px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
+                    <img src="../assets/42seoul/phliosophers.gif" alt="Philosophers" style="width: 100%; height: 100%; object-fit: contain; background: #000;">
+                </div>
+                <div class="vision-text">
+                    <p class="slide-p">
+                        운영체제의 고전적인 <strong>'식사하는 철학자 문제'</strong>를 통해 교착 상태(Deadlock)와 경쟁 상태(Race Condition)를 해결했습니다.
+                    </p>
+                    <div class="tech-point" style="margin-top: 30px;">
+                        <strong>Multi-Thread & Mutex</strong>
+                        <p>pthread API를 활용하여 스레드 간 자원 공유를 제어하고, Mutex Lock을 통해 데이터 무결성을 보장했습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3: SYSTEM COMM (MINITALK) -->
+    <section class="slide feature-slide bg-light">
+        <div class="slide-container">
+            <span class="slide-tag">03. SYSTEM COMMUNICATION</span>
+            <h2 class="slide-title">Minitalk</h2>
+            
+            <div class="vision-grid reveal">
+                <div class="vision-text">
+                    <p class="slide-p">
+                        UNIX 시그널(SIGUSR1, SIGUSR2)만을 사용하여 서버와 클라이언트 간의 문자열 통신 프로그램을 구현했습니다.
+                        <br><br>
+                        문자열을 비트(Bit) 단위로 쪼개어 전송하고, 수신 측에서 비트 연산을 통해 다시 문자로 재조립하며 <strong>저수준 통신(Low-level Communication)</strong>의 원리를 깊이 이해했습니다.
+                    </p>
+                </div>
+                 <div class="f-media" style="border-radius: 12px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
+                    <img src="../assets/42seoul/minitalk.gif" alt="Minitalk" style="width: 100%; height: 100%; object-fit: contain; background: #282c34;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 4: GRAPHICS 2D (SO_LONG) -->
+    <section class="slide feature-slide">
+        <div class="slide-container">
+            <span class="slide-tag">04. COMPUTER GRAPHICS (2D)</span>
+            <h2 class="slide-title">So_Long</h2>
+            
+            <div class="vision-grid reveal" style="grid-template-columns: 1fr 1fr;">
+                <div class="f-media" style="border-radius: 12px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
+                    <img src="../assets/42seoul/solong.gif" alt="So Long" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="vision-text">
+                    <p class="slide-p">
+                        MiniLibX 라이브러리를 활용한 2D 타일 기반 게임입니다. 
+                        맵 파일 파싱(Parsing)부터 렌더링 루프(Render Loop), 키보드 이벤트 처리를 직접 구현하며 <strong>게임 엔진의 기초 구조</strong>를 학습했습니다.
+                    </p>
+                    <ul class="t-list" style="margin-top: 20px;">
+                        <li>Map 유효성 검사 (Flood Fill 알고리즘)</li>
+                        <li>Sprite 렌더링 및 이벤트 훅(Hook) 처리</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 5: GRAPHICS 3D (CUB3D) -->
+    <section class="slide feature-slide bg-light">
+        <div class="slide-container">
+            <span class="slide-tag">05. COMPUTER GRAPHICS (3D)</span>
+            <h2 class="slide-title">Cub3D</h2>
+            
+            <div class="vision-grid reveal">
+                <div class="vision-text">
+                    <p class="slide-p">
+                        Raycasting(광선 투사) 기술을 이용하여 <strong>울펜슈타인 3D 스타일의 1인칭 3D 렌더링 엔진</strong>을 밑바닥부터 구현했습니다.
+                        <br><br>
+                        삼각함수를 이용한 거리 계산, 텍스처 매핑(Texture Mapping), 시점 변환 등을 통해 3D 그래픽스의 수학적 원리를 체득했습니다.
+                    </p>
+                </div>
+                <div class="f-media" style="border-radius: 12px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
+                    <img src="../assets/42seoul/cub3d.gif" alt="Cub3D" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 6: GROWTH & PEER REVIEW -->
+    <section class="slide role-slide" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+        <div class="slide-container">
+            <span class="slide-tag white">06. GROWTH & CULTURE</span>
+            <div class="quote-box reveal">
+                <h3 class="white">"동료가 곧 스승,<br>코드는 설득의 수단입니다."</h3>
+            </div>
+            
+            <div class="vision-grid reveal" style="align-items: flex-start;">
+                <div class="vision-text">
+                    <div class="tech-point">
+                        <strong style="color: #4ade80;">체계적인 동료 평가 (Peer Review)</strong>
+                        <p style="color: #94a3b8;">42Seoul의 모든 과제는 동료 3명 이상의 평가를 통과해야 합니다. 이 과정에서 내 코드를 논리적으로 방어(Defense)하고, 타인의 코드를 분석하며 다양한 시각을 배웁니다.</p>
+                    </div>
+                    <div class="tech-point" style="margin-top: 40px;">
+                        <strong style="color: #4ade80;">엄격한 코딩 컨벤션 (Norminette)</strong>
+                        <p style="color: #94a3b8;">함수 길이 25줄 제한, 변수 선언 위치 등 엄격한 규칙(Norminette)을 준수하며, 가독성 높고 모듈화된 코드를 작성하는 습관을 뼛속 깊이 새겼습니다.</p>
+                    </div>
+                </div>
+                <!-- Using Minishell Peer Eval Image here as requested -->
+                <div class="f-media" style="border-radius: 12px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.3); background: white;">
+                    <img src="../assets/42seoul/minishell_peer_evaluations2.png" alt="Peer Evaluation Log" style="width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUTRO -->
+    <section class="slide outro-slide" style="background: #0f172a;">
+        <div class="slide-container full-height align-center-vh">
+            <div class="outro-content reveal">
+                <h2 class="slide-title white" style="margin-bottom: 30px;">소프트웨어의 본질을 묻다</h2>
+				<h2 class="slide-title white" style="margin-bottom: 30px;">42Seoul</h2>
+				<div class="link-row">
+                    <a href="https://github.com/seohye-ki/42seoul" target="_blank" class="btn btn-outline white-border">GitHub</a>
+                </div>
+			</div>
+            <div class="footer-copy" style="margin-top: 80px; color: white; opacity: 0.4;">
+                © 2026 Kim Seo Hyeon. All rights reserved.
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Footer -->
+    <footer class="project-nav">
+        <a href="everymatch.html" class="nav-prev">
+            <span class="nav-label">Previous Project</span>
+            <span class="nav-name">EveryMatch</span>
+        </a>
+        <!-- No Next Project -->
+    </footer>
+
+    <style>
+        .theme-seoul42 { --accent: #0f172a; --accent-soft: #f1f5f9; }
+        .bg-light { background-color: #f8fafc; }
+        
+        /* Layout Utilities */
+        .slide-container { max-width: 1200px; margin: 0 auto; padding: 100px 5%; }
+        
+        .slide-tag {
+            display: inline-block; color: var(--accent); font-family: 'Outfit'; font-weight: 800;
+            font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; position: relative; padding-left: 20px;
+        }
+        .slide-tag::before { content: ''; position: absolute; left: 0; top: 50%; width: 12px; height: 2px; background: var(--accent); }
+        .slide-tag.white { color: white; }
+        .slide-tag.white::before { background: white; }
+
+        .slide-title { font-size: 3rem; margin-bottom: 30px; font-weight: 900; letter-spacing: -1px; }
+        .slide-title.white { color: white; }
+        .slide-p { font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; word-break: keep-all; }
+
+        .quote-box h3 { font-size: 2.2rem; line-height: 1.4; margin-bottom: 50px; font-weight: 700; word-break: keep-all; }
+        .quote-box h3.white { color: white; }
+
+        /* Vision Grid */
+        .vision-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; }
+        
+        /* List Style */
+        .t-list { padding-left: 20px; line-height: 1.8; color: var(--text-muted); }
+        .t-list li::marker { color: var(--accent); font-weight: bold; }
+
+        /* Media adjustments */
+        .f-media img { display: block; width: 100%; height: 100%; }
+
+		/* Outro */
+		.align-center-vh { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+		.btn-outline.white-border { border-color: white; color: white; }
+		.btn-outline.white-border:hover { background: white; color: var(--accent); }
+
+        @media (max-width: 900px) {
+            .vision-grid { grid-template-columns: 1fr !important; }
+            .hero-mockups { height: auto; position: relative; margin: 40px 0; } 
+            .mockup-bridge { width: 100% !important; height: auto !important; position: static !important; transform: none !important; }
+        }
+    </style>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
