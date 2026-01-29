@@ -1,38 +1,7 @@
+@import 'base.css';
+
 html {
     scroll-behavior: smooth;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
-
-:root {
-    --bg-main: #ffffff;
-    --bg-soft: #fcfdfe;
-    --text-primary: #111827;
-    --text-muted: #4b5563;
-    --accent-blue: #0066ff;
-    --accent-navy: #001f3f;
-    --accent-neon: #00d2ff; /* Electric Blue Sticker Outline */
-    --accent-soft-blue: #e0f2fe;
-    --border-light: #f1f5f9;
-    --border-formal: #e2e8f0;
-	--accent-orange: #20ad5d;
-
-    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-}
-
-body {
-    font-family: 'Inter', 'Noto Sans KR', sans-serif;
-    background-color: var(--bg-main);
-    color: var(--text-primary);
-    line-height: 1.6;
-    overflow-x: hidden;
 }
 
 .container {
@@ -456,7 +425,7 @@ section {
     top: 0; left: 0; right: 0; bottom: 0;
     border-radius: 24px;
     padding: 2px;
-    background: linear-gradient(135deg, var(--accent-blue), var(--accent-neon));
+    background: linear-gradient(135deg, #e5e7eb, #9ca3af);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -468,8 +437,8 @@ section {
 
 .p-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 102, 255, 0.12);
-    border-color: var(--accent-blue);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12); /* Grayscale Shadow */
+    border-color: var(--text-primary); /* Grayscale Border */
 }
 
 .p-card:hover::before {
@@ -568,9 +537,9 @@ section {
 
 .tech-chip:hover {
     background: white;
-    border-color: var(--accent-blue);
+    border-color: var(--text-primary); /* Grayscale */
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Grayscale */
     color: var(--text-primary);
 }
 
@@ -1012,7 +981,7 @@ footer {
     top: 0; left: 0; right: 0; bottom: 0;
     border-radius: 24px;
     padding: 2px;
-    background: linear-gradient(135deg, var(--accent-blue), var(--accent-neon));
+    background: linear-gradient(135deg, #e5e7eb, #9ca3af); /* Grayscale Gradient */
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -1022,8 +991,8 @@ footer {
 
 .review-card:hover {
     transform: translateY(-8px); /* slightly more lift */
-    box-shadow: 0 20px 40px rgba(0, 102, 255, 0.12);
-    border-color: var(--accent-blue);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12); /* Grayscale */
+    border-color: var(--text-primary); /* Grayscale */
 }
 
 .review-card:hover::before {
@@ -1057,7 +1026,7 @@ footer {
     font-family: 'Outfit';
     font-size: 0.75rem;
     font-weight: 900;
-    color: var(--accent-blue);
+    color: var(--accent-navy);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -1170,6 +1139,21 @@ footer {
     margin-bottom: 25px;
     color: var(--text-primary);
     text-align: justify; /* Requested alignment */
+    word-break: keep-all;
+}
+
+.editorial-body ul, 
+.editorial-body ol {
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+.editorial-body li {
+    font-size: 1.05rem; 
+    line-height: 1.9;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+    text-align: justify;
     word-break: keep-all;
 }
 

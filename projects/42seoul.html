@@ -6,6 +6,13 @@
     <title>42SEOUL | 김서현</title>
     <link rel="icon" type="image/png" href="../assets/main_icon.png">
     <link rel="stylesheet" href="../css/projects.css">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="42Seoul | 김서현">
+    <meta property="og:description" content="42Seoul: 동료 학습(Peer Learning)과 문제 해결 역량 강화의 여정">
+    <meta property="og:image" content="https://seohye-ki.github.io/assets/42seoul/thumbnail.png">
+    <meta property="og:url" content="https://seohye-ki.github.io/projects/42seoul.html">
+    <meta property="og:type" content="article">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/nord.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
@@ -20,7 +27,7 @@
         <div class="hero-top">
             <div class="hero-slogan reveal">
                 <span class="slide-tag">CS FOUNDATION</span>
-                <h4>기술의 근간을<br>탐구하다</h4>
+                <h4 class="hero-slogan-text">기술의 근간을<br>탐구하다</h4>
             </div>
             <div class="hero-logo-side reveal">
                 <h2>42 Seoul</h2>
@@ -278,13 +285,6 @@
         }
     </style>
 
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
+    <script src="../js/project.js"></script>
 </body>
 </html>

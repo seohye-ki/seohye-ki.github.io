@@ -6,6 +6,13 @@
     <title>EveryMatch | 김서현</title>
     <link rel="icon" type="image/png" href="../assets/main_icon.png">
     <link rel="stylesheet" href="../css/projects.css">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="EveryMatch | 김서현">
+    <meta property="og:description" content="모든 스포츠 일정을 한눈에: 경기 일정 통합 캘린더">
+    <meta property="og:image" content="https://seohye-ki.github.io/assets/everymatch/thumbnail.jpg">
+    <meta property="og:url" content="https://seohye-ki.github.io/projects/everymatch.html">
+    <meta property="og:type" content="article">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
@@ -301,13 +308,6 @@ public SecurityFilterChain filterChain(HttpSecurity http) {
         }
     </style>
 
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
+    <script src="../js/project.js"></script>
 </body>
 </html>

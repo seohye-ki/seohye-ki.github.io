@@ -1,35 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;800;900&display=swap');
-
-:root {
-    --bg-main: #ffffff;
-    --text-primary: #0f172a;
-    --text-muted: #64748b;
-    --border-soft: #f1f5f9;
-    --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
+@import 'base.css';
 
 /* --- Project Theme Colors --- */
-.theme-spico { --accent: #42D596; --accent-soft: #f0fdfa; }
-.theme-lufin { --accent: #3b82f6; --accent-soft: #eff6ff; }
-.theme-docshund { --accent: #B97E65; --accent-soft: #fdf2f8; }
-.theme-everymatch { --accent: #f1654c; --accent-soft: #fff7ed; }
-.theme-seoul42 { --accent: #0f172a; --accent-soft: #f8fafc; }
-
-* {
-    margin: 0; padding: 0; box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-main);
-    color: var(--text-primary);
-    overflow-x: hidden;
-    word-break: keep-all; /* Fix Korean word breaking */
-}
-
-p {
-    word-break: keep-all;
-}
+.theme-spico { --accent: var(--theme-spico); --accent-soft: #f0fdfa; }
+.theme-lufin { --accent: var(--theme-lufin); --accent-soft: #eff6ff; }
+.theme-docshund { --accent: var(--theme-docshund); --accent-soft: #fdf2f8; }
+.theme-everymatch { --accent: var(--theme-everymatch); --accent-soft: #fff7ed; }
+.theme-seoul42 { --accent: var(--theme-seoul42); --accent-soft: #f8fafc; }
 
 /* --- PPT Slide Structure --- */
 .slide {

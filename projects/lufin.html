@@ -6,6 +6,13 @@
     <title>LuFin | 김서현</title>
     <link rel="icon" type="image/png" href="../assets/main_icon.png">
     <link rel="stylesheet" href="../css/projects.css">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="LuFin | 김서현">
+    <meta property="og:description" content="교실 속 작은 경제: 초등학생 대상 금융 시뮬레이션 서비스">
+    <meta property="og:image" content="https://seohye-ki.github.io/assets/LuFin/thumbnail.jpg">
+    <meta property="og:url" content="https://seohye-ki.github.io/projects/lufin.html">
+    <meta property="og:type" content="article">
     <!-- Highlight.js for code snippets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -301,18 +308,38 @@ public ResponseEntity<?> approveRequest() {
         @media (max-width: 900px) {
             .feature-grid, .tech-focus-grid, .role-grid, .vision-grid { grid-template-columns: 1fr; }
             .hero-mockups { margin: 40px 0; }
-            .slide-container { padding: 60px 5%; }
+            .slide-container { padding: 60px 20px; } /* Fixed smaller padding for mobile */
             .quote-box h3 { font-size: 1.6rem; }
+            
+            /* Mobile Fixes */
+            .role-card { 
+                padding: 20px; 
+                width: 100%; 
+                max-width: 100%; 
+                min-width: 0; /* CRITICAL: Allows grid item to shrink below content size */
+                box-sizing: border-box; 
+                word-break: keep-all; 
+            } 
+            .role-icon { font-size: 2rem; margin-bottom: 15px; } 
+            .role-card h4 { font-size: 1.2rem; margin-bottom: 10px; } 
+            .role-card ul { font-size: 0.9rem; line-height: 1.6; padding-left: 15px; word-break: break-word; } /* Allow break for links/tech terms */
+            
+            pre { 
+                overflow-x: auto; 
+                white-space: pre; 
+                width: 100%; 
+                max-width: 100%; 
+                font-size: 0.8rem; 
+                scrollbar-width: thin; 
+                -webkit-overflow-scrolling: touch; 
+                box-sizing: border-box; 
+                background: rgba(0,0,0,0.3) !important; 
+            } 
+            pre::-webkit-scrollbar { height: 4px; }
+            pre::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 4px; } 
         }
     </style>
 
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) { entry.target.classList.add('active'); }
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
+    <script src="../js/project.js"></script>
 </body>
 </html>

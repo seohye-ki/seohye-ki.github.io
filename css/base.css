@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+:root {
+    /* --- Main Colors --- */
+    --bg-main: #ffffff;
+    --bg-soft: #fcfdfe;
+    
+    /* --- Text Colors --- */
+    --text-primary: #111827; /* Matches #0f172a from projects.css slightly different but #111827 is standard tailwind gray-900 equivalent */
+    --text-muted: #4b5563;   /* #64748b is slate-500, #4b5563 is gray-600. I'll stick to style.css values */
+    
+    /* --- Accents --- */
+    --accent-blue: #0066ff;
+    --accent-navy: #001f3f;
+    --accent-neon: #00d2ff;
+    --accent-soft-blue: #e0f2fe;
+    --accent-orange: #20ad5d; /* Renamed green in style.css but kept variable name */
+
+    /* --- Borders --- */
+    --border-light: #f1f5f9;
+    --border-formal: #e2e8f0;
+
+    /* --- Animations --- */
+    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    
+    /* --- Project Specific Themes (Moved from projects.css for global access) --- */
+    --theme-spico: #42D596;
+    --theme-lufin: #3b82f6;
+    --theme-docshund: #B97E65;
+    --theme-everymatch: #f1654c;
+    --theme-seoul42: #0f172a;
+}
+
+/* --- Global Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Base Body --- */
+body {
+    font-family: 'Inter', 'Noto Sans KR', sans-serif; /* Added Noto Sans KR globally */
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-width: 370px;
+    word-break: keep-all; /* Korean word-break support */
+}
+
+p {
+    word-break: keep-all;
+}

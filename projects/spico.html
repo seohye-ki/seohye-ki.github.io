@@ -6,6 +6,13 @@
     <title>Spico | 김서현</title>
     <link rel="icon" type="image/png" href="../assets/main_icon.png">
     <link rel="stylesheet" href="../css/projects.css">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Spico | 김서현">
+    <meta property="og:description" content="발표에 확신을 더하다: 발표 연습 및 코칭 안드로이드 앱">
+    <meta property="og:image" content="https://seohye-ki.github.io/assets/spico/thumbnail.jpg">
+    <meta property="og:url" content="https://seohye-ki.github.io/projects/spico.html">
+    <meta property="og:type" content="article">
 </head>
 <body class="theme-spico">
     <nav class="top-bar">
@@ -115,19 +122,19 @@
             <div class="process-grid reveal">
                 <div class="step-card">
                     <span class="step-num">01</span>
-                    <div class="step-img"><video src="../assets/spico/project_create.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video></div>
+                    <div class="step-img"><video src="../assets/spico/project_create.mp4" autoplay loop muted playsinline></video></div>
                     <h4>발표 생성</h4>
                     <p>발표 주제와 시간, 대본을 설정하고 일정을 관리합니다.</p>
                 </div>
                 <div class="step-card">
                     <span class="step-num highlight">02</span>
-                    <div class="step-img"><img src="../assets/spico/final_qna.gif" alt="Spico Final QnA" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="step-img"><img src="../assets/spico/final_qna.gif" alt="Spico Final QnA"></div>
                     <h4>발표 연습</h4>
                     <p>실시간 코칭 및 실전 연습 환경을 경험합니다.</p>
                 </div>
                 <div class="step-card">
                     <span class="step-num">03</span>
-                    <div class="step-img"><video src="../assets/spico/final_mode_report.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video></div>
+                    <div class="step-img"><video src="../assets/spico/final_mode_report.mp4" autoplay loop muted playsinline></video></div>
                     <h4>심층 분석</h4>
                     <p>연습 결과 리포트를 통해 취약점을 파악하고 보완합니다.</p>
                 </div>
@@ -160,7 +167,6 @@
         </div>
     </section>
 
-    <!-- SLIDE 6: [ACCOMPLISHMENT] IMPACT & RETRO -->
     <!-- SLIDE 6: [OPS] AUTOMATION -->
     <section class="slide automation-slide">
         <div class="slide-container">
@@ -362,16 +368,37 @@
         /* PROCESS */
         .process-grid {
             display: flex;
-            align-items: center;
+            align-items: flex-start; /* Fix horizontal alignment */
             justify-content: space-between;
             margin-top: 80px;
         }
 
         .step-card { width: 30%; position: relative; }
-        .step-num { font-family: 'Outfit'; font-size: 3rem; font-weight: 900; opacity: 0.1; line-height: 1; display: block; margin-bottom: -15px; position: relative; z-index: 5; } /* Added z-index to force on top */
+        .step-num { 
+            font-family: 'Outfit'; 
+            font-size: 4rem; /* Larger for background effect */
+            font-weight: 900; 
+            opacity: 0.1; 
+            line-height: 1; 
+            position: absolute; /* Take out of flow */
+            top: -40px; 
+            left: -10px;
+            z-index: 0; /* Behind */
+        }
         .step-num.highlight { opacity: 1; color: var(--spico-brand); }
-        .step-img { border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); margin-bottom: 25px; border: 1px solid #eee; }
-        .step-img video, .step-img img { width: 100%; height: 180px; object-fit: cover; display: block; }
+        
+        .step-img { 
+            position: relative; 
+            z-index: 2; /* On top */
+            border-radius: 24px; 
+            overflow: hidden; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08); 
+            margin-bottom: 25px; 
+            border: 1px solid #eee; 
+            background: white; 
+            aspect-ratio: 8/16;
+        }
+        .step-img video, .step-img img { width: 100%; height: 100%; object-fit: fill; display: block; }
         .step-card h4 { font-size: 1.3rem; margin-bottom: 10px; }
         .step-card p { font-size: 0.95rem; color: var(--text-muted); }
 
@@ -443,17 +470,6 @@
         }
     </style>
 
-    <script>
-        // Reveal on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
+    <script src="../js/project.js"></script>
 </body>
 </html>
