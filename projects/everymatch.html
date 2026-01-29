@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EveryMatch Case Study | 김서현</title>
+    <title>EveryMatch | 김서현</title>
+    <link rel="icon" type="image/png" href="../assets/main_icon.png">
     <link rel="stylesheet" href="../css/projects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -19,7 +20,7 @@
         <div class="hero-top">
             <div class="hero-slogan reveal">
                 <span class="slide-tag">SPORTS CALENDAR</span>
-                <h4>당신의 모든<br>경기</h4>
+                <h4 class="hero-slogan-text">모든 경기를<br>한 곳에서</h4>
             </div>
             <div class="hero-logo-side reveal">
                 <h2>EVERYMATCH</h2>
@@ -35,13 +36,14 @@
             <div class="hero-detail-left reveal">
                 <div class="meta-item"><label>PROJECT</label><span>EveryMatch</span></div>
                 <div class="meta-item"><label>OVERVIEW</label><span>프로스포츠 경기일정 통합관리 캘린더</span></div>
-                <div class="meta-item"><label>PERIOD</label><span>2024.11.18 - 11.27 (10 Days)</span></div>
+                <div class="meta-item"><label>PERIOD</label><span>2024.11.18 - 11.27 (10일)</span></div>
                 <div class="meta-item"><label>MEMBERS</label><span>2명</span></div>
                 <div class="meta-item"><label>ROLE</label><span>풀스택, UI/UX 디자인</span></div>
-            </div>
+                <div class="meta-item"><label>TECH</label><span>Java, Vue.js, MySQL, Spring Boot, MyBatis</span></div>
+			</div>
             <div class="hero-detail-right reveal">
-                <h2>프로스포츠 경기 일정 캘린더</h2>
-                <p>좋아하는 팀의 경기 일정을 한눈에 확인하고, AI 추천과 알림 서비스를 제공하는 통합 캘린더 플랫폼입니다.</p>
+                <h2>내 팀 경기만 모은 맞춤 캘린더</h2>
+                <p>야구부터 농구까지, 개인에 커스터마이징된 스포츠 캘린더입니다.<br>관심 팀을 설정하고 알림을 통해 경기를 놓치지 않도록 도와줍니다.<br>AI팀 추천과 챗봇으로 새로운 팬심의 즐거움까지 느낄 수 있습니다.</p>
             </div>
         </div>
     </header>
@@ -92,21 +94,33 @@
             <span class="slide-tag">02. AI INTEGRATION</span>
             <h2 class="slide-title">데이터 기반 AI 추천</h2>
             
-            <div class="vision-grid reveal">
-                <div class="vision-text">
-                    <div class="tech-point">
+            <div class="vision-grid reveal ai-grid">
+                
+                <!-- Item 1: Team Recommendation Text -->
+                <div class="vision-text" style="text-align: left;">
+                    <div class="tech-point" style="margin: 0;">
                         <strong>AI 팀 추천</strong>
                         <p>"응원 팀이 없어도 괜찮습니다."<br>
                         사용자의 성향을 분석하여 ChatGPT API가 가장 적합한 스포츠 팀을 추천해줍니다.</p>
                     </div>
-                    <div class="tech-point" style="margin-top: 40px;">
+                </div>
+                <!-- Item 2: Team Recommendation Image -->
+                <div class="f-media ai-media">
+                    <img src="../assets/everymatch/recommend.png" alt="AI Team Recommendation">
+                </div>
+
+                <!-- Item 3: Chatbot Text -->
+                <div class="vision-text" style="text-align: left;">
+                    <div class="tech-point" style="margin: 0;">
                         <strong>스포츠 전문 챗봇</strong>
                         <p>경기 규칙부터 선수 정보까지, 궁금한 점은 언제든 챗봇에게 물어볼 수 있도록 프롬프트 엔지니어링을 적용했습니다.</p>
                     </div>
                 </div>
-                <div class="f-media" style="border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.15);">
-                    <img src="../assets/everymatch/chat_bot.png" alt="AI Chatbot Interaction" style="width: 100%; height: 100%; object-fit: contain; background: #fff;">
+                <!-- Item 4: Chatbot Image -->
+                <div class="f-media ai-media">
+                    <img src="../assets/everymatch/chat_bot.png" alt="AI Chatbot Interaction">
                 </div>
+
             </div>
         </div>
     </section>
@@ -191,11 +205,11 @@ public SecurityFilterChain filterChain(HttpSecurity http) {
     </section>
 
     <!-- OUTRO -->
-    <section class="slide outro-slide" style="background: #A64D3D;">
+    <section class="slide outro-slide" style="background: #d24a32;">
         <div class="slide-container full-height align-center-vh">
             <div class="outro-content reveal">
                 <div class="award-badge" style="background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 100px; color: white; margin-bottom: 20px; font-weight: 800;">SSAFY 우수상 🏆</div>
-                <h2 class="slide-title white" style="margin-bottom: 30px;">당신의 모든 경기, EveryMatch</h2>
+                <h2 class="slide-title white" style="margin-bottom: 30px;">모든 경기를 한 곳에서, EveryMatch</h2>
                 <div class="link-row">
                     <a href="https://github.com/seohye-ki/EVERY-MATCH" target="_blank" class="btn btn-outline white-border">GitHub</a>
                 </div>

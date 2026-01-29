@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LuFin | 김서현</title>
+    <link rel="icon" type="image/png" href="../assets/main_icon.png">
     <link rel="stylesheet" href="../css/projects.css">
     <!-- Highlight.js for code snippets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
@@ -20,7 +21,7 @@
         <div class="hero-top">
             <div class="hero-slogan reveal">
                 <span class="slide-tag">FINTECH EDU</span>
-                <h4>교실 속<br>작은 경제</h4>
+                <h4 class="hero-slogan-text">교실 속<br>작은 경제</h4>
             </div>
             <div class="hero-logo-side reveal">
                 <h2>LuFin</h2>
@@ -35,14 +36,16 @@
         <div class="hero-bottom">
             <div class="hero-detail-left reveal">
                 <div class="meta-item"><label>PROJECT</label><span>LuFin</span></div>
-                <div class="meta-item"><label>OVERVIEW</label><span>신용도 기반 경제활동 시뮬레이션 플랫폼</span></div>
-                <div class="meta-item"><label>PERIOD</label><span>2025.02.24 ~ 04.11 (7 Weeks)</span></div>
-                <div class="meta-item"><label>MEMBERS</label><span>6명 (Front 3, Back 3)</span></div>
+                <div class="meta-item"><label>OVERVIEW</label><span>신용도 기반 금융 시뮬레이션 플랫폼</span></div>
+                <div class="meta-item"><label>PERIOD</label><span>2025.02.24 ~ 04.11 (7주)</span></div>
+                <div class="meta-item"><label>MEMBERS</label><span>6명 (프론트엔드 3, 백엔드 3)</span></div>
                 <div class="meta-item"><label>ROLE</label><span>백엔드, UI/UX디자인, 인프라</span></div>
+                <div class="meta-item"><label>TECH</label><span>Java, React, MySQL, TypeScript, Spring Boot, JPA</span></div>
             </div>
             <div class="hero-detail-right reveal">
-                <h2>실감나는 금융 시뮬레이션</h2>
-                <p>금융 사각지대에 놓인 아이들을 위해, 가상의 자산과 신용 점수 시스템을 통해 실물 경제를 안전하게 체험할 수 있는 교육 플랫폼입니다.</p>
+                <h2>경험으로 배우는 금융</h2>
+				<p>초등학교 교실 속에서 어려운 금융 지식을 게임처럼 경험하며,<br>자산 관리 능력을 키우는 교육 플랫폼입니다.</p>
+				<p>가상의 화폐와 신용 등급을 활용해 대출, 주식, 소비를 경험하고<br>올바른 경제 관념을 형성하는데 도움을 줍니다.</p>
             </div>
         </div>
     </header>
@@ -169,33 +172,39 @@ public ResponseEntity<?> approveRequest() {
                 <h3>"정리가 되어야<br>협업도, 구현도 흔들리지 않습니다."</h3>
             </div>
 
-            <div class="vision-grid reveal" style="align-items: flex-start;">
-                <div class="vision-text">
+            <div class="vision-grid reveal" style="display: flex; flex-direction: column; gap: 30px;">
+                <div class="vision-text" style="width: 100%; max-width: 100%;">
                     <div class="tech-point">
                         <strong>DDD Event Storming</strong>
                         <p>초반부터 이벤트 스토밍을 통해 도메인 흐름을 명확히 정의하고, 복잡한 금융 로직을 도메인별로 분리하여 설계의 기반을 다졌습니다.</p>
                     </div>
-                    <div class="tech-point" style="margin-top: 30px;">
+                </div>
+                <div class="f-media" style="width: 100%; height: auto; background:transparent; box-shadow:none; overflow:visible;">
+                    <!-- Image Grid: 3 Columns for compact height -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+                        <img src="../assets/LuFin/event_storming1.jpeg" alt="Event Storming Overview" style="width:100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                        <img src="../assets/LuFin/event_storming2.png" alt="Event Storming Detail 1" style="width:100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                        <img src="../assets/LuFin/event_storming3.png" alt="Event Storming Detail 2" style="width:100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+                 <div class="vision-text" style="width: 100%; max-width: 100%; margin-top: 0;">
+                    <div class="tech-point">
                         <strong>협업의 기준을 세우는 문서화</strong>
                         <p style="margin-top:10px; line-height:1.7; color:var(--text-muted);">
                             요구사항 명세서, API 스펙, 에러 코드 정의 등 개발 전 과정의 산출물을 표준화하여 커뮤니케이션 비용을 최소화하고, 기획과 개발 간의 간극을 줄였습니다.
                         </p>
                     </div>
                 </div>
-                <div class="f-media" style="height: auto; min-height: 300px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                    <img src="../assets/LuFin/event_storming.jpeg" alt="Event Storming" style="width:100%; height:auto; display:block;">
-                </div>
             </div>
         </div>
     </section>
 
     <!-- OUTRO -->
-    <!-- OUTRO -->
     <section class="slide outro-slide bg-blue">
         <div class="slide-container full-height align-center-vh">
             <div class="outro-content reveal">
                 <div class="award-badge" style="background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 100px; color: white; margin-bottom: 20px; font-weight: 800;">SSAFY 우수상 🏆</div>
-                <h2 class="slide-title white" style="margin-bottom: 30px;">교실 속 작은 경제, LuFin</h2>
+                <h2 class="slide-title white">교실 속 작은 경제, LuFin</h2>
                 <div class="link-row">
                     <a href="https://github.com/seohye-ki/LuFin" target="_blank" class="btn btn-outline white-border">GitHub</a>
                 </div>

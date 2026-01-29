@@ -15,7 +15,8 @@ html {
     --accent-soft-blue: #e0f2fe;
     --border-light: #f1f5f9;
     --border-formal: #e2e8f0;
-    
+	--accent-orange: #20ad5d;
+
     --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -58,6 +59,20 @@ nav {
     border: 1px solid rgba(0,0,0,0.05);
     border-radius: 100px; /* Floating Pill Style */
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+    nav {
+        width: 90%;
+        padding: 12px 20px;
+        gap: 15px;
+        top: 15px;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+    .nav-links a { font-size: 0.8rem; }
+    .nav-logo { margin-right: 10px; padding-right: 15px; font-size: 1rem; }
 }
 
 /* Re-enabling logo but smaller for the pill */
@@ -106,7 +121,7 @@ nav {
 }
 
 /* --- Hero (Maintain Pop-Editorial but refine) --- */
-.hero-editorial {
+.hero-profile {
     padding: 180px 0 100px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -208,7 +223,7 @@ nav {
 }
 
 @media (max-width: 768px) {
-    .hero-editorial {
+    .hero-profile {
         padding: 140px 0 60px 0;
         grid-template-columns: 1fr;
         text-align: center;
@@ -313,8 +328,7 @@ section {
     text-transform: uppercase;
 }
 
-.record-badge.award { background: var(--accent-blue); } 
-.record-badge.cert { background: var(--accent-navy); } 
+.record-badge.award { background: var(--accent-navy); } 
 
 /* --- Timeline Structure (Experiences) --- */
 .timeline {
@@ -359,21 +373,97 @@ section {
     font-size: 1.2rem;
 }
 
+/* --- Generic Utility Classes --- */
+.text-desc {
+    color: var(--text-muted);
+    margin-top: 8px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.text-highlight {
+    color: var(--text-primary);
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+.sub-list {
+    margin-top: 8px;
+    padding-left: 20px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.info-box {
+    background: var(--bg-soft);
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 10px;
+    border: 1px solid var(--border-light);
+}
+
+.info-box strong {
+    color: var(--accent-indigo);
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.info-box p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
 /* --- Project Thumbnail Grid (As requested) --- */
 .project-card-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr); /* 3 Columns for compactness */
+    gap: 20px; /* Tighter gap */
+}
+
+@media (max-width: 900px) {
+    .project-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .project-card-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .p-card {
     text-decoration: none;
     color: inherit;
-    border-radius: 20px;
+    border-radius: 24px; /* Match review-card */
     overflow: hidden;
     background: white;
     border: 1px solid var(--border-formal);
     transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Gradient Border Effect (Same as Review Card) */
+.p-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 24px;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-neon));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.1;
+    transition: var(--transition);
+    pointer-events: none;
+    z-index: 5;
 }
 
 .p-card:hover {
@@ -382,46 +472,113 @@ section {
     border-color: var(--accent-blue);
 }
 
+.p-card:hover::before {
+    opacity: 0.6;
+}
+
 .p-thumb {
     width: 100%;
     aspect-ratio: 16/9;
 }
 
-.p-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.p-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.p-card:hover .p-thumb img {
+    transform: scale(1.05);
+}
 
 .p-body {
-    padding: 25px;
+    padding: 20px 25px;
+    background: white;
 }
 
-.p-meta {
+.p-body h3 {
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
-    font-size: 0.7rem;
-    color: var(--accent-indigo);
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    display: block;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
 }
 
-.p-title {
-    font-weight: 900;
-    font-size: 1.4rem;
-    margin-bottom: 15px;
+.p-body span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-family: 'Outfit', sans-serif;
 }
 
-.p-tech {
+.p-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Cleaned up p-body and p-tech-icons styles */
+
+/* Skills Wrapper */
+.skills-wrapper {
     display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.skill-category {
+    padding-bottom: 20px;
+}
+
+.skill-cat-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-cat-title::after {
+    content: ''; flex: 1; height: 1px; background: var(--border-light);
+}
+
+/* New Skill Grid (Categorized) */
+.skill-grid {
+    display: flex;
+    flex-wrap: wrap;
     gap: 12px;
-    margin-top: 15px;
 }
 
-.p-tech img {
-    width: 22px; height: 22px; object-fit: contain;
-    filter: grayscale(1);
-    transition: var(--transition);
+/* Restored Tech Chip Style (Pills) */
+.tech-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #f8fafc;
+    border: 1px solid var(--border-light);
+    font-size: 0.9rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: all 0.2s ease;
 }
 
-.p-card:hover .p-tech img { filter: grayscale(0); }
+.tech-chip:hover {
+    background: white;
+    border-color: var(--accent-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    color: var(--text-primary);
+}
+
+.tech-chip img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
 
 /* --- Skills Minimal Grid --- */
 .tech-section {
@@ -537,12 +694,298 @@ footer {
     .hero-title-main { font-size: 3.5rem; }
 }
 
+
+/* --- Carousel Bottom Bar (Curved White Area) --- */
+.carousel-bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 18vh;
+    background: white;
+    z-index: 20;
+    border-radius: 50% 50% 0 0 / 25px 25px 0 0; /* Horizontal curve like reference */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -10px 40px rgba(0,0,0,0.05);
+}
+
+.carousel-bottom-logo {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity 0.2s ease; /* For smooth swap */
+}
+
+/* Adjust Desc Position to not overlap with bottom bar */
+.carousel-desc {
+    bottom: 22vh; /* Move up above the bar */
+}
+
 /* --- Peer Review Section --- */
 .review-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 50px;
+}
+
+/* ... existing review styles ... */
+
+/* --- 3D Carousel Header --- */
+/* --- 3D Carousel Header (Refactored for Floating Hero) --- */
+#carousel-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px; /* Crucial for 3D effect */
+    z-index: 10;
+    /* Default bg, overridden by JS */
+    background: #111; 
+    transition: background 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); /* Slower, smoother color transition */
+}
+
+/* --- Atmosphere --- */
+/* Noise Removed */
+
+.carousel-orbs {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    mix-blend-mode: screen; /* Adds glow */
+    animation: drift 20s infinite alternate ease-in-out;
+}
+
+.orb-1 {
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+    top: -10%; left: -10%;
+}
+
+.orb-2 {
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+    bottom: -10%; right: -10%;
+    animation-delay: -10s;
+}
+
+@keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(30px, 50px); }
+}
+
+
+/* --- Carousel Controls --- */
+.carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1); /* Frosted Glass */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn { left: 40px; }
+.next-btn { right: 40px; }
+
+.carousel-viewport {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Full height to allow large elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-card {
+    position: absolute;
+    width: 85vw; /* Much wider */
+    max-width: 1400px; /* Allow it to be huge */
+    height: 80vh; /* Taller */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+    
+    /* Transparent Card */
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    
+    /* 3D Setup */
+    transform-style: preserve-3d;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Active State */
+.carousel-card.active {
+    opacity: 1;
+    z-index: 10;
+    transform: translateX(0) scale(1) translateZ(0);
+    pointer-events: auto;
+}
+
+/* Prev State */
+/* Prev State (Hidden) */
+.carousel-card.prev {
+    opacity: 0;
+    z-index: 5;
+    transform: translateX(-50%) scale(0.6);
+    pointer-events: none;
+}
+
+/* Next State (Hidden) */
+.carousel-card.next {
+    opacity: 0;
+    z-index: 5;
+    transform: translateX(50%) scale(0.6);
+    pointer-events: none;
+}
+
+/* Hidden States */
+.carousel-card.far-prev {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.4);
+}
+.carousel-card.far-next {
+    opacity: 0;
+    transform: translateX(100%) scale(0.4);
+}
+
+.carousel-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* Let clicks pass to global track if needed, but inner needs events */
+}
+
+.carousel-mockup {
+    width: auto; /* Allow width to vary based on aspect ratio */
+    height: 58vh; /* HUGE again */
+    max-width: 600px;
+    object-fit: contain;
+    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.4));
+    transform: translateZ(50px); /* Mid Layer */
+    transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 5;
+}
+
+/* Breathing & Pop Animation */
+.carousel-card.active .carousel-mockup {
+    transform: translateZ(100px) scale(1.1); /* Pop forward */
+    animation: float-mockup 6s ease-in-out infinite;
+}
+
+@keyframes float-mockup {
+    0%, 100% { transform: translateZ(100px) scale(1.1) translateY(0); }
+    50% { transform: translateZ(100px) scale(1.1) translateY(-15px); } /* Breathing up */
+}
+
+
+/* Info container for Title & Desc */
+.carousel-info {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    pointer-events: none;
+    transform-style: preserve-3d; /* Crucial for child Z separation */
+}
+
+.carousel-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16vw; 
+    font-weight: 900;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.25);
+    white-space: nowrap;
+    margin-bottom: 0;
+    /* Simplifed Animation: Slide Up from Bottom */
+    transform: translateZ(-100px) translateY(120%); 
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy Pop */
+}
+
+.carousel-card.active .carousel-title {
+    color: rgba(255, 255, 255, 1);
+    transform: translateZ(-100px) scale(1.05) translateY(0);
+    opacity: 1;
+}
+
+
+.carousel-desc {
+    position: absolute;
+    bottom: 12vh;
+    font-size: 1.1rem;
+    color: #111;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px 25px;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    opacity: 0;
+    /* Put it nicely in front or just below mockup */
+    transform: translateZ(100px) translateY(50px); 
+    transition: all 0.5s ease 0.1s;
+    pointer-events: auto;
+    z-index: 10;
+}
+
+.carousel-card.active .carousel-desc {
+    opacity: 1;
+    transform: translateZ(150px) translateY(0);
 }
 
 .review-card {
@@ -754,4 +1197,212 @@ footer {
 
 @media (max-width: 768px) {
     .review-grid { grid-template-columns: 1fr; }
+}
+
+/* =========================================
+   CAROUSEL MAGAZINE LAYOUT (SPLIT)
+   ========================================= */
+
+/* Viewport Fix */
+.carousel-viewport {
+    overflow: hidden !important; /* Ensure next slide is hidden */
+}
+
+/* Split Inner Layout */
+.carousel-card-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 2%; /* Less padding = content closer to edges */ 
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+/* 1. Left Text Column */
+.carousel-text-col {
+    flex: 0 0 55%; 
+    text-align: left;
+    color: white;
+    z-index: 10;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Small Logo (Fixed Size) */
+.carousel-logo-small {
+    height: 50px; /* STRICT HEIGHT */
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+    /* filter: brightness(0) invert(1); */
+    opacity: 0.9;
+    align-self: flex-start;
+}
+
+/* Slogan (Big Typography) */
+.carousel-slogan {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    word-break: keep-all;
+}
+
+/* Detail Description (New) */
+.carousel-detail {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 40px; /* Space before Meta Grid */
+    word-break: keep-all;
+    max-width: 90%;
+}
+
+/* Meta Grid */
+.carousel-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 20px;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.meta-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.meta-value {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1.4;
+}
+
+/* 2. Right Image Column */
+.carousel-image-col {
+    flex: 0 0 40%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mockup Style */
+.carousel-mockup {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .carousel-card-inner {
+        flex-direction: column-reverse; /* Image top, Text bottom */
+        justify-content: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .carousel-text-col {
+        flex: 0 0 auto;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        padding-right: 0;
+        margin-top: 20px;
+    }
+
+    .carousel-image-col {
+        flex: 0 0 40%;
+        width: 80%;
+        height: auto;
+    }
+    
+    .carousel-logo-small { align-self: center; height: 30px; margin-bottom: 10px; }
+    .carousel-slogan { font-size: 1.5rem; margin-bottom: 20px; }
+    .carousel-meta-grid { text-align: left; }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE FIXES (Comprehensive)
+   ========================================= */
+@media (max-width: 900px) {
+    /* 0. Nav Bar Fix (Prevent Overflow) */
+    nav { width: 95%; padding: 10px 15px; gap: 10px; }
+    .nav-links { gap: 10px; }
+    .nav-links a { font-size: 0.75rem; letter-spacing: -0.5px; } /* Compact Text */
+    .nav-logo { margin-right: 5px; padding-right: 10px; font-size: 0.9rem; }
+
+    /* 1. Carousel Layout Stack */
+    .carousel-card-inner {
+        flex-direction: column-reverse; /* Text bottom, Image top */
+        padding: 20px 15px;
+        justify-content: flex-end; /* Push content down */
+    }
+
+    .carousel-text-col {
+        flex: 0 0 auto;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        padding-right: 0;
+        margin-top: 15px;
+    }
+
+    /* 2. Hide Bottom Bar to prevent overlap */
+    .carousel-bottom-bar { display: none; }
+    
+    /* 3. Reduce Mockup Size */
+    .carousel-image-col { flex: 0 0 35%; height: 35%; width: 100%; margin-bottom: 20px; }
+    .carousel-mockup { height: auto; max-width: 200px; } /* Smaller to fit text */
+
+    /* 4. Slogan & Detail Size */
+    .carousel-slogan { font-size: 1.6rem; margin-bottom: 15px; }
+    .carousel-detail { font-size: 0.85rem; margin-bottom: 20px; text-align: center; }
+
+    /* 5. Meta Grid Restore (Three Columns - Centered) */
+    .carousel-meta-grid { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 8px;
+        width: 100%;
+        text-align: center; /* Center text in grid */
+    } 
+    .meta-item { align-items: center; } /* Center items */
+    .meta-label { font-size: 0.65rem; letter-spacing: 0.5px; opacity: 0.7; }
+    .meta-value { font-size: 0.75rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+    
+    /* 6. Contact Stack */
+    .contact-row { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .contact-item { width: 100%; justify-content: center; }
+
+    /* 7. Font Sizing Fixes */
+    .timeline-title, .record-title { font-size: 0.95rem; } 
+    .record-item { grid-template-columns: 1fr; gap: 5px; text-align: left; padding: 15px 0; }
+    .record-badge { justify-self: start; margin-top: 5px; }
+    .record-date { margin-bottom: 2px; font-size: 0.8rem; }
 }

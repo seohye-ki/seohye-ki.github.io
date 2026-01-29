@@ -99,6 +99,13 @@ p {
     z-index: 100;
 }
 
+.hero-slogan-text {
+    font-size: clamp(3rem, 6vw, 5rem); /* Inherited but ensured */
+    line-height: 1.35; /* Improved line spacing */
+    margin-top: 15px; /* Space from label */
+    word-break: keep-all;
+}
+
 .hero-logo-side h2 {
     font-family: 'Outfit', sans-serif;
     font-size: clamp(2rem, 4vw, 3rem);
@@ -142,7 +149,7 @@ p {
 }
 
 .scale-tablet {
-    max-height: 43vh;
+    max-height: 41vh;
     width: auto;
 }
 
@@ -298,7 +305,7 @@ p {
 }
 
 .meta-item {
-	padding-bottom: 8px;
+	padding-bottom: 15px;
 }
 
 .meta-item label {
@@ -309,7 +316,7 @@ p {
     letter-spacing: 0.1em;
     color: var(--accent-soft); /* Changed from text-muted to accent color as requested */
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     opacity: 0.8;
 }
 
@@ -460,4 +467,237 @@ footer:not(.project-nav) {
     font-weight: 700;
     color: var(--text-muted);
     background: white;
+}
+
+/* --- Automation / Ops Slide Styles (Redesign: Zig-Zag for Readability) --- */
+.automation-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Space between steps */
+    margin-top: 60px;
+    width: 100%;
+    max-width: 1200px; /* Limit max width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hide the connecting line for this layout */
+.automation-flow::before { display: none; }
+
+.auto-card {
+    background: transparent;
+    border: none;
+    padding: 0;
+    width: 100%; /* Full width row */
+    display: flex;
+    flex-direction: row; /* Side by side */
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    text-align: left; /* Align text left */
+}
+
+/* Zig-Zag: Even children reversed */
+.auto-card:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.auto-card:nth-child(even) .auto-info {
+    align-items: flex-end;
+}
+
+.auto-card:hover {
+    transform: none; /* Disable lift for large layout */
+}
+
+.auto-img {
+    width: 550px;
+    height: 320px; /* Fixed height for uniformity */
+    background: transparent; /* Remove white bg */
+    border: none; /* Remove border */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden; /* Crop overflow */
+    transition: transform 0.3s ease;
+}
+
+.auto-card:hover .auto-img {
+    transform: scale(1.02); /* Subtle zoom */
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+.auto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fill the box */
+}
+
+.auto-info {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auto-info h5 {
+    color: var(--text-primary);
+    font-size: 1.8rem; /* Larger title */
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.auto-info p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Summary tweaks */
+.flow-summary.dark-mode-text {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 900px) {
+    .auto-card, .auto-card:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .auto-card:nth-child(even) .auto-info {
+        align-items: center;
+    }
+
+    .auto-img {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .auto-info {
+        max-width: 100%;
+    }
+}
+
+/* --- Mobile Responsive for Project Pages --- */
+@media (max-width: 900px) {
+    /* 1. Hero Split Stack */
+    .hero-split {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 100px; /* Space for fixed nav */
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .hero-top {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: 60px; /* Added spacing as mockup is hidden */
+    }
+
+    /* AI Grid Stack */
+    .ai-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    
+    .ai-grid .f-media {
+        max-width: 100%;
+    }
+    
+    .hero-logo-side h2 { font-size: 2.5rem; }
+
+    /* 2. Mockup Removal (As requested) */
+    .hero-mockups {
+        display: none !important;
+    }
+
+    /* 3. Hero Bottom Stack */
+    .hero-bottom {
+        flex-direction: column;
+        gap: 40px;
+        padding-bottom: 60px;
+        height: auto;
+    }
+
+    .hero-detail-left, .hero-detail-right {
+        max-width: 100%;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .hero-detail-right h2 { font-size: 1.8rem; }
+}
+
+/* --- EveryMatch AI Styles --- */
+.ai-grid {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    row-gap: 50px;
+    column-gap: 50px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.ai-media {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.ai-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Laptop/Desktop Intermediate (Fix for Mockup Overlap) --- */
+@media (min-width: 1025px) and (max-width: 1600px) {
+    /* Shift Mockup to Right */
+    .mockup-bridge.bridge-center {
+        left: 75% !important; 
+        transform: translate(-50%, -50%) !important;
+    }
+
+    /* Reduce Sizes */
+    .scale-mobile { max-height: 55vh !important; width: auto; }
+    .scale-laptop { max-height: 40vh !important; width: auto; }
+    .scale-tablet { max-height: 35vh !important; width: auto; }
+    .scale-monitor { max-height: 40vh !important; width: auto; }
+}
+
+/* --- Tablet Responsive for Project Pages --- */
+@media (max-width: 1024px) {
+    .scale-mobile {
+        max-height: 50vh !important; /* Reduced further from 55vh */
+        width: auto;
+    }
+
+    .scale-laptop {
+        max-height: 48vh !important;
+        width: auto;
+    }
+
+    .scale-tablet {
+        max-height: 40vh !important;
+        width: auto;
+    }
+
+    /* Shift Mockup to Right (Further Adjustment) */
+    .mockup-bridge.bridge-center {
+        left: 85% !important; /* Pushed further right */
+        transform: translate(-50%, -50%) !important;
+    }
 }

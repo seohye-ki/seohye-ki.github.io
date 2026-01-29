@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spico | 김서현</title>
+    <link rel="icon" type="image/png" href="../assets/main_icon.png">
     <link rel="stylesheet" href="../css/projects.css">
 </head>
 <body class="theme-spico">
@@ -11,11 +12,11 @@
         <a href="../index.html" class="back-btn">← BACK</a>
     </nav>
     <!-- SLIDE 1: [SERVICE] HERO SPLIT -->
-    <header class="hero-split theme-spico korail-style">
+    <header class="hero-split theme-spico hero-split-theme">
         <div class="hero-top">
             <div class="hero-slogan reveal">
-                <span class="slide-tag">01. PROJECT OVERVIEW</span>
-                <h4>당신의 발표를<br>디자인하다</h4>
+                <span class="slide-tag">PRESENTATION COACHING</span>
+                <h4 class="hero-slogan-text">발표에<br>확신을 더하다</h4>
             </div>
             <div class="hero-logo-side reveal">
                 <div class="spico-logo-wrap">
@@ -33,13 +34,15 @@
             <div class="hero-detail-left reveal">
                 <div class="meta-item"><label>PROJECT</label><span>Spico</span></div>
                 <div class="meta-item"><label>OVERVIEW</label><span>발표 연습 애플리케이션</span></div>
-                <div class="meta-item"><label>PERIOD</label><span>2025.04.14 ~ 05.22 (6 Weeks)</span></div>
-                <div class="meta-item"><label>MEMBERS</label><span>6명 (And 3, Back 2, Infra 1)</span></div>
+                <div class="meta-item"><label>PERIOD</label><span>2025.04.14 ~ 05.22 (6주)</span></div>
+                <div class="meta-item"><label>MEMBERS</label><span>6명 (안드로이드 3, 백엔드 2, 인프라 1)</span></div>
                 <div class="meta-item"><label>ROLE</label><span>안드로이드, UI/UX디자인</span></div>
+				<div class="meta-item"><label>TECH</label><span>Kotlin, Android, MariaDB</span></div>
             </div>
             <div class="hero-detail-right reveal">
-                <h2>내 손안의 AI 발표 코치, Spico</h2>
-                <p>발표 공포증을 겪는 사용자들을 위해 실시간 음성 분석과 AI 피드백을 결합한 지능형 코칭 솔루션입니다. 사용자의 발화 습관을 실시간으로 추정하고 개선 방향을 제시합니다.</p>
+                <h2>내 손안의 AI 발표 코치</h2>
+                <p>학교 발표, 면접 등 다양한 상황에서 말하기는 필수가 되었지만,<br>혼자 연습하긴 어렵고 민망한 발표.</p>
+				<p>Spico는 누구나 혼자서도 발표 실력을 키울 수 있도록, 실시간 피드백과 청중 모드와 같은 실전 연습 환경을 제공합니다.</p>
             </div>
         </div>
     </header>
@@ -87,7 +90,7 @@
                     </div>
                 </div>
                 <div class="core-main-mockup">
-                    <video src="../assets/spico/coaching_mode.mp4" autoplay loop muted playsinline style="width: 300px; border-radius: 25px; box-shadow: 0 40px 80px rgba(0,0,0,0.15);"></video>
+                    <img src="../assets/spico/coaching_script_tracking.gif" alt="Spico Coaching Mode" style="width: 300px; border-radius: 25px; box-shadow: 0 40px 80px rgba(0,0,0,0.15);">
                     <div class="floating-badge">REAL-TIME</div>
                 </div>
                 <div class="core-info right">
@@ -118,9 +121,9 @@
                 </div>
                 <div class="step-card">
                     <span class="step-num highlight">02</span>
-                    <div class="step-img"><video src="../assets/spico/coaching_mode.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video></div>
-                    <h4>실시간 코칭</h4>
-                    <p>인텔리전트 엔진이 가이드하는 연습 환경을 경험합니다.</p>
+                    <div class="step-img"><img src="../assets/spico/final_qna.gif" alt="Spico Final QnA" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <h4>발표 연습</h4>
+                    <p>실시간 코칭 및 실전 연습 환경을 경험합니다.</p>
                 </div>
                 <div class="step-card">
                     <span class="step-num">03</span>
@@ -158,22 +161,28 @@
     </section>
 
     <!-- SLIDE 6: [ACCOMPLISHMENT] IMPACT & RETRO -->
-    <section class="slide impact-slide">
+    <!-- SLIDE 6: [OPS] AUTOMATION -->
+    <section class="slide automation-slide">
         <div class="slide-container">
-            <span class="slide-tag">05. IMPACT & REVIEW</span>
-            <h2 class="slide-title">증명된 완성도와<br>도전의 기록</h2>
-            <div class="impact-grid reveal">
-                <div class="impact-main">
-                    <div class="award-hero">
-                        <span class="award-year">2025 SSAFY</span>
-                        <h3>자율 프로젝트 <br><span class="highlight-blue">우수상 수상</span></h3>
-                        <p>기술적 난이도와 사용자 경험의 혁신성을 인정받아<br>전국 단위 프로젝트에서 우수한 성적을 거두었습니다.</p>
+            <span class="slide-tag">05. COLLABORATION & OPS</span>
+            <h2 class="slide-title">협업 자동화<br>환경 설계</h2>
+
+            <div class="automation-flow reveal">
+                <!-- Step 1: Jira -->
+                <div class="auto-card">
+                    <div class="auto-img"><img src="../assets/spico/jira.png" alt="Jira Automation"></div>
+                    <div class="auto-info">
+                        <h5>Jira 자동화 트리거</h5>
+                        <p>브랜치 생성 시 상태 자동 전환<br>MR 완료 시 이슈 상태 이동 자동화</p>
                     </div>
                 </div>
-                <div class="retro-side">
-                    <div class="retro-box">
-                        <label>Technical Challenge</label>
-                        <p><strong>AudioRecord 리소스 충돌</strong>: STT와 녹음 기능의 병행 시도를 통해 플랫폼 제약 사항에 대한 깊은 이해를 얻고, 리소스 우선순위 관리의 중요성을 학습했습니다.</p>
+
+                <!-- Step 2: GPT Commit -->
+                <div class="auto-card highlight">
+                    <div class="auto-img"><img src="../assets/spico/commit.png" alt="GPT Commit Generator"></div>
+                    <div class="auto-info">
+                        <h5>GPT 커밋 메시지 생성기</h5>
+                        <p>팀 규칙 기반 메시지 자동 생성<br>작성 부담 감소 및 컨벤션 준수</p>
                     </div>
                 </div>
             </div>
@@ -185,7 +194,7 @@
         <div class="slide-container full-height align-center-vh">
             <div class="outro-content reveal">
                 <div class="award-badge" style="background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 100px; color: white; margin-bottom: 20px; font-weight: 800;">SSAFY 우수상 🏆</div>
-                <h2 class="slide-title white" style="margin-bottom: 30px;">Spico</h2>
+                <h2 class="slide-title white" style="margin-bottom: 30px;">발표에 확신을 더하다, Spico</h2>
                 <div class="link-row">
                     <a href="https://github.com/YoungdanNoh/Spico" target="_blank" class="btn btn-outline white-border">GitHub</a>
                     <a href="https://www.youtube.com/watch?v=kVqDxbPYqXk" target="_blank" class="btn btn-outline white-border" style="margin-left: 10px;">YouTube</a>
@@ -417,6 +426,7 @@
         /* Outro */
         .align-center-vh { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
         .full-height { min-height: 70vh; }     
+		.award-badge { background: rgba(255,255,255,0.2); color: white; padding: 8px 20px; border-radius: 100px; font-weight: 800; margin-bottom: 20px; display: inline-block; }
 		.btn-outline.white-border { border-color: white; color: white; }
 		.btn-outline.white-border:hover { background: white; color: var(--accent); }
 
