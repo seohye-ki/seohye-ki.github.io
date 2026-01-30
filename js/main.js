@@ -214,4 +214,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* --- DYNAMIC REVIEW PROJECT COLORS --- */
+    const projectColors = {
+        "spico": "#42D596",
+        "lufin": "#3b82f6",
+        "docshund": "#B97E65",
+        "everymatch": "#f1654c",
+        "42seoul": "#0f172a"
+    };
+
+    document.querySelectorAll('.review-project').forEach(el => {
+        const projectName = el.innerText.trim().toLowerCase(); // Normalize to lowercase
+        if (projectColors[projectName]) {
+            el.style.color = projectColors[projectName];
+        }
+    });
+
 });
