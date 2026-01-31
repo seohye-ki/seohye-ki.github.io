@@ -27,11 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let currentIndex = 0;
     let autoPlayTimer;
+    let isAnimating = false;
 
     function updateCarousel() {
-        // Update Header Background with Subtle Gradient
-        // Check if header exists to avoid errors on page load if elements missing
         if (!header || !bottomLogo) return;
+
+        // Debounce: Lock interaction
+        isAnimating = true;
+        setTimeout(() => { isAnimating = false; }, 600); // Match CSS transition 0.6s
 
         const [c1, c2] = gradients[currentIndex];
         header.style.background = `linear-gradient(to bottom, ${c1}, ${c2})`;
@@ -71,6 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Allow clicking prev/next to navigate
             card.onclick = () => {
+                if (isAnimating) return; // Prevent click while animating
+                
                 if (index !== currentIndex) {
                     currentIndex = index;
                     updateCarousel();
@@ -111,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Button Listeners
     if (nextBtn) {
         nextBtn.addEventListener('click', () => {
+            if (isAnimating) return;
             nextSlide();
             resetAutoPlay();
         });
@@ -118,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
+            if (isAnimating) return;
             prevSlide();
             resetAutoPlay();
         });
