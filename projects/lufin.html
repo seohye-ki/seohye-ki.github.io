@@ -23,7 +23,7 @@
         <a href="../index.html" class="back-btn">← BACK</a>
     </nav>
 
-    <!-- HEADER: HERO -->
+    <!-- SLIDE 1: HERO -->
     <header class="hero-split theme-lufin">
         <div class="hero-top">
             <div class="hero-slogan reveal">
@@ -56,13 +56,51 @@
             </div>
         </div>
     </header>
+    
+    <!-- SLIDE 2: MISSION & VISION -->
+    <section class="slide vision-slide">
+        <div class="slide-container">
+            <span class="slide-tag">01. MISSION & VISION</span>
+            
+            <div class="quote-box reveal">
+                <h3>금융은 주입식 교육이 아니라,<br><span style="color:var(--accent);">직접 살아보는</span> 경험이어야 합니다.</h3>
+            </div>
 
-    <!-- SLIDE 1: FINANCIAL LOGIC -->
+            <div class="tech-focus-grid reveal" style="align-items: stretch; gap: 40px; margin-top: 40px;">
+                <!-- GIF side -->
+                <div class="f-media" style="width: 100%; height: 100%; background: transparent; box-shadow: none; overflow: visible;">
+                    <img src="../assets/LuFin/dashboard_student_credit_flip.gif" alt="LuFin Credit System" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
+                </div>
+                
+                <!-- Cards side -->
+                <div class="vision-cards-v" style="display: flex; flex-direction: column; gap: 20px; height: 100%;">
+                    <div class="small-card" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                        <span class="card-label">PROBLEM</span>
+                        <p>체감하기 힘든 금융 교육과<br>추상적인 경제 개념</p>
+                        <div class="tag-cloud">
+                            <span class="tag">금융맹 증가</span>
+                            <span class="tag">이론 위주 교육</span>
+                        </div>
+                    </div>
+                    <div class="small-card accent" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                        <span class="card-label" style="opacity: 0.9; color: white;">SOLUTION</span>
+                        <p>게임을 통한 실생활 기반<br>금융 시뮬레이션</p>
+                        <div class="tag-cloud">
+                            <span class="tag" style="background: rgba(255,255,255,0.2); color: white; border:none;">신용 등급제</span>
+                            <span class="tag" style="background: rgba(255,255,255,0.2); color: white; border:none;">경제 생태계</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3: CORE FUNCTION 01 -->
     <section class="slide feature-slide bg-light">
         <div class="slide-container">
-            <span class="slide-tag">01. SIMULATION LOGIC</span>
+            <span class="slide-tag">02. CORE FUNCTION</span>
             <div class="quote-box reveal">
-                <h3>"게임처럼 보이지만, <span style="color:var(--accent);">금융의 본질</span>을 담아냈습니다."</h3>
+                <h3>게임처럼 보이지만, <span style="color:var(--accent);">금융의 본질</span>을 담아냈습니다.</h3>
             </div>
             
             <div class="feature-grid reveal">
@@ -81,70 +119,126 @@
                     </div>
                     <div class="f-content">
                         <h4>아이템 상점 도메인</h4>
-                        <p>구매, 환불, 사용 요청 등 상점의 전 과정을 상태 기반 흐름(State-based)으로 설계</p>
+                        <p>구매부터 사용, 환불까지 이어지는 아이템 생명주기 로직 구축</p>
                     </div>
                 </div>
                 <div class="feature-card">
                     <div class="f-media">
-                        <img src="../assets/LuFin/secondary_auth.gif" alt="Auth">
+                        <img src="../assets/LuFin/stock_buy.gif" alt="Stock">
                     </div>
                     <div class="f-content">
-                        <h4>2차 인증번호 보안</h4>
-                        <p>타이머 기반 인증 코드 발급 및 검증 로직으로 계정 안전성 확보</p>
+                        <h4>모의 주식 투자</h4>
+                        <p>주식 관련 뉴스를 확인하고 가격 변동을 예측하여 투자하는 경험을 설계</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 2: CONCURRENCY -->
-    <section class="slide tech-slide">
+    <!-- SLIDE 4: CONTRIBUTION SUMMARY -->
+    <section class="slide t-feature-slide bg-lufin-grad">
         <div class="slide-container">
-            <span class="slide-tag">02. TRANSACTION & CONCURRENCY</span>
+            <span class="slide-tag white">03. KEY CONTRIBUTIONS</span>
+            <h2 class="slide-title white">핵심 프로젝트 기여</h2>
+            
+            <div class="reveal">
+                <!-- Item 1 -->
+                <div class="t-feature-row">
+                    <div class="t-feature-num" style="opacity: 0.5;">01</div>
+                    <div class="t-feature-content">
+                        <h3 class="t-feature-title">JPA 비관적 락(Pessimistic Lock) 적용 동시성 제어</h3>
+                        <p class="t-feature-desc">선착순 아이템 구매 시 발생할 수 있는 Race Condition을 해결하기 위해 `SELECT ... FOR UPDATE` 쿼리를 발생하는 비관적 락을 적용하여 트랜잭션 충돌 없이 재고 데이터의 정합성을 보장했습니다.</p>
+                        <div class="t-tech-badges">
+                            <span class="t-tech-badge">JPA Locking</span>
+                            <span class="t-tech-badge">Transaction ACID</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="t-feature-row">
+                    <div class="t-feature-num" style="opacity: 0.5;">02</div>
+                    <div class="t-feature-content">
+                        <h3 class="t-feature-title">Spring AOP 기반 교사 전용 기능 권한 제어</h3>
+                        <p class="t-feature-desc">커스텀 어노테이션(@TeacherOnly)과 Aspect를 활용하여 컨트롤러마다 반복되는 권한 검증 로직을 깔끔하게 분리하고 모듈화했습니다.</p>
+                        <div class="t-tech-badges">
+                            <span class="t-tech-badge">Aspect Oriented Prog</span>
+                            <span class="t-tech-badge">Custom Annotation</span>
+                        </div>
+                    </div>
+                </div>
+
+				<!-- Item 3 -->
+                <div class="t-feature-row">
+                    <div class="t-feature-num" style="opacity: 0.5;">03</div>
+                    <div class="t-feature-content">
+                        <h3 class="t-feature-title">GitLab + Jenkins 기반 CI/CD 자동화 환경 구축</h3>
+                        <p class="t-feature-desc">코드 푸시부터 빌드, 테스트, Docker 배포까지 이어지는 무중단 자동화 파이프라인을 구축하여 개발 생산성을 극대화했습니다.</p>
+                        <div class="t-tech-badges">
+                            <span class="t-tech-badge">DevOps</span>
+                            <span class="t-tech-badge">Jenkins</span>
+                            <span class="t-tech-badge">DockerHub</span>
+                        </div>
+                    </div>
+                </div>
+
+				<!-- Item 4 -->
+                <div class="t-feature-row">
+                    <div class="t-feature-num" style="opacity: 0.5;">04</div>
+                    <div class="t-feature-content">
+                        <h3 class="t-feature-title">문서화 및 협업 프로세스 표준화</h3>
+                        <p class="t-feature-desc">요구사항 명세서, API 문서(Swagger/RestDocs), 에러 코드 정의 등 개발 전 과정의 산출물을 표준화하여 기획-개발 간 커뮤니케이션 비용을 최소화했습니다.</p>
+                        <div class="t-tech-badges">
+                            <span class="t-tech-badge">Documentation</span>
+                            <span class="t-tech-badge">Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 5: CONTRIBUTION 01[CONCURRENCY] -->
+    <section class="slide feature-slide bg-light">
+        <div class="slide-container">
+            <span class="slide-tag">04. TRANSACTION & CONCURRENCY</span>
             <div class="quote-box reveal">
-                <h3>"데이터는 정직해야 하니까,<br>흐름보다 먼저 <span style="color:var(--accent);">정합성</span>을 설계했습니다."</h3>
+                <h3>데이터는 정직해야 하니까,<br><span style="color:var(--accent);">정합성</span>을 설계했습니다</h3>
             </div>
 
             <div class="tech-focus-grid reveal">
                 <div class="tech-card-large">
                     <div class="code-header">
                         <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
-                        <span>ItemPurchaseService.java</span>
+                        <span>ItemRepository.java</span>
                     </div>
-                    <pre><code class="language-java">@Transactional
-@Lock(LockModeType.PESSIMISTIC_WRITE) // 비관적 락(Pessimistic Lock)
-public void purchaseItem(Long itemId, Long userId) {
-    Item item = itemRepository.findByIdWithLock(itemId);
-    
-    // 재고 확인 및 차감 (동시성 제어 핵심 구간)
-    if (item.getStock() <= 0) {
-        throw new OutOfStockException();
-    }
-    item.decreaseStock();
-    
-    // ... 결제 로직 수행
-}</code></pre>
+                    <pre><code class="language-java">@Lock(LockModeType.PESSIMISTIC_WRITE)
+@QueryHints({
+    @QueryHint(name = "jakarta.persistence.lock.timeout", value = "1000")
+})
+@Query("SELECT i FROM Item i WHERE i.id = :itemId")
+Optional&lt;Item&gt; findByIdWithPessimisticLock(@Param("itemId") Integer itemId);</code></pre>
                 </div>
                 <div class="tech-desc-side">
                     <div class="desc-item">
-                        <h5>🛡️ 비관적 Lock 도입</h5>
-                        <p>선착순 아이템 구매, 자동이체 등 충돌 빈도가 높은 로직에 <strong>Pessimistic Lock</strong>을 적용하여 데이터 무결성을 절대적으로 보장했습니다.</p>
+                        <h5>🛡️ 비관적 Lock (Pessimistic Lock)</h5>
+                        <p>선착순 아이템 구매와 같이 충돌 빈도가 높은 핵심 로직에 <strong>DB 수준의 Lock</strong>을 적용하여, 동일 자원에 대한 동시 접근을 원천적으로 차단하고 데이터 정합성을 보장했습니다.</p>
                     </div>
                     <div class="desc-item">
-                        <h5>📊 시스템 영향도 평가</h5>
-                        <p>기능 수정 전 항상 리스크를 분석하고, 도메인 간의 데이터 흐름을 추적하여 사이드 이펙트를 최소화했습니다.</p>
+                        <h5>⏱️ Lock Timeout 설정</h5>
+                        <p>무한 대기(Deadlock)를 방지하기 위해 1초(`1000ms`)의 타임아웃을 설정하여 시스템의 가용성과 안정성을 동시에 확보했습니다.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 3: INFRA & AOP -->
+    <!-- SLIDE 6: CONTRIBUTION 02, 03[INFRA & AOP] -->
     <section class="slide role-slide bg-blue-grad">
         <div class="slide-container">
-            <span class="slide-tag white">03. INFRA & AOP</span>
+            <span class="slide-tag white">05. INFRA & AOP</span>
             <div class="quote-box reveal">
-                <h3 class="white">"반복되는 확인은 도구에 맡기고,<br>로직에만 집중할 수 있도록."</h3>
+                <h3 class="white">반복되는 확인은 도구에 맡기고,<br>로직에만 집중할 수 있도록</h3>
             </div>
 
             <div class="role-grid reveal">
@@ -155,31 +249,47 @@ public void purchaseItem(Long itemId, Long userId) {
                         <li><strong>GitLab + Jenkins</strong>: 푸시 시 자동 빌드/테스트 파이프라인 가동</li>
                         <li><strong>AWS EC2 + Docker</strong>: 멀티 컨테이너 환경 구성으로 배포 효율화</li>
                     </ul>
+                    <p style="margin-top:15px; font-size:0.9rem; opacity:0.8;">비즈니스 로직에만 몰입할 수 있는 자동화 환경을 구축하여 개발 생산성을 극대화했습니다.</p>
                 </div>
                 <div class="role-card">
                     <div class="role-icon">🔐</div>
-                    <h4>AOP 권한 분리</h4>
-                    <pre style="background:rgba(0,0,0,0.3); padding:15px; border-radius:10px; margin-top:15px;"><code class="language-java" style="background:transparent; padding:0; font-size:0.85rem;">@TeacherOnly // Custom Annotation
-@PostMapping("/approve")
-public ResponseEntity<?> approveRequest() {
-    // 권한 체크 로직을 AOP로 분리
-    // 비즈니스 로직은 기능에만 집중
+                    <h4>AOP 권한 제어</h4>
+                    <div class="code-header" style="background:rgba(0,0,0,0.4); margin-top:10px;">
+                        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+                        <span>RoleCheckAspect.java</span>
+                    </div>
+                    <pre style="background:rgba(0,0,0,0.3); padding:15px; border-radius:0 0 10px 10px; margin-top:0;"><code class="language-java" style="background:transparent; padding:0; font-size:0.75rem;">@Aspect @Component
+public class RoleCheckAspect {
+    @Before("@annotation(TeacherOnly)")
+    public void checkTeacherRole() {
+        Member member = getCurrentUser();
+        if (member.getMemberRole() != MemberRole.TEACHER) {
+            throw new BusinessException(ErrorCode.REQUEST_DENIED);
+        }
+    }
 }</code></pre>
-                    <p style="margin-top:15px; font-size:0.9rem; opacity:0.9;">교사/학생 권한 체크 로직을 횡단 관심사로 분리하여 코드 중복을 제거하고 가독성을 높였습니다.</p>
+                    <div style="margin-top:15px;">
+                        <h5 style="color:white; font-size:1rem; margin-bottom:5px;">횡단 관심사 분리의 성과</h5>
+                        <ul style="font-size:0.85rem; opacity:0.9; padding-left:15px;">
+                            <li><strong>코드 응집도 향상</strong>: 수십 개의 API 컨트롤러에서 권한 체크 로직을 완전히 제거</li>
+                            <li><strong>유지보수 용이성</strong>: 권한 로직 변경 시 Aspect 클래스 한 곳만 수정</li>
+                            <li><strong>실수 방지</strong>: 어노테이션 하나로 누락 없는 보안 정책 적용 가능</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 4: DOCS & DDD -->
+    <!-- SLIDE 7: CONTRIBUTION 04[DOCS & DDD] -->
     <section class="slide retro-slide">
         <div class="slide-container">
-            <span class="slide-tag">04. PROCESS & DOCUMENTATION</span>
+            <span class="slide-tag">06. PROCESS & DOCUMENTATION</span>
             <div class="quote-box reveal">
-                <h3>"정리가 되어야<br>협업도, 구현도 흔들리지 않습니다."</h3>
+                <h3>정리가 되어야<br>협업도, 구현도 흔들리지 않습니다</h3>
             </div>
 
-            <div class="vision-grid reveal" style="display: flex; flex-direction: column; gap: 30px;">
+            <div class="reveal" style="display: flex; flex-direction: column; gap: 30px;">
                 <div class="vision-text" style="width: 100%; max-width: 100%;">
                     <div class="tech-point">
                         <strong>DDD Event Storming</strong>
@@ -188,7 +298,7 @@ public ResponseEntity<?> approveRequest() {
                 </div>
                 <div class="f-media" style="width: 100%; height: auto; background:transparent; box-shadow:none; overflow:visible;">
                     <!-- Image Grid: 3 Columns for compact height -->
-                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
                         <img src="../assets/LuFin/event_storming1.jpeg" alt="Event Storming Overview" style="width:100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
                         <img src="../assets/LuFin/event_storming2.png" alt="Event Storming Detail 1" style="width:100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
                         <img src="../assets/LuFin/event_storming3.png" alt="Event Storming Detail 2" style="width:100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
@@ -198,7 +308,7 @@ public ResponseEntity<?> approveRequest() {
                     <div class="tech-point">
                         <strong>협업의 기준을 세우는 문서화</strong>
                         <p style="margin-top:10px; line-height:1.7; color:var(--text-muted);">
-                            요구사항 명세서, API 스펙, 에러 코드 정의 등 개발 전 과정의 산출물을 표준화하여 커뮤니케이션 비용을 최소화하고, 기획과 개발 간의 간극을 줄였습니다.
+                            요구사항 명세서, API 문서, 에러 코드 정의, ERD 등 개발 전 과정의 산출물을 표준화하여 커뮤니케이션 비용을 최소화하고, 기획과 개발 간의 간극을 줄였습니다.
                         </p>
                     </div>
                 </div>
@@ -247,8 +357,12 @@ public ResponseEntity<?> approveRequest() {
         .bg-light { background-color: var(--bg-light); }
         .bg-blue-grad { background: var(--blue-grad); }
         .bg-blue { background-color: var(--accent); }
+        .bg-lufin-grad { 
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); 
+            color: white;
+        }
+        .bg-lufin-grad .slide-tag { color: var(--accent); }
 
-        .slide-container { max-width: 1200px; margin: 0 auto; padding: 100px 5%; }
         
         .slide-tag {
             display: inline-block; color: var(--accent); font-family: 'Outfit'; font-weight: 800;
@@ -285,8 +399,25 @@ public ResponseEntity<?> approveRequest() {
         .desc-item p { color: var(--text-muted); line-height: 1.7; }
 
         /* Role & Infra */
-        .role-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        .role-card { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 24px; color: white; border: 1px solid rgba(255,255,255,0.2); }
+        .t-feature-row {
+            display: grid;
+            grid-template-columns: 50px 1fr;
+            gap: 20px;
+            padding: 35px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+        .t-feature-num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--accent);
+            opacity: 0.5;
+            line-height: 1;
+        }
+        .role-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+        .role-card { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 24px; color: white; border: 1px solid rgba(255,255,255,0.2); min-width: 0; }
         .role-icon { font-size: 2.5rem; margin-bottom: 20px; }
         .role-card h4 { font-size: 1.4rem; margin-bottom: 15px; font-weight: 800; }
         .role-card ul { padding-left: 20px; line-height: 1.8; opacity: 0.9; }
@@ -326,10 +457,11 @@ public ResponseEntity<?> approveRequest() {
             .role-card ul { font-size: 0.9rem; line-height: 1.6; padding-left: 15px; word-break: break-word; } /* Allow break for links/tech terms */
             
             pre { 
-                overflow-x: auto; 
-                white-space: pre; 
+                overflow-x: auto !important; 
+                white-space: pre !important; 
                 width: 100%; 
                 max-width: 100%; 
+                display: block;
                 font-size: 0.8rem; 
                 scrollbar-width: thin; 
                 -webkit-overflow-scrolling: touch; 

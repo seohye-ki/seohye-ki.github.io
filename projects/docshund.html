@@ -22,7 +22,7 @@
         <a href="../index.html" class="back-btn">← BACK</a>
     </nav>
 
-    <!-- HEADER: HERO -->
+    <!-- SLIDE 1: HERO -->
     <header class="hero-split theme-docshund">
         <div class="hero-top">
             <div class="hero-slogan reveal">
@@ -55,52 +55,54 @@
         </div>
     </header>
 
-    <!-- SLIDE 1: MISSION & VISION -->
+    <!-- SLIDE 2: MISSION & VISION -->
     <section class="slide vision-slide">
         <div class="slide-container">
-            <span class="slide-tag">01. MISSION</span>
-            <div class="quote-box reveal">
-                <h3>"공식 문서는 정확해야 하지만,<br><span style="color:var(--accent);">누구나 쉽게</span> 읽을 수 있어야 합니다."</h3>
+            <span class="slide-tag">01. MISSION & VISION</span>
+
+            <div class="f-media reveal" style="display: block; height: auto; margin: 20px 0 40px 0; width: 80%; max-width: 800px; overflow: visible !important;">
+                <img src="../assets/docshund/main.gif" alt="Docshund Home" style="width: 100%; max-width: 100%; max-height: none; border-radius: 20px !important; box-shadow: 0 20px 50px rgba(0,0,0,0.1) !important;">
             </div>
             
-            <div class="vision-grid">
-                <div class="bubble-container reveal">
-                    <div class="bubble as-is">
-                        <label>PROBLEM</label>
-                        <p style="font-weight: 600;">높은 언어 장벽과 파편화된 번역 정보</p>
-                        <div class="tag-cloud">
-                            <span class="tag">영어 울렁증</span>
-                            <span class="tag">부정확한 자동 번역</span>
-                        </div>
-                    </div>
-                    <div class="bubble to-be">
-                        <label>SOLUTION</label>
-                        <p style="font-weight: 600; color: var(--accent);">집단지성을 통한 신뢰할 수 있는 집단 번역</p>
-                        <div class="tag-cloud">
-                            <span class="tag" style="background:var(--accent); color:white;">문단별 번역 투표</span>
-                            <span class="tag" style="background:var(--accent); color:white;">함께 만드는 지식</span>
-                        </div>
+            <div class="quote-box reveal">
+                <h3>공식 문서는 정확해야 하지만,<br><span style="color:var(--accent);">누구나 쉽게</span> 읽을 수 있어야 합니다</h3>
+                <p class="slide-p" style="margin-top: 30px; max-width: 800px;">
+                    DocshunD는 혼자 읽기 힘든 방대한 공식 문서를 개발자들이 힘을 합쳐 번역하고,
+                    실시간으로 질문과 답변을 주고받으며 함께 성장하는 공간입니다.
+                </p>
+            </div>
+            
+            <!-- Cards (Below GIF) -->
+            <div class="vision-cards reveal">
+                <div class="small-card">
+                    <span class="card-label">PROBLEM</span>
+                    <p>높은 언어 장벽과<br>파편화된 번역 정보</p>
+                    <div class="tag-cloud">
+                        <span class="tag">영어 울렁증</span>
+                        <span class="tag">부정확한 자동 번역</span>
                     </div>
                 </div>
-                <div class="vision-text reveal">
-                    <p class="slide-p">
-                        DocshunD는 혼자 읽기 힘든 방대한 공식 문서를 개발자들이 힘을 합쳐 번역하고,
-                        실시간으로 질문과 답변을 주고받으며 함께 성장하는 공간입니다.
-                    </p>
+                <div class="small-card accent">
+                    <span class="card-label" style="opacity: 0.9; color: white;">SOLUTION</span>
+                    <p>집단지성을 통한<br>신뢰할 수 있는 공동 번역</p>
+                    <div class="tag-cloud">
+                        <span class="tag" style="background: rgba(255,255,255,0.2); color: white; border:none;">문단별 번역 투표</span>
+                        <span class="tag" style="background: rgba(255,255,255,0.2); color: white; border:none;">함께 만드는 지식</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 2: CORE FEATURES (TRANSLATION) -->
+    <!-- SLIDE 3: CORE FUNCTION 01[Translation]-->
     <section class="slide feature-slide bg-light">
         <div class="slide-container">
-            <span class="slide-tag">02. CORE FEATURES</span>
+            <span class="slide-tag">02. TRANSLATION</span>
             <h2 class="slide-title">함께 만드는 번역</h2>
             
             <div class="feature-layout reveal">
                 <div class="f-image-large">
-                    <img src="../assets/docshund/pc_best_translate.png" alt="Translation System">
+                    <img src="../assets/docshund/docstrans.gif" alt="Translation System" style="border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
                 </div>
                 <div class="f-desc-side">
                     <div class="f-item">
@@ -116,10 +118,10 @@
         </div>
     </section>
 
-    <!-- SLIDE 3: COMMUNICATION & UTILITY -->
+    <!-- SLIDE 4: CORE FUNCTION 02[COMMUNICATION & UTILITY] -->
     <section class="slide feature-slide">
         <div class="slide-container">
-            <span class="slide-tag">03. COMMUNICATION</span>
+            <span class="slide-tag">03. COMMUNICATION & UTILITY</span>
             <h2 class="slide-title">소통과 기록을 동시에</h2>
 
             <div class="grid-2col reveal">
@@ -129,7 +131,7 @@
                     </div>
                     <div class="f-content">
                         <h4>문서별 실시간 채팅</h4>
-                        <p>STOMP.js 기반의 WebSocket 채팅으로 문서를 보며 실시간으로 질의응답을 나눕니다.</p>
+                        <p>문서별 채팅방에서 문서를 보며 실시간으로 질의응답을 나눕니다.</p>
                         <span class="f-tag">STOMP.js</span>
                     </div>
                 </div>
@@ -139,7 +141,7 @@
                     </div>
                     <div class="f-content">
                         <h4>마크다운 메모장</h4>
-                        <p>번역 중 중요한 내용을 바로 기록할 수 있는 사이드바 형태의 에디터를 제공합니다.</p>
+                        <p>번역 중 중요한 내용을 바로 기록할 수 있는 개인 메모장을 제공합니다.</p>
                         <span class="f-tag">React MD Editor</span>
                     </div>
                 </div>
@@ -147,63 +149,151 @@
         </div>
     </section>
 
-    <!-- SLIDE 4: TECH & FRONTEND ROLE -->
-    <section class="slide tech-slide bg-light">
+    <!-- SLIDE 5: CONTRIBUTION SUMMARY -->
+    <section class="slide t-feature-slide" style="background: linear-gradient(135deg, #0f172a 0%, #472d21 100%); color: white;">
         <div class="slide-container">
-            <span class="slide-tag">04. TECH & ROLE</span>
-            <h2 class="slide-title">사용자 경험을 위한 기술</h2>
-
-            <div class="tech-focus-grid reveal">
-                <div class="tech-card-large" style="background: #2D2420;">
-                    <div class="code-header">
-                        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
-                        <span>AxiosInterceptor.js</span>
+            <span class="slide-tag white">04. KEY CONTRIBUTIONS</span>
+            <h2 class="slide-title white">핵심 프로젝트 기여</h2>
+            
+            <div class="t-feature-container reveal">
+                <!-- Item 1 -->
+                <div class="t-feature-row">
+                    <div class="t-feature-num">01</div>
+                    <div class="t-feature-content">
+                        <h3 class="t-feature-title">STOMP.js + SockJS 활용 실시간 다채널 채팅 구현</h3>
+                        <p class="t-feature-desc">문서 ID를 WebSocket Topic으로 구독하는 Pub/Sub 구조를 설계하여 문서 독자가 서로 간섭 없이 독립적인 대화를 나눌 수 있는 실시간 채팅 서버를 구축했습니다.</p>
+                        <div class="t-tech-badges">
+                            <span class="t-tech-badge">STOMP.js</span>
+                            <span class="t-tech-badge">WebSocket Pub/Sub</span>
+                        </div>
                     </div>
-                    <pre><code class="language-javascript">const instance = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
-});
-
-// 요청 인터셉터: JWT 자동 주입
-instance.interceptors.request.use((config) => {
-    const token = localStorage.getItem('accessToken');
-    if (token) config.headers.Authorization = `Bearer ${token}`;
-    return config;
-});
-
-// 응답 인터셉터: 예외 처리 표준화
-instance.interceptors.response.use(
-    (response) => response,
-    (error) => {
-        if (error.response.status === 401) {
-            handleLogout(); // 세션 만료 시 자동 처리
-        }
-        return Promise.reject(error);
-    }
-);</code></pre>
                 </div>
-                <div class="tech-desc-side">
-                    <div class="desc-item">
-                        <h5>🎨 Tailwind CSS 반응형 UI</h5>
-                        <p>모바일, 태블릿, 데스크톱 등 모든 디바이스에서 최적화된 가독성을 제공하기 위해 <strong>Mobile First Approach</strong>로 디자인했습니다.</p>
+
+                <!-- Item 2 -->
+                <div class="t-feature-row">
+                    <div class="t-feature-num">02</div>
+                    <div class="t-feature-content">
+                        <h3 class="t-feature-title">Axios Interceptor & Router Guard 기반 보안 시스템</h3>
+                        <p class="t-feature-desc">Axios Interceptor를 통해 모든 요청에 JWT 토큰을 자동 주입하고, React Router Guard를 구현하여 권한이 없는 사용자의 접근을 원천 차단하는 Stateless 인증 시스템을 구축했습니다.</p>
+                        <div class="t-tech-badges">
+                            <span class="t-tech-badge">Axios Interceptor</span>
+                            <span class="t-tech-badge">React Router</span>
+							<span class="t-tech-badge">JWT</span>
+                        </div>
                     </div>
-                    <div class="desc-item">
-                        <h5>🔐 보안 및 인증 처리</h5>
-                        <p><strong>Axios Interceptor</strong>와 <strong>Router Guard</strong>를 구현하여 인증 토큰 관리와 페이지 접근 제어를 중앙에서 표준화했습니다.</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="t-feature-row">
+                    <div class="t-feature-num">03</div>
+                    <div class="t-feature-content">
+                        <h3 class="t-feature-title">Tailwind CSS 활용한 반응형 UI 시스템</h3>
+                        <p class="t-feature-desc">프로젝트 전용 색상, 폰트를 정의하고, 이를 기반으로 모바일, 태블릿, 데스크톱 3단계 반응형 레이아웃을 일관성 있게 구현했습니다.</p>
+                        <div class="t-tech-badges">
+                            <span class="t-tech-badge">Tailwind CSS</span>
+                            <span class="t-tech-badge">Responsive Design</span>
+                        </div>
                     </div>
-                    <div class="desc-item">
-                        <h5>⚡ STOMP.js 채팅 로직</h5>
-                        <p>WebSocket 구독 관리 및 자동 스크롤(Smart Scroll) 로직을 구현하여 끊김 없는 대화 경험을 제공했습니다.</p>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="t-feature-row">
+                    <div class="t-feature-num">04</div>
+                    <div class="t-feature-content">
+                        <h3 class="t-feature-title">QA 및 프로젝트 퀄리티 강화</h3>
+                        <p class="t-feature-desc">정식 QA 3회, 외부 QA 진행 및 팀 내 전담 인원 배정을 통해 기능, 로딩, 예외 상황을 집중 검증했습니다. 특히 현업 QA 전문가의 검수를 통해 실제 서비스 수준의 완성도를 확보했다는 평가를 받았습니다.</p>
+                        <div class="t-tech-badges">
+                            <span class="t-tech-badge">QA</span>
+                            <span class="t-tech-badge">User Experience</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 5: TEAM CULTURE -->
-    <!-- SLIDE 5: ENGINEERING (RESPONSIVE) -->
+    <!-- SLIDE 6: CONTRIBUTION 01 [STOMP.js Chat Logic] -->
+    <section class="slide feature-slide bg-light">
+        <div class="slide-container">
+            <span class="slide-tag">05. CHATTING</span>
+            <h2 class="slide-title align-center">흐름이 끊기지 않도록,<br>채팅 UX의 디테일</h2>
+            
+            <div class="core-showcase reveal">
+                <div class="core-info left">
+                    <div class="info-pod">
+                        <h5>다채널 구독 관리</h5>
+                        <p>문서 ID별로 고유한 Topic을 구독하며, 페이지 이탈 시 자동으로 구독을 해제하여 안정성을 확보했습니다.</p>
+                    </div>
+                    <div class="info-pod">
+                        <h5>실시간 대화 공간</h5>
+                        <p>STOMP.js 기반의 WebSocket Pub/Sub 구조를 설계하여 독자 간 간섭 없는 소통 환경을 구축했습니다.</p>
+                    </div>
+                </div>
+                <div class="core-main-mockup">
+                    <img src="../assets/docshund/chatting.png" alt="Chat Logic Mockup" style="width: 100%; max-width: 280px; height: auto; border-radius: 20px; box-shadow: 0 40px 80px rgba(0,0,0,0.15);">
+                </div>
+                <div class="core-info right">
+                    <div class="info-pod">
+                        <h5>Smart Scroll UX</h5>
+                        <p>내가 메시지를 전송하거나 이미 하단에 있을 때만 자동 스크롤되는 스마트 로직을 구현했습니다.</p>
+                    </div>
+                    <div class="info-pod">
+                        <h5>사용자 위치 보존</h5>
+                        <p>과거 메시지를 읽는 중에는 신규 메시지가 와도 스크롤이 고정되어 흐름을 방해하지 않습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 7: CONTRIBUTION 02 [Axios Interceptor & Router Guard] -->
+    <section class="slide tech-slide">
+        <div class="slide-container">
+            <span class="slide-tag">06. SECURITY</span>
+            <h2 class="slide-title">간결하게, 확실하게</h2>
+
+            <div class="tech-focus-grid reveal" style="grid-template-columns: 1.3fr 0.7fr; gap: 40px; align-items: flex-start;">
+                <div class="tech-card-large" style="background: #2D2420;">
+                    <div class="code-header">
+                        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+                        <span>AxiosInterceptor.jsx</span>
+                    </div>
+                    <pre><code class="language-javascript">// Axios Interceptor: 자동 토큰 주입 및 401 에러 통합 처리
+const requestInterceptor = (config) => {
+  const token = localStorage.getItem("token");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+};
+
+const responseInterceptor = (error) => {
+  if (error.response?.status === 401) {
+    // 전역 AuthStore를 통한 로그아웃 처리
+    useAuthStore.getState().logout();
+    window.location.href = "/";
+  }
+  return Promise.reject(error);
+};</code></pre>
+                </div>
+                <div class="tech-desc-side">
+                    <div class="desc-item">
+                        <h5>인증 표준화</h5>
+                        <p>Axios 인스턴스에 공통 인터셉터를 적용하여, 모든 API 요청에서 토큰 누락을 방지하고 보안 로직을 모듈화했습니다.</p>
+                    </div>
+                    <div class="desc-item">
+                        <h5>자동 토큰 주입</h5>
+                        <p>모든 네트워크 요청 시 헤더에 JWT 토큰을 자동으로 포함시켜, 매 API마다 반복되는 인증 코드를 효율적으로 제거했습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 8: CONTRIBUTION 03 [Responsive] -->
     <section class="slide role-slide" style="background: linear-gradient(135deg, #B97E65 0%, #8c5e4d 100%);">
         <div class="slide-container">
-            <span class="slide-tag white">05. RESPONSIVE ENGINEERING</span>
+            <span class="slide-tag white">07. RESPONSIVE UI</span>
             <h2 class="slide-title white">어디서든 완벽한<br>가독성을 위해</h2>
             
             <div class="reveal" style="display: flex; align-items: center; justify-content: center; gap: 50px; flex-wrap: wrap;">
@@ -232,7 +322,7 @@ instance.interceptors.response.use(
         </div>
     </section>
 
-    <!-- SLIDE 6: OUTRO -->
+    <!-- SLIDE 9: OUTRO -->
     <section class="slide outro-slide" style="background: #A66D55;">
         <div class="slide-container full-height align-center-vh">
             <div class="outro-content reveal">
@@ -269,7 +359,6 @@ instance.interceptors.response.use(
         .bg-light { background-color: #fafaf9; }
         
         /* Layout Utilities */
-        .slide-container { max-width: 1200px; margin: 0 auto; padding: 100px 5%; }
         
         .slide-tag {
             display: inline-block; color: var(--accent); font-family: 'Outfit'; font-weight: 800;
@@ -334,9 +423,27 @@ instance.interceptors.response.use(
         .btn-outline.white-border:hover { background: white; color: var(--accent); }
         .btn-text { color: white; text-decoration: underline; background: none; border: none; font-weight: 600; }
         .footer-copy { margin-top: 80px; color: white; opacity: 0.4; font-size: 0.8rem; }
+        
+        /* Core Showcase (Spico Style) */
+        .core-showcase { display: flex; justify-content: center; align-items: center; gap: 60px; margin-top: 60px; }
+        .core-info { display: flex; flex-direction: column; gap: 40px; width: 320px; }
+        .core-info.left { text-align: right; }
+        .info-pod h5 { font-size: 1.2rem; margin-bottom: 10px; font-weight: 800; color: #111; }
+        .info-pod p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
+        .core-main-mockup { position: relative; }
+        .floating-badge {
+            position: absolute; top: -20px; right: -20px; background: var(--accent);
+            color: white; padding: 10px 20px; border-radius: 30px; font-weight: 800; font-size: 0.8rem;
+            box-shadow: 0 10px 20px rgba(185, 126, 101, 0.4);
+        }
+        .align-center { text-align: center; }
 
         @media (max-width: 900px) {
-            .vision-grid, .feature-layout, .grid-2col, .tech-focus-grid { grid-template-columns: 1fr; }
+            .vision-grid, .feature-layout, .grid-2col, .tech-focus-grid { grid-template-columns: 1fr !important; }
+            .core-showcase { flex-direction: column; gap: 40px; }
+            .core-info { width: 100%; text-align: left !important; }
+            .core-main-mockup img { max-width: 240px !important; }
+            .hero-mockups { height: auto; position: relative; margin: 40px 0; }
             .hero-mockups { height: auto; position: relative; margin: 40px 0; }
             .scale-laptop { width: 100%; position: static; transform: none; }
         }

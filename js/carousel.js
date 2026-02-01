@@ -57,16 +57,19 @@ document.addEventListener('DOMContentLoaded', () => {
         cards.forEach((card, index) => {
             // Reset classes
             card.className = 'carousel-card';
-            
-            const diff = index - currentIndex;
+
+            let diff = index - currentIndex;
+            const n = cards.length;
+            if (diff > n / 2) diff -= n;
+            if (diff < -n / 2) diff += n;
 
             if (diff === 0) {
                 card.classList.add('active');
-            } else if (diff === -1) {
+            } else if (diff === -1 || (diff === n-1)) {
                 card.classList.add('prev');
-            } else if (diff === 1) {
+            } else if (diff === 1 || (diff === -(n-1))) {
                 card.classList.add('next');
-            } else if (diff < -1) {
+            } else if (diff < 0) {
                 card.classList.add('far-prev');
             } else {
                 card.classList.add('far-next');

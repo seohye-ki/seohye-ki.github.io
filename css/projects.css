@@ -15,7 +15,13 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    /* Removed overflow: hidden to allow bridging mockups */
+}
+
+.slide-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 5%;
+    width: 100%;
 }
 
 .slide.outro-slide{
@@ -464,19 +470,27 @@ footer:not(.project-nav) {
     background: transparent;
     border: none;
     padding: 0;
-    width: 100%; /* Full width row */
-    display: flex;
-    flex-direction: row; /* Side by side */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: center;
     gap: 60px;
-    text-align: left; /* Align text left */
+    text-align: left;
 }
 
 /* Zig-Zag: Even children reversed */
+/* Zig-Zag: Swap order for even items */
 .auto-card:nth-child(even) {
-    flex-direction: row-reverse;
     text-align: right;
+}
+
+.auto-card:nth-child(even) .auto-img {
+    order: 2;
+    justify-self: end; /* Align image to right edge */
+}
+
+.auto-card:nth-child(even) .auto-info {
+    order: 1;
 }
 
 .auto-card:nth-child(even) .auto-info {
@@ -691,5 +705,334 @@ footer:not(.project-nav) {
     .mockup-bridge.bridge-center {
         left: 85% !important; /* Pushed further right */
         transform: translate(-50%, -50%) !important;
+    }
+}
+
+
+/* --- New Technical Feature Slide Styles (Bold & Specific) --- */
+.t-feature-slide {
+    background: #111; /* Pitch black/dark grey for high contrast */
+    color: white;
+    /* Reduce gap / height constraints */
+    min-height: auto; /* Allow it to shrink to content */
+    padding: 120px 8%; /* Adjust padding to visually balance */
+}
+
+.t-feature-container {
+    max-width: 1000px; /* Narrows focus */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* No gap, borders will separate */
+}
+
+.t-feature-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 40px;
+    padding: 35px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    align-items: flex-start;
+    transition: all 0.3s ease;
+}
+
+.t-feature-row:hover {
+    background: rgba(255, 255, 255, 0.03);
+    padding-left: 20px; /* Subtle movement */
+    border-bottom-color: rgba(255, 255, 255, 0.4);
+}
+
+.t-feature-row:last-child {
+    border-bottom: none;
+}
+
+.t-feature-num {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--accent); /* Brand accent color */
+    line-height: 1;
+    opacity: 0.8;
+}
+
+.t-feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.t-feature-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1.3;
+    font-family: 'Outfit', sans-serif;
+    word-break: keep-all;
+    color: #ffffff; /* Explicit White */
+}
+
+.t-feature-desc {
+    font-size: 1.05rem;
+    color: #e2e8f0; /* Light Slate / High Contrast Grey */
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* --- Ported Small Card Styles (Promoted to Global) --- */
+.vision-cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.small-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.small-card.accent {
+    background: var(--accent);
+    color: white;
+}
+
+.small-card .card-label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    opacity: 0.7;
+    display: block;
+    margin-bottom: 15px;
+    letter-spacing: 0.05em;
+}
+
+.small-card p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.small-card .tag-cloud {
+    margin-top: auto; /* Push to bottom */
+    justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+    .vision-cards {
+        flex-direction: column;
+    }
+}
+
+/* Tech Badges in a raw/technical style */
+.t-tech-badges {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.t-tech-badge {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .t-feature-row {
+        grid-template-columns: 1fr; /* Stack number */
+        gap: 15px;
+        padding: 30px 0;
+    }
+
+    .t-feature-num {
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+    }
+
+    .t-feature-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* --- Feature Spotlight Layout (For Slide 6) --- */
+.feature-spotlight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.fs-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.fs-visual {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fs-visual img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-spotlight:hover .fs-visual img {
+    transform: scale(1.02);
+}
+
+@media (max-width: 1024px) {
+    .feature-spotlight {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .feature-spotlight {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .fs-text {
+        align-items: center; /* Center badges and text */
+        order: 1; /* Text first */
+    }
+
+    .fs-visual {
+        order: 2;
+    }
+    
+    .fs-visual img {
+        max-width: 100%;
+    }
+}
+
+/* --- Spico Specific Gradient Background --- */
+.bg-spico-grad {
+    background: linear-gradient(135deg, #0f172a 0%, #052e16 100%);
+    color: white;
+}
+.bg-spico-grad .slide-tag { color: var(--accent); } /* Ensure tag pops */
+
+/* --- Core Function Slide (Style Injection) --- */
+.core-showcase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.core-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.core-info.left { text-align: right; }
+.core-info.right { text-align: left; }
+
+.info-pod h5 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.info-pod p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.core-main-mockup {
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.floating-badge {
+    position: absolute;
+    top: 40px !important;
+    right: -20px;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    background: var(--accent);
+    color: white;
+    padding: 6px 16px;
+    height: auto !important;
+    width: auto !important;
+    display: inline-block;
+    z-index: 20;
+    border-radius: 100px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+    .core-showcase {
+        flex-direction: column;
+        gap: 50px;
+        margin-top: 40px;
+    }
+
+    .core-info.left, .core-info.right {
+        text-align: left; /* Force Left Align on Mobile */
+        gap: 30px;
+    }
+    
+    .core-main-mockup {
+        order: -1; /* Image Top */
+    }
+
+    .core-main-mockup img {
+        max-width: 260px !important; /* Reduce Image Size on Mobile */
+    }
+
+    /* Force Tag Left Alignment on Mobile */
+    .slide-tag {
+        display: block;
+        text-align: left !important;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .slide-title.align-center {
+        text-align: left !important; /* Optional: Align title left on mobile too for consistency? Or keep center? User asked for TAG left align. */
+    }
+    
+    /* Re-apply Slide 6 Left Alignment (User Revert Fix) */
+    @media (max-width: 900px) {
+        .feature-spotlight {
+            text-align: left !important;
+        }
+        .fs-text {
+            align-items: flex-start !important;
+        }
     }
 }
