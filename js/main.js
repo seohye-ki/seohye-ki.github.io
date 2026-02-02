@@ -12,30 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /* --- HERO MOUSE MOVEMENT EFFECT --- */
-    const hero = document.querySelector('.hero');
-    const sticker = document.querySelector('.sticker-deco');
-    const aura1 = document.querySelector('.aura.one');
-    const aura2 = document.querySelector('.aura.two');
-
-    if (hero) {
-        hero.addEventListener('mousemove', (e) => {
-            const { clientX, clientY } = e;
-            const { innerWidth, innerHeight } = window;
-
-            const moveX = (clientX - innerWidth / 2) / 30;
-            const moveY = (clientY - innerHeight / 2) / 30;
-
-            // if (sticker) sticker.style.transform = `translate(${moveX}px, ${moveY}px) rotate(${moveX/10}deg)`;
-            if (aura1) aura1.style.transform = `translate(${-moveX*1.5}px, ${-moveY*1.5}px)`;
-            if (aura2) aura2.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        });
-
-        hero.addEventListener('mouseleave', () => {
-            // if (sticker) sticker.style.transform = `translate(0, 0) rotate(0)`;
-        });
-    }
-
     /* --- VIEW MORE REVIEWS --- */
     const viewMoreBtn = document.getElementById('view-more-reviews');
     const hiddenReviews = document.querySelectorAll('.review-hidden');

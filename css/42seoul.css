@@ -1,0 +1,44 @@
+.theme-seoul42 { --accent: #0f172a; --accent-soft: #f1f5f9; }
+.bg-light { background-color: var(--bg-alt); }
+
+/* Layout Utilities */
+.slide-container { max-width: 1200px; margin: 0 auto; padding: 100px 5%; }
+
+.slide-tag {
+    display: inline-block; color: var(--accent); font-family: 'Outfit'; font-weight: 800;
+    font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; position: relative; padding-left: 20px;
+}
+.slide-tag::before { content: ''; position: absolute; left: 0; top: 50%; width: 12px; height: 2px; background: var(--accent); }
+.slide-tag.white { color: var(--text-inverse); }
+.slide-tag.white::before { background: var(--text-inverse); }
+
+.slide-title { font-size: 3rem; margin-bottom: 30px; font-weight: 900; letter-spacing: -1px; }
+.slide-title.white { color: var(--text-inverse); }
+.slide-p { font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; word-break: keep-all; }
+
+.quote-box h3 { font-size: 2.2rem; line-height: 1.4; margin-bottom: 50px; font-weight: 700; word-break: keep-all; }
+.quote-box h3.white { color: var(--text-inverse); }
+
+/* Vision Grid */
+.vision-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; }
+
+/* List Style */
+.t-list { padding-left: 20px; line-height: 1.8; color: var(--text-muted); }
+.t-list li::marker { color: var(--accent); font-weight: bold; }
+
+/* Media adjustments */
+.f-media img { display: block; width: 100%; height: 100%; }
+
+.tech-point strong { font-size: 1.3rem; color: var(--accent); display: block; margin-bottom: 15px; }
+.tech-point p { font-size: 1rem; color: var(--text-muted); line-height: 1.7; }
+
+/* Outro */
+.align-center-vh { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.btn-outline.white-border { border-color: var(--border-inverse); color: var(--text-inverse); }
+.btn-outline.white-border:hover { background: var(--bg-card); color: var(--accent); }
+
+@media (max-width: 900px) {
+    .vision-grid { grid-template-columns: 1fr !important; }
+    .hero-mockups { height: auto; position: relative; margin: 40px 0; } 
+    .mockup-bridge { width: 100% !important; height: auto !important; position: static !important; transform: none !important; }
+}

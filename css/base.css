@@ -1,29 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
 
 :root {
-    /* --- Main Colors --- */
-    --bg-main: #ffffff;
-    --bg-soft: #fcfdfe;
+    /* --- Main Colors (Primitives) --- */
+    --white: #ffffff;
+    --black: #000000;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+
+    /* --- Semantic Tokens (Design System) --- */
     
-    /* --- Text Colors --- */
-    --text-primary: #111827; /* Matches #0f172a from projects.css slightly different but #111827 is standard tailwind gray-900 equivalent */
-    --text-muted: #4b5563;   /* #64748b is slate-500, #4b5563 is gray-600. I'll stick to style.css values */
+    /* Surface */
+    --bg-main: var(--white);
+    --bg-alt: var(--gray-50);
+    --bg-card: var(--white);
+    --bg-overlay: rgba(255, 255, 255, 0.1);
     
+    /* Text */
+    --text-main: var(--gray-900);
+    --text-muted: var(--gray-600);
+    --text-subtle: var(--gray-400);
+    --text-main: var(--gray-900);
+    --text-primary: var(--text-main); /* Alias for legacy */
+    --text-muted: var(--gray-600);
+    --text-secondary: var(--text-muted); /* Alias */
+    --text-subtle: var(--gray-400);
+    --text-inverse: var(--white);
+    
+    /* Border */
+    --border-subtle: var(--gray-100);
+    --border-default: var(--gray-200);
+    --border-strong: var(--gray-300);
+    --border-inverse: var(--white);
+    --border-overlay: rgba(255, 255, 255, 0.15);
+
     /* --- Accents --- */
     --accent-blue: #0066ff;
     --accent-navy: #001f3f;
     --accent-neon: #00d2ff;
     --accent-soft-blue: #e0f2fe;
-    --accent-orange: #20ad5d; /* Renamed green in style.css but kept variable name */
-
-    /* --- Borders --- */
-    --border-light: #f1f5f9;
-    --border-formal: #e2e8f0;
+    --accent-orange: #20ad5d; 
+    
+    /* Default Accent */
+    --accent: var(--accent-blue);
+    --accent-indigo: var(--accent-navy); /* Alias */
 
     /* --- Animations --- */
     --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     
-    /* --- Project Specific Themes (Moved from projects.css for global access) --- */
+    /* --- Project Specific Themes --- */
     --theme-spico: #42D596;
     --theme-lufin: #3b82f6;
     --theme-docshund: #B97E65;
@@ -48,7 +80,65 @@ body {
     overflow-x: hidden;
     min-width: 370px;
     word-break: keep-all; /* Korean word-break support */
+    scroll-behavior: smooth;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* --- Layout Utilities --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 6%;
+}
+
+/* --- Typography Utilities --- */
+.text-desc {
+    color: var(--text-muted);
+    margin-top: 8px;
+    font-weight: 500;
+    line-height: 1.5;
+	font-size: 0.9rem;
+}
+
+.text-highlight {
+    color: var(--text-primary);
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+.sub-list {
+    margin-top: 8px;
+    padding-left: 20px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* --- Animation Utilities --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
 
 p {
     word-break: keep-all;

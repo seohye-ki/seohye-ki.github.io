@@ -42,7 +42,7 @@
 
 .hero-top {
     flex: 5.5;
-    background: white;
+    background: var(--bg-card);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +54,7 @@
 .hero-bottom {
     flex: 4.5;
     background: var(--accent);
-    color: white;
+    color: var(--text-inverse);
     border-radius: 80px 80px 0 0;
     display: flex;
     justify-content: space-between;
@@ -70,7 +70,7 @@
     font-weight: 900;
     line-height: 1;
     letter-spacing: -0.05em;
-    color: var(--text-primary);
+    color: var(--text-main);
     position: relative;
     z-index: 100; /* Always top */
 }
@@ -182,7 +182,7 @@
 }
 
 .hero-tag {
-    background: rgba(255,255,255,0.2);
+    background: var(--bg-overlay);
     padding: 6px 15px;
     border-radius: 100px;
     font-size: 0.8rem;
@@ -243,13 +243,13 @@
 }
 
 .bubble {
-    background: var(--bg-soft, #f8fafc);
+    background: var(--bg-alt);
     padding: 30px;
     border-radius: 24px;
     position: relative;
 }
 
-.bubble.as-is { border-left: 8px solid #cbd5e1; }
+.bubble.as-is { border-left: 8px solid var(--border-strong); }
 .bubble.to-be { border-left: 8px solid var(--accent); background: var(--accent-soft); }
 
 .bubble label {
@@ -270,8 +270,8 @@
 }
 
 .tag {
-    background: white;
-    border: 1px solid var(--border-soft);
+    background: var(--bg-card);
+    border: 1px solid var(--border-default);
     padding: 8px 20px;
     border-radius: 100px;
     font-weight: 600;
@@ -336,7 +336,7 @@
 
 .back-btn {
     text-decoration: none;
-    color: var(--text-primary);
+    color: var(--text-main);
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
     font-size: 0.8rem;
@@ -355,7 +355,7 @@
 
 .back-btn:hover {
     transform: translateX(-5px);
-    background: #fff;
+    background: var(--bg-card);
 }
 
 .top-bar div {
@@ -382,7 +382,7 @@
 
 .btn-primary {
     background-color: var(--accent);
-    color: white;
+    color: var(--text-inverse);
     border: 2px solid var(--accent);
 }
 
@@ -399,7 +399,7 @@
 
 .btn-outline:hover {
     background-color: var(--accent);
-    color: white;
+    color: var(--text-inverse);
 }
 
 /* --- Project Navigation Footer --- */
@@ -407,8 +407,8 @@
     padding: 80px 8%;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid var(--border-soft);
-    background: white;
+    border-top: 1px solid var(--border-subtle);
+    background: var(--bg-card);
 }
 
 .nav-prev, .nav-next {
@@ -434,7 +434,7 @@
     font-family: 'Outfit';
     font-size: 1.5rem;
     font-weight: 900;
-    color: var(--text-primary);
+    color: var(--text-main);
 }
 
 .nav-prev:hover .nav-name, .nav-next:hover .nav-name {
@@ -448,133 +448,10 @@ footer:not(.project-nav) {
     font-size: 0.8rem;
     font-weight: 700;
     color: var(--text-muted);
-    background: white;
+    background: var(--bg-card);
 }
 
-/* --- Automation / Ops Slide Styles (Redesign: Zig-Zag for Readability) --- */
-.automation-flow {
-    display: flex;
-    flex-direction: column;
-    gap: 80px; /* Space between steps */
-    margin-top: 60px;
-    width: 100%;
-    max-width: 1200px; /* Limit max width */
-    margin-left: auto;
-    margin-right: auto;
-}
 
-/* Hide the connecting line for this layout */
-.automation-flow::before { display: none; }
-
-.auto-card {
-    background: transparent;
-    border: none;
-    padding: 0;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 60px;
-    text-align: left;
-}
-
-/* Zig-Zag: Even children reversed */
-/* Zig-Zag: Swap order for even items */
-.auto-card:nth-child(even) {
-    text-align: right;
-}
-
-.auto-card:nth-child(even) .auto-img {
-    order: 2;
-    justify-self: end; /* Align image to right edge */
-}
-
-.auto-card:nth-child(even) .auto-info {
-    order: 1;
-}
-
-.auto-card:nth-child(even) .auto-info {
-    align-items: flex-end;
-}
-
-.auto-card:hover {
-    transform: none; /* Disable lift for large layout */
-}
-
-.auto-img {
-    width: 550px;
-    height: 320px; /* Fixed height for uniformity */
-    background: transparent; /* Remove white bg */
-    border: none; /* Remove border */
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    overflow: hidden; /* Crop overflow */
-    transition: transform 0.3s ease;
-}
-
-.auto-card:hover .auto-img {
-    transform: scale(1.02); /* Subtle zoom */
-    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
-}
-
-.auto-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Fill the box */
-}
-
-.auto-info {
-    flex: 1;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.auto-info h5 {
-    color: var(--text-primary);
-    font-size: 1.8rem; /* Larger title */
-    font-weight: 800;
-    margin-bottom: 15px;
-}
-
-.auto-info p {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    line-height: 1.7;
-}
-
-/* Summary tweaks */
-.flow-summary.dark-mode-text {
-    margin-top: 100px;
-    margin-bottom: 40px;
-    font-size: 1.2rem;
-}
-
-@media (max-width: 900px) {
-    .auto-card, .auto-card:nth-child(even) {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-    
-    .auto-card:nth-child(even) .auto-info {
-        align-items: center;
-    }
-
-    .auto-img {
-        width: 100%;
-        max-width: 500px;
-    }
-    
-    .auto-info {
-        max-width: 100%;
-    }
-}
 
 /* --- Mobile Responsive for Project Pages --- */
 @media (max-width: 900px) {
@@ -596,14 +473,7 @@ footer:not(.project-nav) {
     }
 
     /* AI Grid Stack */
-    .ai-grid {
-        grid-template-columns: 1fr !important;
-        gap: 40px !important;
-    }
-    
-    .ai-grid .f-media {
-        max-width: 100%;
-    }
+
     
     .hero-logo-side h2 { font-size: 2.5rem; }
 
@@ -645,29 +515,7 @@ footer:not(.project-nav) {
     }
 }
 
-/* --- EveryMatch AI Styles --- */
-.ai-grid {
-    display: grid;
-    grid-template-columns: 1fr 450px;
-    row-gap: 50px;
-    column-gap: 50px;
-    align-items: center;
-    margin-top: 30px;
-}
 
-.ai-media {
-    width: 100%;
-    height: auto;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-.ai-media img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
 
 /* --- Laptop/Desktop Intermediate (Fix for Mockup Overlap) --- */
 @media (min-width: 1025px) and (max-width: 1600px) {
@@ -711,8 +559,8 @@ footer:not(.project-nav) {
 
 /* --- New Technical Feature Slide Styles (Bold & Specific) --- */
 .t-feature-slide {
-    background: #111; /* Pitch black/dark grey for high contrast */
-    color: white;
+    background: var(--gray-900); /* Pitch black/dark grey for high contrast */
+    color: var(--text-inverse);
     /* Reduce gap / height constraints */
     min-height: auto; /* Allow it to shrink to content */
     padding: 120px 8%; /* Adjust padding to visually balance */
@@ -731,7 +579,7 @@ footer:not(.project-nav) {
     grid-template-columns: 80px 1fr;
     gap: 40px;
     padding: 35px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid var(--border-overlay);
     align-items: flex-start;
     transition: all 0.3s ease;
 }
@@ -767,13 +615,12 @@ footer:not(.project-nav) {
     line-height: 1.3;
     font-family: 'Outfit', sans-serif;
     word-break: keep-all;
-    color: #ffffff; /* Explicit White */
+    color: var(--text-inverse); /* Explicit White */
 }
 
 .t-feature-desc {
     font-size: 1.05rem;
-    color: #e2e8f0; /* Light Slate / High Contrast Grey */
-    line-height: 1.6;
+    color: var(--text-inverse);
     font-weight: 500;
 }
 
@@ -785,7 +632,7 @@ footer:not(.project-nav) {
 }
 
 .small-card {
-    background: #fff;
+    background: var(--bg-card);
     padding: 25px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -796,7 +643,7 @@ footer:not(.project-nav) {
 
 .small-card.accent {
     background: var(--accent);
-    color: white;
+    color: var(--text-inverse);
 }
 
 .small-card .card-label {
@@ -841,7 +688,7 @@ footer:not(.project-nav) {
     background: rgba(255, 255, 255, 0.05);
     padding: 4px 10px;
     border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--bg-overlay);
 }
 
 @media (max-width: 768px) {
@@ -862,76 +709,10 @@ footer:not(.project-nav) {
 }
 
 /* --- Feature Spotlight Layout (For Slide 6) --- */
-.feature-spotlight {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-    margin-top: 40px;
-    width: 100%;
-}
 
-.fs-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-}
-
-.fs-visual {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.fs-visual img {
-    width: 100%;
-    max-width: 550px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: transform 0.3s ease;
-}
-
-.feature-spotlight:hover .fs-visual img {
-    transform: scale(1.02);
-}
-
-@media (max-width: 1024px) {
-    .feature-spotlight {
-        gap: 40px;
-    }
-}
-
-@media (max-width: 900px) {
-    .feature-spotlight {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 50px;
-    }
-
-    .fs-text {
-        align-items: center; /* Center badges and text */
-        order: 1; /* Text first */
-    }
-
-    .fs-visual {
-        order: 2;
-    }
-    
-    .fs-visual img {
-        max-width: 100%;
-    }
-}
 
 /* --- Spico Specific Gradient Background --- */
-.bg-spico-grad {
-    background: linear-gradient(135deg, #0f172a 0%, #052e16 100%);
-    color: white;
-}
-.bg-spico-grad .slide-tag { color: var(--accent); } /* Ensure tag pops */
+
 
 /* --- Core Function Slide (Style Injection) --- */
 .core-showcase {
@@ -958,7 +739,7 @@ footer:not(.project-nav) {
     font-size: 1.1rem;
     font-weight: 800;
     margin-bottom: 8px;
-    color: var(--text-primary);
+    color: var(--text-main);
 }
 
 .info-pod p {
@@ -981,7 +762,7 @@ footer:not(.project-nav) {
     left: auto;
     transform: none;
     background: var(--accent);
-    color: white;
+    color: var(--text-inverse);
     padding: 6px 16px;
     height: auto !important;
     width: auto !important;
@@ -1028,12 +809,5 @@ footer:not(.project-nav) {
     }
     
     /* Re-apply Slide 6 Left Alignment (User Revert Fix) */
-    @media (max-width: 900px) {
-        .feature-spotlight {
-            text-align: left !important;
-        }
-        .fs-text {
-            align-items: flex-start !important;
-        }
-    }
+
 }

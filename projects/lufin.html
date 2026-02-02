@@ -78,8 +78,8 @@
                         <span class="card-label">PROBLEM</span>
                         <p>체감하기 힘든 금융 교육과<br>추상적인 경제 개념</p>
                         <div class="tag-cloud">
-                            <span class="tag" style="background: #f1f1f180;">금융맹 증가</span>
-                            <span class="tag" style="background: #f1f1f180;">이론 위주 교육</span>
+                            <span class="tag">금융맹 증가</span>
+                            <span class="tag">이론 위주 교육</span>
                         </div>
                     </div>
                     <div class="small-card accent" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
@@ -269,10 +269,9 @@ public class RoleCheckAspect {
     }
 }</code></pre>
                     <div style="margin-top:15px;">
-                        <h5 style="color:white; font-size:1rem; margin-bottom:5px;">횡단 관심사 분리의 성과</h5>
-                        <ul style="font-size:0.85rem; opacity:0.9; padding-left:15px;">
-                            <li><strong>코드 응집도 향상</strong>: 수십 개의 API 컨트롤러에서 권한 체크 로직을 완전히 제거</li>
-                            <li><strong>유지보수 용이성</strong>: 권한 로직 변경 시 Aspect 클래스 한 곳만 수정</li>
+                        <ul style="font-size:1rem; opacity:0.9; padding-left:15px;">
+                            <li><strong>코드 응집도 향상</strong>: API 컨트롤러 단에서 권한 체크 코드 중복 제거</li>
+                            <li><strong>유지보수 용이</strong>: 권한 로직 변경 시 Aspect 클래스 한 곳만 수정</li>
                             <li><strong>실수 방지</strong>: 어노테이션 하나로 누락 없는 보안 정책 적용 가능</li>
                         </ul>
                     </div>
@@ -292,7 +291,7 @@ public class RoleCheckAspect {
             <div class="reveal" style="display: flex; flex-direction: column; gap: 30px;">
                 <div class="vision-text" style="width: 100%; max-width: 100%;">
                     <div class="tech-point">
-                        <strong>DDD Event Storming</strong>
+                        <strong>Event Storming</strong>
                         <p>초반부터 이벤트 스토밍을 통해 도메인 흐름을 명확히 정의하고, 복잡한 금융 로직을 도메인별로 분리하여 설계의 기반을 다졌습니다.</p>
                     </div>
                 </div>
@@ -329,7 +328,7 @@ public class RoleCheckAspect {
             </div>
             
             <div class="footer-copy" style="margin-top: 80px; color: white; opacity: 0.4;">
-                © 2025 LuFin Team. All rights reserved.
+                ⓒ 2025. LuFin Team All rights reserved.
             </div>
         </div>
     </section>
@@ -346,142 +345,7 @@ public class RoleCheckAspect {
         </a>
     </footer>
 
-    <style>
-        /* Shared & Clean Styles */
-        :root {
-            --bg-light: #f8fafc;
-            --blue-grad: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-        }
-        .theme-lufin { --accent: #3b82f6; --accent-soft: #eff6ff; }
-        
-        .bg-light { background-color: var(--bg-light); }
-        .bg-blue-grad { background: var(--blue-grad); }
-        .bg-blue { background-color: var(--accent); }
-        .bg-lufin-grad { 
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); 
-            color: white;
-        }
-        .bg-lufin-grad .slide-tag { color: var(--accent); }
-
-        
-        .slide-tag {
-            display: inline-block; color: var(--accent); font-family: 'Outfit'; font-weight: 800;
-            font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; position: relative; padding-left: 20px;
-        }
-        .slide-tag::before { content: ''; position: absolute; left: 0; top: 50%; width: 12px; height: 2px; background: var(--accent); }
-        .slide-tag.white { color: white; }
-        .slide-tag.white::before { background: white; }
-
-        .quote-box h3 {
-            font-size: 2.2rem; line-height: 1.4; margin-bottom: 60px; font-weight: 700; word-break: keep-all;
-        }
-        .quote-box h3.white { color: white; }
-
-        /* Grids */
-        .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        .feature-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .feature-card .f-media { height: 200px; background: #f1f5f9; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .feature-card .f-media img { width: 100%; height: 100%; object-fit: cover; }
-        .feature-card .f-content { padding: 25px; }
-        .feature-card h4 { font-size: 1.1rem; margin-bottom: 10px; font-weight: 800; }
-        .feature-card p { font-size: 0.9rem; color: #64748b; line-height: 1.6; word-break: keep-all; }
-
-        /* Tech Focus */
-        .tech-focus-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; align-items: center; }
-        .tech-card-large { background: #1e293b; border-radius: 16px; overflow: hidden; color: white; box-shadow: 0 20px 50px rgba(0,0,0,0.2); }
-        .code-header { background: #0f172a; padding: 15px 20px; display: flex; gap: 8px; align-items: center; margin-bottom: 0; }
-        .code-header .dot { width: 10px; height: 10px; border-radius: 50%; }
-        .dot.red { background: #ef4444; } .dot.yellow { background: #eab308; } .dot.green { background: #22c55e; }
-        .code-header span { margin-left: auto; font-family: monospace; font-size: 0.8rem; color: #94a3b8; }
-        
-        .desc-item { margin-bottom: 40px; }
-        .desc-item h5 { font-size: 1.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 10px; }
-        .desc-item p { color: var(--text-muted); line-height: 1.7; }
-
-        /* Role & Infra */
-        .t-feature-row {
-            display: grid;
-            grid-template-columns: 50px 1fr;
-            gap: 20px;
-            padding: 35px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-            align-items: flex-start;
-            transition: all 0.3s ease;
-        }
-        .t-feature-num {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: var(--accent);
-            opacity: 0.5;
-            line-height: 1;
-        }
-        .role-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
-        .role-card { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 24px; color: white; border: 1px solid rgba(255,255,255,0.2); min-width: 0; }
-        .role-icon { font-size: 2.5rem; margin-bottom: 20px; }
-        .role-card h4 { font-size: 1.4rem; margin-bottom: 15px; font-weight: 800; }
-        .role-card ul { padding-left: 20px; line-height: 1.8; opacity: 0.9; }
-
-        /* Vision Split */
-        .vision-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; }
-        .tech-point strong { font-size: 1.2rem; display: block; margin-bottom: 10px; color: var(--accent); }
-        .tech-point p { color: var(--text-muted); line-height: 1.7; }
-
-        /* Outro */
-        .align-center-vh { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
-        .full-height { min-height: 70vh; }
-        .award-badge { background: rgba(255,255,255,0.2); color: white; padding: 8px 20px; border-radius: 100px; font-weight: 800; margin-bottom: 20px; display: inline-block; }
-        .slide-title.white { color: white; font-size: 2.5rem; margin-bottom: 40px; }
-        .btn-outline.white-border { border-color: white; color: white; }
-        .btn-outline.white-border:hover { background: white; color: var(--accent); }
-        .footer-copy { margin-top: 80px; color: white; opacity: 0.4; font-size: 0.8rem; }
-
-        /* Responsive */
-        @media (max-width: 900px) {
-            .feature-grid, .tech-focus-grid, .role-grid, .vision-grid { grid-template-columns: 1fr; }
-            .hero-mockups { margin: 40px 0; }
-            .slide { padding: 80px 20px; } 
-            .slide-container { padding: 40px 0; } 
-            .quote-box h3 { font-size: 1.6rem; }
-
-            /* Key Contribution Row Adjustments */
-            .t-feature-row {
-                grid-template-columns: 40px 1fr;
-                gap: 15px;
-            }
-            .t-tech-badges {
-                flex-wrap: wrap;
-            }
-            
-            /* Mobile Fixes */
-            .role-card { 
-                padding: 20px; 
-                width: 100%; 
-                max-width: 100%; 
-                min-width: 0; /* CRITICAL: Allows grid item to shrink below content size */
-                box-sizing: border-box; 
-                word-break: keep-all; 
-            } 
-            .role-icon { font-size: 2rem; margin-bottom: 15px; } 
-            .role-card h4 { font-size: 1.2rem; margin-bottom: 10px; } 
-            .role-card ul { font-size: 0.9rem; line-height: 1.6; padding-left: 15px; word-break: break-word; } /* Allow break for links/tech terms */
-            
-            pre { 
-                overflow-x: auto !important; 
-                white-space: pre !important; 
-                width: 100%; 
-                max-width: 100%; 
-                display: block;
-                font-size: 0.8rem; 
-                scrollbar-width: thin; 
-                -webkit-overflow-scrolling: touch; 
-                box-sizing: border-box; 
-                background: rgba(0,0,0,0.3) !important; 
-            } 
-            pre::-webkit-scrollbar { height: 4px; }
-            pre::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 4px; } 
-        }
-    </style>
+    <link rel="stylesheet" href="../css/lufin.css">
 
     <script src="../js/project.js"></script>
 </body>
