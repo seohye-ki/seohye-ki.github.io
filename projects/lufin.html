@@ -78,8 +78,8 @@
                         <span class="card-label">PROBLEM</span>
                         <p>체감하기 힘든 금융 교육과<br>추상적인 경제 개념</p>
                         <div class="tag-cloud">
-                            <span class="tag">금융맹 증가</span>
-                            <span class="tag">이론 위주 교육</span>
+                            <span class="tag" style="background: #f1f1f180;">금융맹 증가</span>
+                            <span class="tag" style="background: #f1f1f180;">이론 위주 교육</span>
                         </div>
                     </div>
                     <div class="small-card accent" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
@@ -187,7 +187,7 @@
                     <div class="t-feature-num" style="opacity: 0.5;">04</div>
                     <div class="t-feature-content">
                         <h3 class="t-feature-title">문서화 및 협업 프로세스 표준화</h3>
-                        <p class="t-feature-desc">요구사항 명세서, API 문서(Swagger/RestDocs), 에러 코드 정의 등 개발 전 과정의 산출물을 표준화하여 기획-개발 간 커뮤니케이션 비용을 최소화했습니다.</p>
+                        <p class="t-feature-desc">요구사항 명세서, API 문서, 에러 코드 정의 등 개발 전 과정의 산출물을 표준화하여 기획-개발 간 커뮤니케이션 비용을 최소화했습니다.</p>
                         <div class="t-tech-badges">
                             <span class="t-tech-badge">Documentation</span>
                             <span class="t-tech-badge">Collaboration</span>
@@ -440,8 +440,18 @@ public class RoleCheckAspect {
         @media (max-width: 900px) {
             .feature-grid, .tech-focus-grid, .role-grid, .vision-grid { grid-template-columns: 1fr; }
             .hero-mockups { margin: 40px 0; }
-            .slide-container { padding: 60px 20px; } /* Fixed smaller padding for mobile */
+            .slide { padding: 80px 20px; } 
+            .slide-container { padding: 40px 0; } 
             .quote-box h3 { font-size: 1.6rem; }
+
+            /* Key Contribution Row Adjustments */
+            .t-feature-row {
+                grid-template-columns: 40px 1fr;
+                gap: 15px;
+            }
+            .t-tech-badges {
+                flex-wrap: wrap;
+            }
             
             /* Mobile Fixes */
             .role-card { 

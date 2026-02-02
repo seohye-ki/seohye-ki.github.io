@@ -829,6 +829,7 @@ footer:not(.project-nav) {
 /* Tech Badges in a raw/technical style */
 .t-tech-badges {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 5px;
 }

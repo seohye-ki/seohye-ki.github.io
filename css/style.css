@@ -760,7 +760,7 @@ footer {
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
-    z-index: 20;
+    z-index: 200;
     transition: all 0.3s ease;
     display: flex;
     justify-content: center;
@@ -791,6 +791,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Prevent 3D cards from leaking */
 }
 
 .carousel-card {
@@ -1792,6 +1793,9 @@ footer {
 
 /* --- Tablet / Small Desktop (max-width: 900px) --- */
 @media (max-width: 900px) {
+    /* Hero Section */
+    #profile { overflow: hidden; }
+
     /* Navigation Tablet Adjustments */
     nav {
         max-width: 450px; 
@@ -1957,6 +1961,18 @@ footer {
     .hero-content, .hero-tag { width: 100%; max-width: 100%; box-sizing: border-box; }
     .hero-aura, .orb { max-width: 100%; }
 
+    .carousel-card { width: 95vw; }
+    .carousel-card-inner { padding: 20px 15px; }
+    .carousel-meta-grid { 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 4px; 
+        padding-top: 10px;
+        width: 100%;
+    }
+    .carousel-meta-grid .meta-label { font-size: 0.55rem; letter-spacing: 0; }
+    .carousel-meta-grid .meta-value { font-size: 0.7rem; word-break: keep-all; }
+    .meta-item { min-width: 0; }
+
     /* Navigation */
     nav {
         width: 98%; 
@@ -1967,14 +1983,15 @@ footer {
         white-space: nowrap;
         border-radius: 20px;
         -webkit-overflow-scrolling: touch;
+        max-width: calc(100vw - 20px); /* Ensure it doesn't exceed screen */
     }
     /* Hide scrollbars */
     nav::-webkit-scrollbar { display: none; }
     nav { -ms-overflow-style: none; scrollbar-width: none; }
 
-    .nav-links { gap: 8px; padding-right: 10px; flex-shrink: 0; }
+    .nav-links { gap: 8px; padding-right: 10px; flex-shrink: 1; min-width: 0; }
     .nav-links a { font-size: 0.7rem; }
-    .nav-logo { padding-right: 8px; font-size: 0.85rem; flex-shrink: 0; }
+    .nav-logo { padding-right: 8px; font-size: 0.85rem; flex-shrink: 1; min-width: 0; }
 
     /* Hero Typography */
     .hero-content { align-items: center; width: 100%; padding: 0; }
@@ -1993,7 +2010,7 @@ footer {
     nav {
         /* Floating Pill Design */
         width: 96%;
-        max-width: 360px; 
+        max-width: calc(100vw - 16px); 
         border-radius: 50px;
         left: 50%;
         transform: translateX(-50%);
