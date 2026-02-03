@@ -22,10 +22,6 @@
 .slide-tag.white { color: var(--text-inverse); }
 .slide-tag.white::before { background: var(--text-inverse); }
 
-.quote-box h3 {
-    font-size: 2.2rem; line-height: 1.4; margin-bottom: 60px; font-weight: 700; word-break: keep-all;
-}
-.quote-box h3.white { color: var(--text-inverse); }
 
 /* Grids */
 .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
@@ -81,7 +77,6 @@
 .align-center-vh { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
 .full-height { min-height: 70vh; }
 .award-badge { background: var(--bg-overlay); color: var(--text-inverse); padding: 8px 20px; border-radius: 100px; font-weight: 800; margin-bottom: 20px; display: inline-block; }
-.slide-title.white { color: var(--text-inverse); font-size: 2.5rem; margin-bottom: 40px; }
 .btn-outline.white-border { border-color: var(--border-inverse); color: var(--text-inverse); }
 .btn-outline.white-border:hover { background: var(--bg-card); color: var(--accent); }
 .footer-copy { margin-top: 80px; color: var(--text-inverse); opacity: 0.4; font-size: 0.8rem; }
@@ -91,11 +86,13 @@
     .feature-grid, .tech-focus-grid, .role-grid, .vision-grid { grid-template-columns: 1fr; }
     .hero-mockups { margin: 40px 0; }
     .hero-mockups { margin: 40px 0; }
+    .hero-mockups { margin: 40px 0; }
     .quote-box h3 { font-size: 1.6rem; }
+    .slide-title, .slide-title.white { font-size: 2rem; }
 
     /* Key Contribution Row Adjustments */
     .t-feature-row {
-        grid-template-columns: 40px 1fr;
+        grid-template-columns: 1fr;
         gap: 15px;
     }
     .t-tech-badges {

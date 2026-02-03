@@ -202,11 +202,38 @@
 
 .slide-title {
     font-family: 'Outfit', sans-serif;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: 3rem;
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 1.2;
     margin-bottom: 40px;
     letter-spacing: -0.03em;
+}
+
+.slide-title.white {
+    color: var(--text-inverse);
+}
+
+/* Quote Box Standard (Global Title Style) */
+.quote-box h3, h2.quote-box {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 50px;
+    font-weight: 800;
+    word-break: keep-all;
+    font-family: 'Outfit', sans-serif;
+}
+.quote-box h3.white, h2.quote-box.white { color: var(--text-inverse); }
+
+@media (max-width: 900px) {
+    .quote-box h3, h2.quote-box, .slide-title {
+        font-size: 2rem; /* Mobile Standard */
+        margin-bottom: 30px;
+    }
+    
+    .slide-p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 }
 
 /* --- Components based on Reference Images --- */
@@ -364,7 +391,8 @@
 
 @media (max-width: 1024px) {
     .mockup-showcase, .bubble-container { grid-template-columns: 1fr; }
-    .slide-title { font-size: 3rem; }
+    .mockup-showcase, .bubble-container { grid-template-columns: 1fr; }
+    .slide-title { font-size: 2rem; }
 }
 
 /* --- Interactive Elements --- */
@@ -805,9 +833,6 @@ footer:not(.project-nav) {
     }
 
     .slide-title.align-center {
-        text-align: left !important; /* Optional: Align title left on mobile too for consistency? Or keep center? User asked for TAG left align. */
-    }
-    
-    /* Re-apply Slide 6 Left Alignment (User Revert Fix) */
-
+        text-align: left !important;
+	}
 }

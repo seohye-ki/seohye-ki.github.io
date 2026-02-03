@@ -12,12 +12,8 @@
 .slide-tag.white { color: var(--text-inverse); }
 .slide-tag.white::before { background: var(--text-inverse); }
 
-.slide-title { font-size: 3rem; margin-bottom: 40px; }
-.slide-title.white { color: var(--text-inverse); }
 .slide-p { font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; max-width: 700px; }
 
-.quote-box h3 { font-size: 2.2rem; line-height: 1.4; margin-bottom: 50px; font-weight: 700; word-break: keep-all; }
-.quote-box h3.white { color: var(--text-inverse); }
 
 /* Vision Section */
 .vision-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
@@ -87,6 +83,11 @@
     .core-info { width: 100%; text-align: left !important; }
     .core-main-mockup img { max-width: 240px !important; }
     .hero-mockups { height: auto; position: relative; margin: 40px 0; }
+    .vision-gif-container { max-width: 100%; } /* Full width on mobile */
     .hero-mockups { height: auto; position: relative; margin: 40px 0; }
     .scale-laptop { width: 100%; position: static; transform: none; }
+}
+
+@media (max-width: 900px) {
+    .slide-title { font-size: 2rem; }
 }

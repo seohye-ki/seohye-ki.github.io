@@ -165,34 +165,30 @@ nav {
     opacity: 1;
     z-index: 100;
     transform: translateX(0) scale(1) translateZ(0);
+    visibility: visible;
     pointer-events: auto;
+    transition: opacity 0.6s, transform 0.6s, visibility 0s;
+}
+
+.carousel-card:not(.active) {
+    opacity: 0;
+    z-index: -1; /* Force behind */
+    pointer-events: none;
+    visibility: hidden; /* Prevent ghost clicks/touches */
+    transition: opacity 0.4s, transform 0.6s, visibility 0s 0.4s; /* Delay visibility hide */
 }
 
 .carousel-card.prev {
-    opacity: 0;
-    z-index: 20;
     transform: translateX(-50%) scale(0.6) translateZ(-100px);
-    pointer-events: none;
 }
 
 .carousel-card.next {
-    opacity: 0;
-    z-index: 20;
     transform: translateX(50%) scale(0.6) translateZ(-100px);
-    pointer-events: none;
 }
 
-.carousel-card.far-prev {
-    opacity: 0;
-    z-index: 1;
-    transform: translateX(-100%) scale(0.4) translateZ(-200px);
-    display: none !important; 
-}
+.carousel-card.far-prev,
 .carousel-card.far-next {
-    opacity: 0;
-    z-index: 1;
-    transform: translateX(100%) scale(0.4) translateZ(-200px);
-    display: none !important;
+    display: none !important; 
 }
 
 .carousel-card-inner {
@@ -1279,29 +1275,10 @@ footer {
     .carousel-slogan { font-size: 1.5rem; margin-bottom: 20px; }
     .carousel-meta-grid { text-align: left; }
 
-    /* 1. Ensure inactive cards are NOT clickable and hidden */
-    .carousel-card:not(.active) {
-        opacity: 0 !important;
-        visibility: hidden !important;
-        pointer-events: none !important;
-        z-index: -1 !important;
-        transition: opacity 0.4s, transform 0.6s;
-    }
-
-    /* 2. Active card visible */
-    .carousel-card.active {
-        opacity: 1 !important;
-        visibility: visible !important;
-        z-index: 100 !important;
-        transform: translateX(0) scale(1) translateZ(0) !important;
-    }
-
-    /* 3. Push Inactive Cards WAY off-screen to prevent overlap overlap */
-    .carousel-card.prev { transform: translateX(-120vw) scale(0.5) !important; }
-    .carousel-card.next { transform: translateX(120vw) scale(0.5) !important; }
-    
-    .carousel-card.far-prev { display: none !important; }
-    .carousel-card.far-next { display: none !important; }
+    /* 3. Push Inactive Cards WAY off-screen on mobile to prevent overlap */
+    /* Using 120vw ensures they are completely out of the viewport width */
+    .carousel-card.prev { transform: translateX(-150%) scale(0.5) !important; }
+    .carousel-card.next { transform: translateX(150%) scale(0.5) !important; }
 
     /* Hide Bottom Bar */
     .carousel-bottom-bar { display: none; }
