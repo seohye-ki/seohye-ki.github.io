@@ -90,7 +90,6 @@
     .quote-box h3 { font-size: 1.6rem; }
     .slide-title, .slide-title.white { font-size: 2rem; }
 
-    /* Key Contribution Row Adjustments */
     .t-feature-row {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -104,13 +103,13 @@
         padding: 20px; 
         width: 100%; 
         max-width: 100%; 
-        min-width: 0; /* CRITICAL: Allows grid item to shrink below content size */
+        min-width: 0;
         box-sizing: border-box; 
         word-break: keep-all; 
     } 
     .role-icon { font-size: 2rem; margin-bottom: 15px; } 
     .role-card h4 { font-size: 1.2rem; margin-bottom: 10px; } 
-    .role-card ul { font-size: 0.9rem; line-height: 1.6; padding-left: 15px; word-break: break-word; } /* Allow break for links/tech terms */
+    .role-card ul { font-size: 0.9rem; line-height: 1.6; padding-left: 15px; word-break: break-word; }
     
     pre { 
         overflow-x: auto !important; 

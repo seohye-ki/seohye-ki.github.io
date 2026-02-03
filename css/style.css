@@ -172,10 +172,10 @@ nav {
 
 .carousel-card:not(.active) {
     opacity: 0;
-    z-index: -1; /* Force behind */
+    z-index: -1; 
     pointer-events: none;
-    visibility: hidden; /* Prevent ghost clicks/touches */
-    transition: opacity 0.4s, transform 0.6s, visibility 0s 0.4s; /* Delay visibility hide */
+    visibility: hidden; 
+    transition: opacity 0.4s, transform 0.6s, visibility 0s 0.4s; 
 }
 
 .carousel-card.prev {

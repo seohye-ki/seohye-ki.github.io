@@ -28,9 +28,9 @@
     --text-muted: var(--gray-600);
     --text-subtle: var(--gray-400);
     --text-main: var(--gray-900);
-    --text-primary: var(--text-main); /* Alias for legacy */
+    --text-primary: var(--text-main);
     --text-muted: var(--gray-600);
-    --text-secondary: var(--text-muted); /* Alias */
+    --text-secondary: var(--text-muted);
     --text-subtle: var(--gray-400);
     --text-inverse: var(--white);
     
@@ -50,7 +50,7 @@
     
     /* Default Accent */
     --accent: var(--accent-blue);
-    --accent-indigo: var(--accent-navy); /* Alias */
+    --accent-indigo: var(--accent-navy);
 
     /* --- Animations --- */
     --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -73,13 +73,13 @@
 
 /* --- Base Body --- */
 body {
-    font-family: 'Inter', 'Noto Sans KR', sans-serif; /* Added Noto Sans KR globally */
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
     background-color: var(--bg-main);
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
     min-width: 370px;
-    word-break: keep-all; /* Korean word-break support */
+    word-break: keep-all;
     scroll-behavior: smooth;
     width: 100%;
     margin: 0;

@@ -2,8 +2,6 @@
 .bg-light { background-color: var(--bg-alt); }
 
 /* Layout Utilities */
-/* Layout Utilities */
-
 .slide-tag {
     display: inline-block; color: var(--accent); font-family: 'Outfit'; font-weight: 800;
     font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; position: relative; padding-left: 20px;

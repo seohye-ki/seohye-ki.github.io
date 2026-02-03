@@ -2,8 +2,6 @@
 .bg-light { background-color: var(--bg-alt); }
 
 /* Layout Utilities */
-/* Layout Utilities */
-
 .slide-tag {
     display: inline-block; color: var(--accent); font-family: 'Outfit'; font-weight: 800;
     font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; position: relative; padding-left: 20px;
@@ -62,7 +60,6 @@
     .scale-laptop { width: 100%; position: static; transform: none; }
     .slide-title { font-size: 2rem; }
 
-    /* AI Grid Responsive */
     .ai-grid {
         grid-template-columns: 1fr !important;
         gap: 40px !important;
@@ -72,7 +69,6 @@
     }
 }
 
-/* --- EveryMatch AI Styles --- */
 .ai-grid {
     display: grid;
     grid-template-columns: 1fr 450px;

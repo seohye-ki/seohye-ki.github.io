@@ -25,19 +25,18 @@
 }
 
 .slide.outro-slide{
-    min-height: 75vh; /* Reduced height to show footer */
+    min-height: 75vh;
     justify-content: center;
     padding-bottom: 40px;
 }
 
-/* --- Hero Split Layout (Ref Image) --- */
+/* --- Hero Split --- */
 .hero-split {
     height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 0;
-    position: relative; 
-    /* Removed overflow: hidden */
+    position: relative;
 }
 
 .hero-top {
@@ -48,7 +47,7 @@
     align-items: center;
     padding: 0 8%;
     position: relative;
-    z-index: 10; /* Lower than bottom but higher than base */
+    z-index: 10;
 }
 
 .hero-bottom {
@@ -72,7 +71,7 @@
     letter-spacing: -0.05em;
     color: var(--text-main);
     position: relative;
-    z-index: 100; /* Always top */
+    z-index: 100;
 }
 
 .hero-logo-side {
@@ -82,9 +81,9 @@
 }
 
 .hero-slogan-text {
-    font-size: clamp(3rem, 6vw, 5rem); /* Inherited but ensured */
-    line-height: 1.35; /* Improved line spacing */
-    margin-top: 15px; /* Space from label */
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1.35;
+    margin-top: 15px;
     word-break: keep-all;
 }
 
@@ -104,14 +103,12 @@
     height: 100%;
     z-index: 50;
     pointer-events: none;
-    /* No flex here, let bridge classes handle it */
 }
 
 .hero-mockups img {
     filter: drop-shadow(0 40px 80px rgba(0,0,0,0.18));
 }
 
-/* Base style for bridging mockups */
 .mockup-bridge {
     position: absolute;
     transition: var(--transition);
@@ -119,14 +116,13 @@
     filter: drop-shadow(0 40px 80px rgba(0,0,0,0.18));
 }
 
-/* Specific Scales for Device Types */
 .scale-mobile {
-    max-height: 75vh; /* Further reduced from 70vh */
+    max-height: 75vh;
     width: auto;
 }
 
 .scale-laptop {
-    max-height: 45vh; /* Further reduced from 58vh */
+    max-height: 45vh;
     width: auto;
 }
 
@@ -144,14 +140,13 @@
 }
 
 .scale-monitor {
-    max-height: 48vh; /* Reduced as requested */
+    max-height: 48vh;
     width: auto;
 }
 
-/* Universal Center Bridge Layout */
 .bridge-center {
     left: 50%;
-    top: 50%; /* Vertical center point */
+    top: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -172,7 +167,7 @@
     font-size: 2rem;
     font-weight: 800;
     line-height: 1.2;
-    margin-bottom: 20px; /* Added spacing */
+    margin-bottom: 20px;
 }
 
 .hero-tag-row {
@@ -226,7 +221,7 @@
 
 @media (max-width: 900px) {
     .quote-box h3, h2.quote-box, .slide-title {
-        font-size: 2rem; /* Mobile Standard */
+        font-size: 2rem;
         margin-bottom: 30px;
     }
     
@@ -235,8 +230,6 @@
         line-height: 1.6;
     }
 }
-
-/* --- Components based on Reference Images --- */
 
 /* 1. Device Mockup with Callouts (Ref Image 1 & 4) */
 .mockup-showcase {
@@ -288,7 +281,7 @@
     color: var(--text-muted);
 }
 
-/* 3. Floating Tags (Ref Image 3) */
+/* 3. Floating Tags */
 .tag-cloud {
     display: flex;
     flex-wrap: wrap;
@@ -306,7 +299,7 @@
     color: var(--text-muted);
 }
 
-/* 4. PPT Info Table (Ref Image 1 bottom left) */
+/* 4. PPT Info Table */
 .project-meta {
     margin-top: 60px;
     display: flex;
@@ -323,7 +316,7 @@
     font-weight: 800;
     font-size: 0.8rem;
     letter-spacing: 0.1em;
-    color: var(--accent-soft); /* Changed from text-muted to accent color as requested */
+    color: var(--accent-soft);
     text-transform: uppercase;
     margin-bottom: 3px;
     opacity: 0.8;
@@ -346,7 +339,6 @@
     transform: translateY(0);
 }
 
-/* --- Navigation Header --- */
 /* --- Navigation Header --- */
 .top-bar {
     position: fixed;
@@ -386,7 +378,7 @@
 }
 
 .top-bar div {
-    display: none; /* Hide the name tag in the top bar as requested/implied by redesign to minimal */
+    display: none;
 }
 
 @media (max-width: 1024px) {
@@ -395,7 +387,6 @@
     .slide-title { font-size: 2rem; }
 }
 
-/* --- Interactive Elements --- */
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -483,11 +474,10 @@ footer:not(.project-nav) {
 
 /* --- Mobile Responsive for Project Pages --- */
 @media (max-width: 900px) {
-    /* 1. Hero Split Stack */
     .hero-split {
         height: auto;
         min-height: 100vh;
-        padding-top: 100px; /* Space for fixed nav */
+        padding-top: 100px;
         flex-direction: column;
         justify-content: flex-start;
     }
@@ -497,20 +487,14 @@ footer:not(.project-nav) {
         gap: 20px;
         align-items: flex-start;
         text-align: left;
-        margin-bottom: 60px; /* Added spacing as mockup is hidden */
+        margin-bottom: 60px;
     }
 
-    /* AI Grid Stack */
-
-    
     .hero-logo-side h2 { font-size: 2.5rem; }
-
-    /* 2. Mockup Removal (As requested) */
     .hero-mockups {
         display: none !important;
     }
 
-    /* 3. Hero Bottom Stack */
     .hero-bottom {
         flex-direction: column;
         gap: 40px;
@@ -526,7 +510,6 @@ footer:not(.project-nav) {
     
     .hero-detail-right h2 { font-size: 1.8rem; }
     
-    /* Outro Link Row Stack */
     .link-row {
         display: flex;
         flex-direction: column;
@@ -537,7 +520,7 @@ footer:not(.project-nav) {
 
     .link-row .btn {
         width: 100%;
-        margin-left: 0 !important; /* Override inline styles */
+        margin-left: 0 !important;
         text-align: center;
         justify-content: center;
     }
@@ -545,15 +528,14 @@ footer:not(.project-nav) {
 
 
 
-/* --- Laptop/Desktop Intermediate (Fix for Mockup Overlap) --- */
+/* --- Laptop/Desktop Intermediate --- */
 @media (min-width: 1025px) and (max-width: 1600px) {
-    /* Shift Mockup to Right */
+	
     .mockup-bridge.bridge-center {
         left: 75% !important; 
         transform: translate(-50%, -50%) !important;
     }
 
-    /* Reduce Sizes */
     .scale-mobile { max-height: 55vh !important; width: auto; }
     .scale-laptop { max-height: 40vh !important; width: auto; }
     .scale-tablet { max-height: 35vh !important; width: auto; }
@@ -563,7 +545,7 @@ footer:not(.project-nav) {
 /* --- Tablet Responsive for Project Pages --- */
 @media (max-width: 1024px) {
     .scale-mobile {
-        max-height: 50vh !important; /* Reduced further from 55vh */
+        max-height: 50vh !important;
         width: auto;
     }
 
@@ -577,9 +559,8 @@ footer:not(.project-nav) {
         width: auto;
     }
 
-    /* Shift Mockup to Right (Further Adjustment) */
     .mockup-bridge.bridge-center {
-        left: 85% !important; /* Pushed further right */
+        left: 85% !important;
         transform: translate(-50%, -50%) !important;
     }
 }
@@ -587,19 +568,18 @@ footer:not(.project-nav) {
 
 /* --- New Technical Feature Slide Styles (Bold & Specific) --- */
 .t-feature-slide {
-    background: var(--gray-900); /* Pitch black/dark grey for high contrast */
+    background: var(--gray-900);
     color: var(--text-inverse);
-    /* Reduce gap / height constraints */
-    min-height: auto; /* Allow it to shrink to content */
-    padding: 120px 8%; /* Adjust padding to visually balance */
+    min-height: auto;
+    padding: 120px 8%;
 }
 
 .t-feature-container {
-    max-width: 1000px; /* Narrows focus */
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 0; /* No gap, borders will separate */
+    gap: 0;
 }
 
 .t-feature-row {
@@ -614,7 +594,7 @@ footer:not(.project-nav) {
 
 .t-feature-row:hover {
     background: rgba(255, 255, 255, 0.03);
-    padding-left: 20px; /* Subtle movement */
+    padding-left: 20px;
     border-bottom-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -626,7 +606,7 @@ footer:not(.project-nav) {
     font-family: 'Outfit', sans-serif;
     font-size: 2.5rem;
     font-weight: 900;
-    color: var(--accent); /* Brand accent color */
+    color: var(--accent);
     line-height: 1;
     opacity: 0.8;
 }
@@ -643,7 +623,7 @@ footer:not(.project-nav) {
     line-height: 1.3;
     font-family: 'Outfit', sans-serif;
     word-break: keep-all;
-    color: var(--text-inverse); /* Explicit White */
+    color: var(--text-inverse);
 }
 
 .t-feature-desc {
@@ -652,7 +632,6 @@ footer:not(.project-nav) {
     font-weight: 500;
 }
 
-/* --- Ported Small Card Styles (Promoted to Global) --- */
 .vision-cards {
     display: flex;
     gap: 20px;
@@ -691,7 +670,7 @@ footer:not(.project-nav) {
 }
 
 .small-card .tag-cloud {
-    margin-top: auto; /* Push to bottom */
+    margin-top: auto;
     justify-content: flex-start;
 }
 
@@ -701,7 +680,6 @@ footer:not(.project-nav) {
     }
 }
 
-/* Tech Badges in a raw/technical style */
 .t-tech-badges {
     display: flex;
     flex-wrap: wrap;
@@ -721,7 +699,7 @@ footer:not(.project-nav) {
 
 @media (max-width: 768px) {
     .t-feature-row {
-        grid-template-columns: 1fr; /* Stack number */
+        grid-template-columns: 1fr;
         gap: 15px;
         padding: 30px 0;
     }
@@ -737,12 +715,6 @@ footer:not(.project-nav) {
 }
 
 /* --- Feature Spotlight Layout (For Slide 6) --- */
-
-
-/* --- Spico Specific Gradient Background --- */
-
-
-/* --- Core Function Slide (Style Injection) --- */
 .core-showcase {
     display: flex;
     justify-content: space-between;
@@ -812,19 +784,18 @@ footer:not(.project-nav) {
     }
 
     .core-info.left, .core-info.right {
-        text-align: left; /* Force Left Align on Mobile */
+        text-align: left;
         gap: 30px;
     }
     
     .core-main-mockup {
-        order: -1; /* Image Top */
+        order: -1;
     }
 
     .core-main-mockup img {
-        max-width: 260px !important; /* Reduce Image Size on Mobile */
+        max-width: 260px !important;
     }
 
-    /* Force Tag Left Alignment on Mobile */
     .slide-tag {
         display: block;
         text-align: left !important;
