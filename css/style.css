@@ -1279,24 +1279,29 @@ footer {
     .carousel-slogan { font-size: 1.5rem; margin-bottom: 20px; }
     .carousel-meta-grid { text-align: left; }
 
-    /* Comprehensive Mobile Fixes */
+    /* 1. Ensure inactive cards are NOT clickable and hidden */
     .carousel-card:not(.active) {
         opacity: 0 !important;
+        visibility: hidden !important;
         pointer-events: none !important;
-        visibility: hidden;
-        transition: opacity 0.6s, visibility 0s 0.6s; /* Wait for fade out */
+        z-index: -1 !important;
+        transition: opacity 0.4s, transform 0.6s;
     }
 
+    /* 2. Active card visible */
     .carousel-card.active {
-        visibility: visible;
-        transition: opacity 0.6s, visibility 0s; /* Immediate show */
+        opacity: 1 !important;
+        visibility: visible !important;
+        z-index: 100 !important;
+        transform: translateX(0) scale(1) translateZ(0) !important;
     }
 
-    /* Aggressive translation for narrow mobile views to prevent ghosting */
-    .carousel-card.prev { transform: translateX(-200%) scale(0.6) translateZ(-100px); }
-    .carousel-card.next { transform: translateX(200%) scale(0.6) translateZ(-100px); }
-    .carousel-card.far-prev { transform: translateX(-250%) scale(0.4) translateZ(-200px); display: none !important; }
-    .carousel-card.far-next { transform: translateX(250%) scale(0.4) translateZ(-200px); display: none !important; }
+    /* 3. Push Inactive Cards WAY off-screen to prevent overlap overlap */
+    .carousel-card.prev { transform: translateX(-120vw) scale(0.5) !important; }
+    .carousel-card.next { transform: translateX(120vw) scale(0.5) !important; }
+    
+    .carousel-card.far-prev { display: none !important; }
+    .carousel-card.far-next { display: none !important; }
 
     /* Hide Bottom Bar */
     .carousel-bottom-bar { display: none; }
