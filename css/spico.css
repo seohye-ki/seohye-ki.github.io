@@ -45,7 +45,7 @@ h2.quote-box {
 .highlight-blue { color: var(--theme-spico); }
 
 .bg-light { background-color: var(--bg-light); }
-.bg-blue-grad { background: linear-gradient(135deg, var(--theme-spico) 0%, #2BA174 100%); }
+.bg-blue-grad { background: linear-gradient(120deg, var(--theme-spico) 0%, #1d9265 100%); }
 .bg-blue { background-color: var(--spico-brand); }
 
 

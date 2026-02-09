@@ -72,7 +72,7 @@
     :root {
         --bg-main: var(--gray-800);
         --bg-alt: var(--gray-800);
-        --bg-card: #1c2533;
+        --bg-card: #1b222d;
         --bg-overlay: rgba(255, 255, 255, 0.05);
         
         --text-main: var(--gray-100);
@@ -121,7 +121,7 @@
 [data-theme='dark'] {
     --bg-main: var(--gray-800);
     --bg-alt: var(--gray-800);
-    --bg-card: #1c2533;
+    --bg-card: #1b222d;
     --bg-overlay: rgba(0, 0, 0, 0.4);
     
     --text-main: var(--gray-100);

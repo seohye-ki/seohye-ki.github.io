@@ -1145,9 +1145,9 @@ section {
 
 [data-theme='dark'] {
     --bg-main: var(--gray-800);
-    --bg-alt: var(--gray-800);
-    --bg-card: #1c2533;
-    --bg-overlay: rgba(3, 4, 26, 0.6);
+    --bg-alt: #252e3b;
+    --bg-card: #1b222d;
+    --bg-overlay: rgba(27, 30, 38, 0.659);
     
     --text-main: var(--gray-100);
     --text-muted: var(--gray-400);
