@@ -17,6 +17,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
 </head>
 <body class="theme-lufin">
     <nav class="top-bar">
@@ -32,7 +42,7 @@
             </div>
             <div class="hero-logo-side reveal">
                 <h2>LuFin</h2>
-                <div style="height: 4px; background: var(--accent); width: 60px; margin-left: auto;"></div>
+                <div style="height: 4px; background: var(--text-lufin); width: 60px; margin-left: auto;"></div>
             </div>
         </div>
 
@@ -63,7 +73,7 @@
             <span class="slide-tag">01. MISSION & VISION</span>
             
             <div class="quote-box reveal">
-                <h3>금융은 주입식 교육이 아니라,<br><span style="color:var(--accent);">직접 살아보는</span> 경험이어야 합니다</h3>
+                <h3>금융은 주입식 교육이 아니라,<br><span style="color:var(--text-lufin);">직접 살아보는</span> 경험이어야 합니다</h3>
             </div>
 
             <div class="tech-focus-grid reveal" style="align-items: stretch; gap: 40px; margin-top: 40px;">
@@ -100,7 +110,7 @@
         <div class="slide-container">
             <span class="slide-tag">02. CORE FUNCTION</span>
             <div class="quote-box reveal">
-                <h3>게임처럼 보이지만,<br><span style="color:var(--accent);">금융의 본질</span>을 담아냈습니다</h3>
+                <h3>게임처럼 보이지만,<br><span style="color:var(--text-lufin);">금융의 본질</span>을 담아냈습니다</h3>
             </div>
             
             <div class="feature-grid reveal">
@@ -144,7 +154,7 @@
             <div class="reveal">
                 <!-- Item 1 -->
                 <div class="t-feature-row">
-                    <div class="t-feature-num" style="opacity: 0.5;">01</div>
+                    <div class="t-feature-num">01</div>
                     <div class="t-feature-content">
                         <h3 class="t-feature-title">JPA 비관적 락(Pessimistic Lock) 적용 동시성 제어</h3>
                         <p class="t-feature-desc">선착순 아이템 구매 시 발생할 수 있는 Race Condition을 해결하기 위해 `SELECT ... FOR UPDATE` 쿼리를 발생하는 비관적 락을 적용하여 트랜잭션 충돌 없이 재고 데이터의 정합성을 보장했습니다.</p>
@@ -157,7 +167,7 @@
 
                 <!-- Item 2 -->
                 <div class="t-feature-row">
-                    <div class="t-feature-num" style="opacity: 0.5;">02</div>
+                    <div class="t-feature-num">02</div>
                     <div class="t-feature-content">
                         <h3 class="t-feature-title">Spring AOP 기반 교사 전용 기능 권한 제어</h3>
                         <p class="t-feature-desc">커스텀 어노테이션(@TeacherOnly)과 Aspect를 활용하여 컨트롤러마다 반복되는 권한 검증 로직을 깔끔하게 분리하고 모듈화했습니다.</p>
@@ -170,7 +180,7 @@
 
 				<!-- Item 3 -->
                 <div class="t-feature-row">
-                    <div class="t-feature-num" style="opacity: 0.5;">03</div>
+                    <div class="t-feature-num">03</div>
                     <div class="t-feature-content">
                         <h3 class="t-feature-title">GitLab + Jenkins 기반 CI/CD 자동화 환경 구축</h3>
                         <p class="t-feature-desc">코드 푸시부터 빌드, 테스트, Docker 배포까지 이어지는 무중단 자동화 파이프라인을 구축하여 개발 생산성을 극대화했습니다.</p>
@@ -184,7 +194,7 @@
 
 				<!-- Item 4 -->
                 <div class="t-feature-row">
-                    <div class="t-feature-num" style="opacity: 0.5;">04</div>
+                    <div class="t-feature-num">04</div>
                     <div class="t-feature-content">
                         <h3 class="t-feature-title">문서화 및 협업 프로세스 표준화</h3>
                         <p class="t-feature-desc">요구사항 명세서, API 문서, 에러 코드 정의 등 개발 전 과정의 산출물을 표준화하여 기획-개발 간 커뮤니케이션 비용을 최소화했습니다.</p>
@@ -203,7 +213,7 @@
         <div class="slide-container">
             <span class="slide-tag">04. TRANSACTION</span>
             <div class="quote-box reveal">
-                <h3>데이터는 정직해야 하니까,<br><span style="color:var(--accent);">정합성</span>을 설계했습니다</h3>
+                <h3>데이터는 정직해야 하니까,<br><span style="color:var(--text-lufin);">정합성</span>을 설계했습니다</h3>
             </div>
 
             <div class="tech-focus-grid reveal">
@@ -316,7 +326,7 @@ public class RoleCheckAspect {
     </section>
 
     <!-- OUTRO -->
-    <section class="slide outro-slide bg-blue">
+    <section class="slide outro-slide" style="background-color: var(--theme-lufin);">
         <div class="slide-container full-height align-center-vh">
             <div class="outro-content reveal">
                 <div class="award-badge" style="background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 100px; color: white; margin-bottom: 20px; font-weight: 800;">SSAFY 우수상 🏆</div>

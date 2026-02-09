@@ -1,10 +1,17 @@
 /* DocshunD Specific Styles */
-.theme-docshund { --accent: #B97E65; --accent-soft: #fdf2f8; }
+.theme-docshund { 
+	--accent: var(--theme-docshund);
+	--accent-soft: #fdf2f8;
+	--text-docshund: #B97E65;
+}
 .bg-light { background-color: var(--bg-alt); }
 
 /* Layout Utilities */
+.hero-logo-side h2 {
+	color: var(--text-docshund);
+}
 .slide-tag {
-    display: inline-block; color: var(--accent); font-family: 'Outfit'; font-weight: 800;
+    display: inline-block; color: var(--text-docshund); font-family: 'Outfit'; font-weight: 800;
     font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; position: relative; padding-left: 20px;
 }
 .slide-tag::before { content: ''; position: absolute; left: 0; top: 50%; width: 12px; height: 2px; background: var(--accent); }
@@ -22,8 +29,9 @@
 .feature-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; align-items: center; }
 .f-image-large img { width: 100%; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
 .f-desc-side .f-item { margin-bottom: 40px; }
-.f-desc-side h4 { font-size: 1.3rem; margin-bottom: 10px; font-weight: 800; color: var(--accent); }
+.f-desc-side h4 { font-size: 1.3rem; margin-bottom: 10px; font-weight: 800; color: var(--text-docshund); }
 .f-desc-side p { line-height: 1.6; color: var(--text-muted); }
+
 
 /* Grid 2Col */
 .grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
@@ -33,7 +41,12 @@
 .f-content { padding: 30px; }
 .f-content h4 { font-size: 1.2rem; font-weight: 800; margin-bottom: 10px; }
 .f-content p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px; }
-.f-tag { font-size: 0.75rem; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+.f-tag { font-size: 0.75rem; font-weight: 800; color: var(--text-docshund); text-transform: uppercase; letter-spacing: 1px; }
+
+
+/* Core */
+.t-feature-num { color: var(--text-docshund); }
+.t-tech-badge { color: var(--text-docshund); }
 
 /* Tech Focus */
 .tech-focus-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; align-items: center; }
@@ -58,7 +71,7 @@
 .full-height { min-height: 70vh; }
 .award-badge { background: var(--bg-overlay); color: var(--text-inverse); padding: 8px 20px; border-radius: 100px; font-weight: 800; margin-bottom: 20px; display: inline-block; }
 .btn-outline.white-border { border-color: var(--border-inverse); color: var(--text-inverse); }
-.btn-outline.white-border:hover { background: var(--bg-card); color: var(--accent); }
+.btn-outline.white-border:hover { background: var(--text-inverse); color: var(--accent); }
 .btn-text { color: var(--text-inverse); text-decoration: underline; background: none; border: none; font-weight: 600; }
 .footer-copy { margin-top: 80px; color: var(--text-inverse); opacity: 0.4; font-size: 0.8rem; }
 

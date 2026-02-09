@@ -1,14 +1,39 @@
 
 document.addEventListener('DOMContentLoaded', () => {
+    /* --- THEME TOGGLE --- */
+    const themeToggle = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Dispatch custom event for other scripts (like carousel)
+            window.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme: newTheme } }));
+        });
+    }
 
     /* --- HEADER SCROLL EFFECT --- */
     const headerEl = document.querySelector('.header');
     
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            headerEl.classList.add('scrolled');
-        } else {
-            headerEl.classList.remove('scrolled');
+        if (headerEl) {
+            if (window.scrollY > 50) {
+                headerEl.classList.add('scrolled');
+            } else {
+                headerEl.classList.remove('scrolled');
+            }
         }
     });
 

@@ -16,6 +16,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/nord.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
 </head>
 <body class="theme-seoul42">
     <nav class="top-bar">
@@ -31,7 +41,7 @@
             </div>
             <div class="hero-logo-side reveal">
                 <h2>42 Seoul</h2>
-                <div style="height: 4px; background: var(--accent); width: 60px; margin-left: auto;"></div>
+                <div style="height: 4px; background: var(--text-42seoul); width: 60px; margin-left: auto;"></div>
             </div>
         </div>
 
@@ -187,7 +197,7 @@
     </section>
 
    	<!-- SLIDE 6: KEY LEARNINGS -->
-    <section class="slide t-feature-slide" style="background: linear-gradient(135deg, #1e293b 0%, #020617 100%);">
+    <section class="slide t-feature-slide" style="background: linear-gradient(135deg, #1e293b 0%, #260835 100%);">
         <div class="slide-container">
             <span class="slide-tag white">06. KEY LEARNINGS</span>
             <h2 class="slide-title white">핵심 기술적 성과</h2>
@@ -237,7 +247,7 @@
     </section>
 
     <!-- SLIDE 7: GROWTH & PEER REVIEW -->
-    <section class="slide role-slide" style="background: #f8fafc;">
+    <section class="slide role-slide">
         <div class="slide-container">
             <span class="slide-tag">07. GROWTH & CULTURE</span>
             <div class="quote-box reveal">
@@ -247,12 +257,12 @@
             <div class="vision-grid reveal" style="align-items: flex-start;">
                 <div class="vision-text">
                     <div class="tech-point">
-                        <strong style="color: #15803d;">체계적인 동료 평가 (Peer Review)</strong>
-                        <p style="color: #475569;">42Seoul의 모든 과제는 동료 3명 이상의 평가를 통과해야 합니다. 이 과정에서 내 코드를 논리적으로 방어(Defense)하고, 타인의 코드를 분석하며 다양한 시각을 배웁니다.</p>
+                        <strong style="color: var(--text-42seoul);">체계적인 동료 평가 (Peer Review)</strong>
+                        <p>42Seoul의 모든 과제는 동료 3명 이상의 평가를 통과해야 합니다. 이 과정에서 내 코드를 논리적으로 방어(Defense)하고, 타인의 코드를 분석하며 다양한 시각을 배웁니다.</p>
                     </div>
                     <div class="tech-point" style="margin-top: 40px;">
-                        <strong style="color: #15803d;">엄격한 코딩 컨벤션 (Norminette)</strong>
-                        <p style="color: #475569;">함수 길이 25줄 제한, 변수 선언 위치 등 엄격한 규칙(Norminette)을 준수하며, 가독성 높고 모듈화된 코드를 작성하는 습관을 뼛속 깊이 새겼습니다.</p>
+                        <strong style="color: var(--text-42seoul);">엄격한 코딩 컨벤션 (Norminette)</strong>
+                        <p>함수 길이 25줄 제한, 변수 선언 위치 등 엄격한 규칙(Norminette)을 준수하며, 가독성 높고 모듈화된 코드를 작성하는 습관을 뼛속 깊이 새겼습니다.</p>
                     </div>
                 </div>
                 <!-- Using Minishell Peer Eval Image here as requested -->
@@ -264,7 +274,7 @@
     </section>
 
     <!-- OUTRO -->
-    <section class="slide outro-slide" style="background: #0f172a;">
+    <section class="slide outro-slide" style="background: var(--theme-seoul42);">
         <div class="slide-container full-height align-center-vh">
             <div class="outro-content reveal">
                 <h2 class="slide-title white" style="margin-bottom: 30px;">자기주도 학습의 정점</h2>

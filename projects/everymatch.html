@@ -16,6 +16,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+
+    <!-- Theme Logic (Critical: Apply before render) -->
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
 </head>
 <body class="theme-everymatch">
     <nav class="top-bar">
@@ -31,7 +43,7 @@
             </div>
             <div class="hero-logo-side reveal">
                 <h2>EVERYMATCH</h2>
-                <div style="height: 4px; background: var(--accent); width: 60px; margin-left: auto;"></div>
+                <div style="height: 4px; background: var(--text-everymatch); width: 60px; margin-left: auto;"></div>
             </div>
         </div>
 
@@ -60,7 +72,7 @@
         <div class="slide-container">
             <span class="slide-tag">01. SERVICE</span>
             <div class="quote-box reveal">
-                <h3>단순한 달력이 아니라,<br><span style="color:var(--accent);">팀을 향한 애정</span>을 시각화했습니다</h3>
+                <h3>단순한 달력이 아니라,<br><span style="color:var(--text-everymatch);">팀을 향한 애정</span>을 시각화했습니다</h3>
             </div>
             
             <div class="feature-grid reveal">
@@ -173,7 +185,7 @@
         <div class="slide-container">
             <span class="slide-tag">04. SECURITY</span>
             <div class="quote-box reveal">
-                <h3>로그인부터 데이터 보호까지,<br><span style="color:var(--accent);">사용자의 신뢰</span>를 설계했습니다</h3>
+                <h3>로그인부터 데이터 보호까지,<br><span style="color:var(--text-everymatch);">사용자의 신뢰</span>를 설계했습니다</h3>
             </div>
 
             <div class="tech-focus-grid reveal">
@@ -214,7 +226,7 @@ public SecurityFilterChain filterChain(HttpSecurity http) {
     </section>
 
     <!-- SLIDE 5: UI/UX & GROWTH -->
-    <section class="slide role-slide" style="background: linear-gradient(135deg, #f1654c 0%, #d94e35 100%);">
+    <section class="slide role-slide" style="background: linear-gradient(135deg, var(--theme-everymatch) 0%, #bd3d26 100%);">
         <div class="slide-container">
             <span class="slide-tag white">05. UI/UX & GROWTH</span>
             <h2 class="slide-title white">10일간의 몰입</h2>
@@ -247,7 +259,7 @@ public SecurityFilterChain filterChain(HttpSecurity http) {
     </section>
 
     <!-- OUTRO -->
-    <section class="slide outro-slide" style="background: #d24a32;">
+    <section class="slide outro-slide" style="background: var(--theme-everymatch);">
         <div class="slide-container full-height align-center-vh">
             <div class="outro-content reveal">
                 <div class="award-badge" style="background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 100px; color: white; margin-bottom: 20px; font-weight: 800;">SSAFY 우수상 🏆</div>

@@ -52,6 +52,10 @@
     --accent: var(--accent-blue);
     --accent-indigo: var(--accent-navy);
 
+    /* --- Effects --- */
+    --shadow-main: 0 10px 30px rgba(0,0,0,0.05);
+    --shadow-subtle: 0 4px 12px rgba(0,0,0,0.05);
+
     /* --- Animations --- */
     --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     
@@ -60,8 +64,92 @@
     --theme-lufin: #3b82f6;
     --theme-docshund: #B97E65;
     --theme-everymatch: #f1654c;
-    --theme-seoul42: #0f172a;
+    --theme-seoul42: #9266a5;
 }
+
+/* --- Dark Mode Semantic Tokens --- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-main: var(--gray-800);
+        --bg-alt: var(--gray-800);
+        --bg-card: #1c2533;
+        --bg-overlay: rgba(255, 255, 255, 0.05);
+        
+        --text-main: var(--gray-100);
+        --text-muted: var(--gray-400);
+        --text-subtle: var(--gray-500);
+        --text-primary: var(--text-main);
+        --text-secondary: var(--text-muted);
+        
+        --border-subtle: #2d3748;
+        --border-default: #3e4b5f;
+        --border-strong: #4a5568;
+        --border-overlay: rgba(255, 255, 255, 0.1);
+
+        --shadow-main: 0 10px 30px rgba(0,0,0,0.3);
+        --shadow-subtle: 0 4px 12px rgba(0,0,0,0.2);
+
+        --accent-indigo: #60a5fa;
+        --accent-soft-blue: rgba(0, 102, 255, 0.1);
+    }
+}
+
+/* Manual Theme Switch Support */
+[data-theme='light'] {
+    --bg-main: var(--white);
+    --bg-alt: var(--gray-50);
+    --bg-card: var(--white);
+    --bg-overlay: rgba(255, 255, 255, 0.1);
+    
+    --text-main: var(--gray-900);
+    --text-muted: var(--gray-600);
+    --text-subtle: var(--gray-400);
+    --text-primary: var(--text-main);
+    --text-secondary: var(--text-muted);
+    
+    --border-subtle: var(--gray-100);
+    --border-default: var(--gray-200);
+    --border-strong: var(--gray-300);
+    --border-overlay: rgba(255, 255, 255, 0.15);
+
+    --shadow-main: 0 10px 30px rgba(0,0,0,0.05);
+    --shadow-subtle: 0 4px 12px rgba(0,0,0,0.05);
+
+    --accent-soft-blue: #e0f2fe;
+}
+
+[data-theme='dark'] {
+    --bg-main: var(--gray-800);
+    --bg-alt: var(--gray-800);
+    --bg-card: #1c2533;
+    --bg-overlay: rgba(0, 0, 0, 0.4);
+    
+    --text-main: var(--gray-100);
+    --text-muted: var(--gray-400);
+    --text-subtle: var(--gray-500);
+    --text-primary: var(--text-main);
+    --text-secondary: var(--text-muted);
+    
+    --border-subtle: #2d3748;
+    --border-default: #3e4b5f;
+    --border-strong: #4a5568;
+    --border-overlay: rgba(255, 255, 255, 0.1);
+
+    --shadow-main: 0 10px 30px rgba(0,0,0,0.3);
+    --shadow-subtle: 0 4px 12px rgba(0,0,0,0.2);
+
+    --accent-indigo: #60a5fa;
+    --accent-soft-blue: rgba(0, 102, 255, 0.1);
+
+    /* Dark Mode Project Accents (Subtle) */
+    --theme-spico: #059669;
+    --theme-lufin: #1f5bb4;
+    --theme-docshund: #7a4b2d;
+    --theme-everymatch: #a64026;
+    --theme-seoul42: #60446c;
+}
+
+
 
 /* --- Global Reset --- */
 * {

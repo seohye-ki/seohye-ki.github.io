@@ -1,8 +1,8 @@
 :root {
     --bg-light: var(--bg-alt);
-    --blue-grad: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    --blue-grad: linear-gradient(135deg, var(--theme-lufin) 0%, #193f93 100%);
+	--text-lufin: #3b82f6;
 }
-.theme-lufin { --accent: #3b82f6; --accent-soft: #eff6ff; }
 
 .bg-light { background-color: var(--bg-light); }
 .bg-blue-grad { background: var(--blue-grad); }
@@ -11,11 +11,13 @@
     background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); 
     color: var(--text-inverse);
 }
-.bg-lufin-grad .slide-tag { color: var(--accent); }
+.bg-lufin-grad { color: var(--accent); }
+
+.hero-logo-side h2 { color: var(--text-lufin); }
 
 
 .slide-tag {
-    display: inline-block; color: var(--accent); font-family: 'Outfit'; font-weight: 800;
+    display: inline-block; color: var(--text-lufin); font-family: 'Outfit'; font-weight: 800;
     font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; position: relative; padding-left: 20px;
 }
 .slide-tag::before { content: ''; position: absolute; left: 0; top: 50%; width: 12px; height: 2px; background: var(--accent); }
@@ -58,10 +60,10 @@
     font-family: 'Outfit', sans-serif;
     font-size: 1.8rem;
     font-weight: 900;
-    color: var(--accent);
-    opacity: 0.5;
+    color: var(--text-lufin);
     line-height: 1;
 }
+.t-tech-badge { color: var(--text-lufin); }
 .role-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
 .role-card { background: var(--bg-overlay); backdrop-filter: blur(10px); padding: 40px; border-radius: 24px; color: var(--text-inverse); border: 1px solid rgba(255,255,255,0.2); min-width: 0; }
 .role-icon { font-size: 2.5rem; margin-bottom: 20px; }
@@ -70,7 +72,7 @@
 
 /* Vision Split */
 .vision-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; }
-.tech-point strong { font-size: 1.2rem; display: block; margin-bottom: 10px; color: var(--accent); }
+.tech-point strong { font-size: 1.2rem; display: block; margin-bottom: 10px; color: var(--text-lufin); }
 .tech-point p { color: var(--text-muted); line-height: 1.7; }
 
 /* Outro */
@@ -78,7 +80,7 @@
 .full-height { min-height: 70vh; }
 .award-badge { background: var(--bg-overlay); color: var(--text-inverse); padding: 8px 20px; border-radius: 100px; font-weight: 800; margin-bottom: 20px; display: inline-block; }
 .btn-outline.white-border { border-color: var(--border-inverse); color: var(--text-inverse); }
-.btn-outline.white-border:hover { background: var(--bg-card); color: var(--accent); }
+.btn-outline.white-border:hover { background: var(--text-inverse); color: var(--accent); }
 .footer-copy { margin-top: 80px; color: var(--text-inverse); opacity: 0.4; font-size: 0.8rem; }
 
 /* Responsive */

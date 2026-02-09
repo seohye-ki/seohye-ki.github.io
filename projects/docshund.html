@@ -16,6 +16,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dusk.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
 </head>
 <body class="theme-docshund">
     <nav class="top-bar">
@@ -31,7 +41,7 @@
             </div>
             <div class="hero-logo-side reveal">
                 <h2>DocshunD</h2>
-                <div style="height: 4px; background: var(--accent); width: 60px; margin-left: auto;"></div>
+                <div style="height: 4px; background: var(--text-docshund); width: 60px; margin-left: auto;"></div>
             </div>
         </div>
 
@@ -65,7 +75,7 @@
             </div>
             
             <div class="quote-box reveal">
-                <h3>공식 문서는 정확해야 하지만,<br><span style="color:var(--accent);">누구나 쉽게</span> 읽을 수 있어야 합니다</h3>
+                <h3>공식 문서는 정확해야 하지만,<br><span style="color:var(--text-docshund);">누구나 쉽게</span> 읽을 수 있어야 합니다</h3>
                 <p class="slide-p" style="margin-top: 30px; max-width: 800px;">
                     DocshunD는 혼자 읽기 힘든 방대한 공식 문서를 개발자들이 힘을 합쳐 번역하고,
                     실시간으로 질문과 답변을 주고받으며 함께 성장하는 공간입니다.
@@ -299,7 +309,7 @@ const responseInterceptor = (error) => {
     </section>
 
     <!-- SLIDE 8: CONTRIBUTION 03 [Responsive] -->
-    <section class="slide role-slide" style="background: linear-gradient(135deg, #B97E65 0%, #8c5e4d 100%);">
+    <section class="slide role-slide" style="background: linear-gradient(135deg, var(--theme-docshund) 0%, #8c5e4d 100%);">
         <div class="slide-container">
             <span class="slide-tag white">07. RESPONSIVE UI</span>
             <div class="quote-box reveal">
@@ -333,7 +343,7 @@ const responseInterceptor = (error) => {
     </section>
 
     <!-- SLIDE 9: OUTRO -->
-    <section class="slide outro-slide" style="background: #A66D55;">
+    <section class="slide outro-slide" style="background: var(--theme-docshund);">
         <div class="slide-container full-height align-center-vh">
             <div class="outro-content reveal">
                 <div class="award-badge" style="background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 100px; color: white; margin-bottom: 20px; font-weight: 800;">SSAFY 우수상 🏆</div>

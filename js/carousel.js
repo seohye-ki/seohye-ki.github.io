@@ -3,14 +3,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('carousel-header');
     const cards = Array.from(document.querySelectorAll('.carousel-card'));
     
-    // Define Project Gradients (Start -> End) for Subtle Depth
-    const gradients = [
-        ['#20ad5d', '#42D596'], // Spico
+    // Define Project Gradients (Light vs Dark)
+    const brandGradients = [
+        ['#42D596', '#059669'], // Spico
         ['#3b82f6', '#2563eb'], // LuFin
-        ['#a66d55', '#a9461b'], // DocshunD
-        ['#f78a50', '#f1654c'], // EveryMatch
-        ['#f07965', '#0f172a']  // 42Seoul
+        ['#B97E65', '#78350f'], // DocshunD
+        ['#ee7f6bff', '#c2410c'], // EveryMatch
+        ['#0f172a', '#312e81']  // 42Seoul
     ];
+
+    const darkGradients = [
+        ['#020617', '#064e3b'], // Spico
+        ['#020617', '#1e3a8a'], // LuFin
+        ['#020617', '#451a03'], // DocshunD
+        ['#020617', '#7c2d12'], // EveryMatch
+        ['#020617', '#1e1b4b']  // 42Seoul
+    ];
+
+    function getGradients() {
+        const theme = document.documentElement.getAttribute('data-theme');
+        if (theme === 'dark') return darkGradients;
+        if (theme === 'light') return brandGradients;
+        // Fallback to system
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? darkGradients : brandGradients;
+    }
 
     // Define Project Logos
     const projectLogos = [
@@ -30,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isAnimating = false;
 
     function updateCarousel() {
+        const gradients = getGradients();
         if (!header || !bottomLogo) return;
 
         // Debounce: Lock interaction
@@ -37,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => { isAnimating = false; }, 600); // Match CSS transition 0.6s
 
         const [c1, c2] = gradients[currentIndex];
-        header.style.background = `linear-gradient(to bottom, ${c1}, ${c2})`;
+        header.style.background = `linear-gradient(135deg, ${c1}, ${c2})`;
         
         // Update Bottom Logo with subtle fade
         bottomLogo.style.opacity = '0';
@@ -137,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function startAutoPlay() {
         autoPlayTimer = setInterval(() => {
             nextSlide();
-        }, 8000); // 8 Seconds
+        }, 5000); // 5 Seconds
     }
 
     function resetAutoPlay() {
@@ -150,4 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCarousel();
         startAutoPlay();
     }
+
+    // Listen for theme changes from main.js (Immediate Update)
+    window.addEventListener('themeChanged', () => {
+        updateCarousel();
+    });
 });
