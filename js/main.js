@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
     } else {
-        document.documentElement.setAttribute('data-theme', 'light');
+        const defaultTheme = systemDark ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', defaultTheme);
     }
 
     if (themeToggle) {

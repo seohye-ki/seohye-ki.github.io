@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | 김서현</title>
     <link rel="icon" type="image/png" href="./assets/main_icon.png" />
-    <link rel="stylesheet" href="./css/style.css?v=2" />
+    <link rel="stylesheet" href="./css/style.css?v=2.1" />
 
     <!-- Metadata -->
     <meta property="og:title" content="Portfolio | 김서현" />
@@ -27,7 +27,8 @@
         if (savedTheme) {
           document.documentElement.setAttribute('data-theme', savedTheme);
         } else {
-          document.documentElement.setAttribute('data-theme', 'light'); // Default to Light
+          const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.setAttribute('data-theme', systemDark ? 'dark' : 'light');
         }
       })();
     </script>
@@ -436,7 +437,7 @@
 	  <!-- PROJECTS -->
       <section id="projects">
         <div class="section-header">
-           <span class="section-label">PROJECT ARCHIVE</span>
+           <span class="section-label">ARCHIVE</span>
            <h2 class="section-title">Projects</h2>
         </div>
 
@@ -508,7 +509,7 @@
            <div class="project-impact-card reveal">
                <div class="project-impact-header">
                    <div class="project-header-left">
-                       <img src="./assets/docshund/logo.png" class="project-impact-logo" alt="DocshunD Logo"/>
+                       <img src="./assets/docshund/small_logo.png" class="project-impact-logo" alt="DocshunD Logo"/>
                        <div class="project-impact-title-group">
                            <p class="project-impact-title">DocshunD</p>
                            <span class="project-impact-subtitle">IT 공식 문서 공동 번역 플랫폼</span>
@@ -539,7 +540,7 @@
            <div class="project-impact-card reveal">
                <div class="project-impact-header">
                    <div class="project-header-left">
-                       <img src="./assets/everymatch/logo.png" class="project-impact-logo" alt="EveryMatch Logo"/>
+                       <img src="./assets/everymatch/small_logo.png" class="project-impact-logo" alt="EveryMatch Logo"/>
                        <div class="project-impact-title-group">	
                            <p class="project-impact-title">EveryMatch</p>
                            <span class="project-impact-subtitle">프로스포츠 경기 일정 통합 캘린더</span>
@@ -571,7 +572,7 @@
            <div class="project-impact-card reveal">
                <div class="project-impact-header">
                    <div class="project-header-left">
-                       <img src="./assets/42seoul/logo.png" class="project-impact-logo" alt="42Seoul Logo"/>
+                       <img src="./assets/42seoul/logo.png" class="project-impact-logo logo-invert" alt="42Seoul Logo"/>
                        <div class="project-impact-title-group">
                            <p class="project-impact-title">42 Seoul</p>
                            <span class="project-impact-subtitle">자기주도형 소프트웨어 교육 과정</span>
@@ -662,7 +663,7 @@
               <div class="record-title">삼성 청년 SW•AI 아카데미 자율프로젝트(도메인: 오픈소스) 우수상</div>
               <div class="record-sub"><a href="./projects/spico.html">AI 발표 코칭 애플리케이션 (Spico)</a></div>
             </div>
-            <div class="record-badge award">3위</div>
+            <div class="record-badge award">3 위</div>
           </div>
           <div class="record-item reveal delay-100">
             <div class="record-date">2025.04.11</div>
@@ -670,7 +671,7 @@
               <div class="record-title">삼성 청년 SW•AI 아카데미 특화프로젝트(도메인: 핀테크) 우수상</div>
               <div class="record-sub"><a href="./projects/lufin.html">신용도 기반 초등학생 금융교육 시뮬레이션 (LuFin)</a></div>
             </div>
-            <div class="record-badge award">2위</div>
+            <div class="record-badge award">2 위</div>
           </div>
           <div class="record-item reveal delay-200">
             <div class="record-date">2025.02.21</div>
@@ -678,7 +679,7 @@
               <div class="record-title">삼성 청년 SW•AI 아카데미 공통프로젝트(도메인: 웹디자인) 우수상</div>
               <div class="record-sub"><a href="./projects/docshund.html">IT 개발 공식 문서 공동 번역 및 커뮤니티 (DocshunD)</a></div>
             </div>
-            <div class="record-badge award">3위</div>
+            <div class="record-badge award">3 위</div>
           </div>
           <div class="record-item reveal delay-300">
             <div class="record-date">2024.11.28</div>
@@ -686,7 +687,7 @@
               <div class="record-title">삼성 청년 SW•AI 아카데미 관통프로젝트(도메인: 스포츠) 우수상</div>
               <div class="record-sub"><a href="./projects/everymatch.html">프로스포츠 경기일정 통합 캘린더 (EVERYMATCH)</a></div>
             </div>
-            <div class="record-badge award">2위</div>
+            <div class="record-badge award">2 위</div>
           </div>
         </div>
       </section>
@@ -694,10 +695,9 @@
       <!-- CERTIFICATIONS -->
       <section id="certifications">
         <div class="section-header">
-          <span class="section-label">Validation</span>
+          <span class="section-label">Credentials</span>
           <h2 class="section-title">
-            <span class="desktop-text">Certifications</span>
-            <span class="mobile-text">Certs</span>
+            <span>Certifications</span>
           </h2>
         </div>
         <div class="record-list">
@@ -735,7 +735,7 @@
       <!-- PEER REVIEWS -->
       <section id="reviews">
         <div class="section-header">
-          <span class="section-label">Behind Notes</span>
+          <span class="section-label">Feedback</span>
           <h2 class="section-title">
             <span class="desktop-text">Peer Reviews</span>
             <span class="mobile-text">Reviews</span>
@@ -884,7 +884,7 @@
       <section id="contact">
         <div class="section-header">
           <span class="section-label">Connect</span>
-          <h2 class="section-title">Contact</h2>
+          <h2 class="section-title">Links</h2>
         </div>
         <div class="contact-row reveal">
           <a href="mailto:seohyeon.shkim@gmail.com" class="contact-link">
@@ -917,7 +917,7 @@
     <footer>ⓒ 2026. KIM SEO HYEON ALL RIGHTS RESERVED.</footer>
 
     <!-- External Scripts -->
-    <script src="js/main.js?v=2"></script>
-    <script src="js/carousel.js?v=2"></script>
+    <script src="js/main.js?v=2.1"></script>
+    <script src="js/carousel.js?v=2.1"></script>
   </body>
 </html>
