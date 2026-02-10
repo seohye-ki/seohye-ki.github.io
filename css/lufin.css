@@ -32,7 +32,6 @@
 .feature-card .f-media img { width: 100%; height: 100%; object-fit: cover; }
 .feature-card .f-content { padding: 25px; }
 .feature-card h4 { font-size: 1.1rem; margin-bottom: 10px; font-weight: 800; }
-.feature-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; word-break: keep-all; }
 
 /* Tech Focus */
 .tech-focus-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; align-items: center; }
@@ -89,7 +88,7 @@
     .hero-mockups { margin: 40px 0; }
     .hero-mockups { margin: 40px 0; }
     .hero-mockups { margin: 40px 0; }
-    .quote-box h3 { font-size: 1.6rem; }
+    .hero-mockups { margin: 40px 0; }
     .slide-title, .slide-title.white { font-size: 2rem; }
 
     .t-feature-row {
@@ -127,4 +126,384 @@
     } 
     pre::-webkit-scrollbar { height: 4px; }
     pre::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 4px; } 
+}
+
+.tech-focus-grid.vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+}
+
+.tech-desc-side {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tech-desc-side .small-card {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+    justify-content: flex-start;
+    position: relative;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+
+.tech-desc-side .small-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 4px;
+    background: var(--text-lufin);
+    opacity: 0.8;
+}
+
+.card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    background: rgba(59, 130, 246, 0.08);
+    width: 60px; height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    color: var(--text-main);
+}
+
+.tech-desc-side .small-card h5 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+}
+
+.tech-desc-side .small-card p {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 400;
+    word-break: keep-all;
+}
+
+/* Section Subtitles */
+.section-subtitle {
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Visibility enhancement for bold keywords */
+.reveal p b,
+.reveal li b {
+    color: var(--text-lufin);
+    font-weight: 800;
+}
+
+/* Infra & AOP Section Styles */
+.infra-desc {
+    color: white;
+    opacity: 0.9;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    word-break: keep-all;
+}
+
+/* Paradigm Shift: CI/CD Pipeline */
+.pipeline-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 30px; /* Increased gap */
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pipeline-step {
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+.pipeline-step .step-label {
+    color: white;
+    font-weight: 700;
+}
+
+.pipeline-step .step-desc {
+    color: white;
+    opacity: 0.8;
+    font-size: 0.85rem;
+}
+
+.pipeline-step:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    right: -25px; /* Adjusted for better centering in the gap */
+    top: 20px;
+    color: var(--text-lufin);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+/* AOP Simplified Layout */
+.aop-simple-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.aop-code-card {
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    overflow: visible !important;
+}
+
+.aop-code-header {
+    background: rgba(0,0,0,0.4) !important;
+    margin-top: 10px !important;
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.aop-code-filename {
+    color: white;
+    opacity: 0.6;
+    font-size: 0.85rem;
+}
+
+.aop-code-block {
+    background: rgba(0,0,0,0.3) !important;
+    padding: 20px !important;
+    border-radius: 0 0 10px 10px !important;
+    margin-top: 0 !important;
+}
+
+.aop-code-block code {
+    background: transparent !important;
+    padding: 0 !important;
+    font-size: 0.85rem !important;
+    color: white !important;
+}
+
+.aop-benefits-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.aop-benefit-item {
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.aop-benefit-title {
+    font-size: 1.1rem;
+    color: white; /* Brightened for visibility */
+    font-weight: 800;
+}
+
+.aop-benefit-desc {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+/* Philosophy Section */
+.philosophy-card {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border: none;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.philosophy-text {
+    text-align: center;
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+}
+
+.step-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(59, 130, 246, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 10px; /* Centering */
+}
+
+/* Paradigm Shift: AOP Transformation */
+.transformation-container {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.transform-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.transform-card.problem {
+    border-left: 4px solid #ef4444;
+}
+
+.transform-card.solution {
+    border-left: 4px solid var(--text-lufin);
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.transform-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.transform-header span {
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.transform-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.transform-card li {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    opacity: 0.9;
+}
+
+.transform-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--text-lufin);
+}
+
+/* Code Comparison Visibility Enhancement */
+.code-diff-container {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    gap: 15px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.code-diff-box {
+    background: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.code-diff-header {
+    background: #2d2d2d;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+}
+
+.code-diff-box pre {
+    margin: 0;
+    padding: 15px;
+    font-size: 0.7rem;
+    line-height: 1.5;
+}
+
+.code-magic-arrow {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--text-lufin);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.7; }
+}
+
+@media (max-width: 900px) {
+    .code-diff-container {
+        grid-template-columns: 1fr;
+    }
+    .code-magic-arrow {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .tech-desc-side {
+        grid-template-columns: 1fr;
+    }
+    .pipeline-container {
+        flex-direction: column;
+        gap: 50px; /* Increased for breathing room */
+        padding: 40px 20px;
+    }
+    .pipeline-step {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .pipeline-step:not(:last-child)::after {
+        content: '↓';
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -45px;
+        top: auto;
+    }
+    .transformation-container {
+        grid-template-columns: 1fr;
+    }
+    .transform-arrow {
+        transform: rotate(90deg);
+    }
+    .aop-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }

@@ -1,0 +1,236 @@
+/**
+ * Render Script
+ * Renders the content from DATA into the HTML structure.
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderCarousel();
+    renderSkills();
+    renderProjects();
+    renderExperience();
+    renderAwards();
+    renderCertifications();
+    renderReviews();
+});
+
+/* --- CAROUSEL RENDERER --- */
+function renderCarousel() {
+    const track = document.getElementById('track');
+    if (!track) return;
+    
+    track.innerHTML = DATA.carousel.map((item, index) => `
+        <div class="carousel-card ${item.className}">
+            <div class="carousel-card-inner">
+                <div class="carousel-text-col">
+                    <img src="${item.logoSmall}" alt="${item.id} Logo" class="carousel-logo-small" />
+                    <div class="carousel-slogan">${item.slogan}</div>
+                    <div class="carousel-detail">${item.detail}</div>
+
+                    <div class="carousel-meta-grid">
+                        <div class="meta-item">
+                            <div class="meta-label">ROLE.</div>
+                            ${item.role.map(r => `<div class="meta-value">${r}</div>`).join('')}
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">PERIOD.</div>
+                            <div class="meta-value">${item.period}</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">TOOL.</div>
+                            <div class="meta-value">${item.tool.join('<br />')}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-image-col">
+                    <img src="${item.mockup}" alt="${item.id} Mockup" class="carousel-mockup" />
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+/* --- SKILLS RENDERER --- */
+function renderSkills() {
+    const container = document.getElementById('skills-container');
+    if (!container) return;
+
+    container.innerHTML = DATA.skills.map(category => `
+        <div class="skill-category">
+            <h3 class="skill-cat-title">${category.category}</h3>
+            <div class="skill-grid">
+                ${category.items.map(skill => `
+                    <div class="tech-chip">
+                        <img src="${skill.icon}" /> ${skill.name}
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `).join('');
+}
+
+/* --- PROJECTS RENDERER --- */
+function renderProjects() {
+    const container = document.getElementById('project-list');
+    if (!container) return;
+
+    container.innerHTML = DATA.projects.map(project => `
+        <div class="project-impact-card reveal">
+            <div class="project-impact-header">
+                <div class="project-header-left">
+                    <img src="${project.logo}" class="project-impact-logo ${project.logoInvert ? 'logo-invert' : ''}" alt="${project.title} Logo"/>
+                    <div class="project-impact-title-group">
+                        <p class="project-impact-title">${project.title}</p>
+                        <span class="project-impact-subtitle">${project.subtitle}</span>
+                    </div>
+                </div>
+                <a href="${project.link}" class="project-view-cta">View More →</a>
+            </div>
+            
+            <div class="project-impact-tags">
+                ${project.tags.map(tag => `<span class="project-tech-chip">${tag}</span>`).join('')}
+            </div>
+            
+            <details class="project-impact-details">
+                <summary class="project-impact-summary">주요 담당 파트 내용</summary>
+                <div class="project-impact-body">
+                    <ul class="project-impact-list">
+                        ${project.details.map(detail => `<li>${detail}</li>`).join('')}
+                    </ul>
+                </div>
+            </details>
+        </div>
+    `).join('');
+
+    observeReveal();
+}
+
+/* --- EXPERIENCE RENDERER --- */
+function renderExperience() {
+    const container = document.getElementById('experience-timeline');
+    if (!container) return;
+
+    container.innerHTML = DATA.experience.map(exp => `
+        <div class="experience-item reveal ${exp.delay || ''}">
+            <span class="experience-date">${exp.period}</span>
+            <h3 class="experience-title">${exp.title}</h3>
+            <p class="text-desc">${exp.desc}</p>
+            ${exp.subList ? `
+                <ul class="sub-list">
+                    ${exp.subList.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+            ` : ''}
+            ${exp.infoBox ? `
+                <div class="info-box">
+                    <strong>${exp.infoBox.title}</strong>
+                    <p>${exp.infoBox.desc}</p>
+                </div>
+            ` : ''}
+        </div>
+    `).join('');
+    
+    observeReveal();
+}
+
+/* --- AWARDS RENDERER --- */
+function renderAwards() {
+    const container = document.getElementById('awards-list');
+    if (!container) return;
+
+    container.innerHTML = DATA.awards.map(award => `
+        <div class="record-item reveal ${award.delay || ''}">
+            <div class="record-date">${award.date}</div>
+            <div class="record-content">
+                <div class="record-title">${award.title}</div>
+                <div class="record-sub"><a href="${award.link}">${award.sub}</a></div>
+            </div>
+            <div class="record-badge award">${award.rank}</div>
+        </div>
+    `).join('');
+
+    observeReveal();
+}
+
+/* --- CERTIFICATIONS RENDERER --- */
+function renderCertifications() {
+    const container = document.getElementById('certifications-list');
+    if (!container) return;
+
+    container.innerHTML = DATA.certifications.map(cert => `
+        <div class="record-item reveal ${cert.delay || ''}">
+            <div class="record-date">${cert.date}</div>
+            <div class="record-content">
+                <div class="record-title">${cert.title}</div>
+                <div class="record-sub">${cert.sub}</div>
+            </div>
+        </div>
+    `).join('');
+    
+    observeReveal();
+}
+
+/* --- REVIEWS RENDERER --- */
+function renderReviews() {
+    const container = document.getElementById('review-grid');
+    if (!container) return;
+
+    container.innerHTML = DATA.reviews.map(review => `
+        <div class="review-card reveal ${review.hidden ? 'review-hidden' : ''} ${review.delay || ''}" data-review-id="${review.id}">
+            <p class="review-text">${review.summary}</p>
+            <div class="review-meta">
+                <span class="review-author">${review.author}</span>
+                <span class="review-project">${review.project}</span>
+            </div>
+        </div>
+    `).join('');
+    
+    observeReveal();
+    initializeReviewModal();
+    applyProjectColors();
+}
+
+/* --- HELPER: Re-attach intersection observer --- */
+function observeReveal() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('active');
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+/* --- HELPER: Modal Logic (Moved from main.js or re-bound here) --- */
+function initializeReviewModal() {
+    const modal = document.getElementById('review-modal');
+    const modalBody = document.getElementById('modal-body');
+    // Events are often bound to static elements, but card clicks need binding dynamically
+    
+    document.querySelectorAll('.review-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const id = card.getAttribute('data-review-id');
+            const data = DATA.reviews.find(r => r.id == id);
+            if (data) {
+                modalBody.innerHTML = data.fullContent;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+}
+
+function applyProjectColors() {
+    const projectColors = {
+        "spico": "#42D596",
+        "lufin": "#3b82f6",
+        "docshund": "#B97E65",
+        "everymatch": "#f1654c",
+        "42seoul": "#0f172a"
+    };
+
+    document.querySelectorAll('.review-project').forEach(el => {
+        const projectName = el.innerText.trim().toLowerCase();
+        if (projectColors[projectName]) {
+            el.style.color = projectColors[projectName];
+        }
+    });
+}

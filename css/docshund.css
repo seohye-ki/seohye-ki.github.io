@@ -57,6 +57,17 @@
 .code-header span { margin-left: auto; font-family: monospace; font-size: 0.8rem; opacity: 0.7; }
 
 .desc-item { margin-bottom: 30px; }
+.card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    background: rgba(185, 126, 101, 0.08);
+    width: 60px; height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    color: var(--text-main);
+}
 .desc-item h5 { font-size: 1.1rem; font-weight: 800; margin-bottom: 8px; color: var(--text-main); }
 .desc-item p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
 

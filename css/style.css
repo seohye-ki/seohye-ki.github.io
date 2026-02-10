@@ -141,22 +141,22 @@ nav {
 .orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.4;
+    filter: blur(100px);
+    opacity: 0.6;
     mix-blend-mode: screen;
     animation: drift 20s infinite alternate ease-in-out;
 }
 
 .orb-1 {
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
-    top: -10%; left: -10%;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+    top: -15%; left: -15%;
 }
 
 .orb-2 {
-    width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
-    bottom: -10%; right: -10%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 70%);
+    bottom: -15%; right: -15%;
     animation-delay: -10s;
 }
 
@@ -536,7 +536,7 @@ section {
 .profile-tag {
     font-size: 1.25rem;
     font-weight: 500;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.5;
     transform: translateY(10px);
@@ -600,7 +600,7 @@ section {
 .core-value-card p {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     word-break: keep-all;
 }
 
@@ -621,7 +621,7 @@ section {
     font-family: 'Outfit', sans-serif;
     font-weight: 900;
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -649,7 +649,7 @@ section {
     font-size: 0.9rem;
     font-family: 'Outfit', sans-serif;
     font-weight: 600;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     transition: all 0.2s ease;
 }
 
@@ -780,7 +780,7 @@ section {
     padding: 6px 12px;
     border-radius: 6px;
     background: var(--bg-alt);
-    color: var(--text-muted);
+    color: var(--text-secondary);
     letter-spacing: 0.02em;
     display: flex;
     align-items: center;
@@ -796,7 +796,7 @@ section {
     font-size: 0.9rem;
     font-family: 'Outfit', sans-serif;
     font-weight: 600;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     transition: all 0.2s ease;
 }
 
@@ -821,7 +821,7 @@ section {
     content: "+";
     font-size: 1.2rem;
     font-weight: 400;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     transition: transform 0.2s ease;
 }
 
@@ -940,7 +940,7 @@ section {
 }
 
 .info-box p {
-    color: var(--text-muted);
+    color: var(--text-secondary);
     font-size: 0.9rem;
     margin: 0;
     line-height: 1.5;
@@ -971,7 +971,7 @@ section {
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
     font-size: 0.85rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
 }
 
 .record-content {
@@ -993,7 +993,7 @@ section {
 
 .record-sub {
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     margin-top: 2px;
 }
 
@@ -1095,7 +1095,7 @@ section {
 .review-author {
     font-size: 0.85rem;
     font-weight: 800;
-    color: var(--text-muted);
+    color: var(--text-secondary);
 }
 
 .review-project {
@@ -1143,43 +1143,14 @@ section {
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-[data-theme='dark'] {
-    --bg-main: var(--gray-800);
-    --bg-alt: #252e3b;
-    --bg-card: #1b222d;
-    --bg-overlay: rgba(27, 30, 38, 0.659);
-    
-    --text-main: var(--gray-100);
-    --text-muted: var(--gray-400);
-    --text-subtle: var(--gray-500);
-    --text-primary: var(--text-main);
-    --text-secondary: var(--text-muted);
-    
-    --border-subtle: #2d3748;
-    --border-default: #3e4b5f;
-    --border-strong: #4a5568;
-    --border-overlay: rgba(255, 255, 255, 0.1);
 
-    --shadow-main: 0 10px 30px rgba(0,0,0,0.3);
-    --shadow-subtle: 0 4px 12px rgba(0,0,0,0.2);
-
-    --accent-indigo: #60a5fa;
-    --accent-soft-blue: rgba(0, 102, 255, 0.1);
-
-    /* Dark Mode Project Accents (Subtle) */
-    --theme-spico: #059669;
-    --theme-lufin: #2563eb;
-    --theme-docshund: #92400e;
-    --theme-everymatch: #c2410c;
-    --theme-seoul42: #334155;
-}
 
 /* Ensure background color applies to sections */
 [data-theme='dark'] body,
 [data-theme='dark'] section,
 [data-theme='dark'] footer {
     background-color: var(--bg-main);
-    color: var(--text-main);
+    color: var(--text-primary);
 }
 
 .modal.active {
@@ -1250,7 +1221,7 @@ section {
 .editorial-body blockquote {
     font-size: 1.2rem;
     font-weight: 500;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     border-left: 4px solid #9ca3af;
     padding-left: 30px;
     margin: 40px 0;
@@ -1311,7 +1282,7 @@ section {
 footer {
     padding: 60px 0;
     text-align: center;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     font-size: 0.8rem;
     font-weight: 700;
 }

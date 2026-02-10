@@ -82,7 +82,7 @@
                     </div>
                     <div class="f-content">
                         <h4>경기 일정 히트맵</h4>
-                        <p>FullCalendar를 커스터마이징하여, 일자별 경기 밀도에 따라 색상의 농자가 변하는 직관적인 UI를 구현했습니다.</p>
+                        <p>FullCalendar를 커스터마이징하여, 일자별 경기 밀도에 따라 색상의 농도가 변하는 직관적인 UI를 구현했습니다.</p>
                     </div>
                 </div>
                 <div class="feature-card">
@@ -100,7 +100,7 @@
                     </div>
                     <div class="f-content">
                         <h4>경기 임박 알림 서비스</h4>
-                        <p>경기 시작 1시간 전, 놓치지 않도록 이메일 알림을 자동 발송하는 스케줄링 시스템을 구축했습니다.</p>
+                        <p>관심 팀 경기 시작 1시간 전, 놓치지 않도록 이메일 알림을 자동 발송하는 스케줄링 시스템을 구축했습니다.</p>
                     </div>
                 </div>
             </div>
@@ -111,7 +111,9 @@
     <section class="slide vision-slide">
         <div class="slide-container">
             <span class="slide-tag">02. AI ASSISTANT</span>
-            <h2 class="slide-title">더 재밌게, AI 기능</h2>
+            <div class="quote-box reveal">
+                <h3>더 재밌게,<br><span style="color:var(--text-everymatch);">AI 기능</span></h3>
+            </div>
             
             <div class="vision-grid reveal ai-grid">
                 
@@ -120,7 +122,7 @@
                     <div class="tech-point" style="margin: 0;">
                         <strong>AI 팀 추천</strong>
                         <p>"응원 팀이 없어도 괜찮습니다."<br>
-                        사용자의 성향을 분석하여 ChatGPT API가 가장 적합한 스포츠 팀을 추천해줍니다.</p>
+                        사용자의 성향을 분석하여 AI가 가장 적합한 스포츠 팀을 추천해줍니다.</p>
                     </div>
                 </div>
                 <!-- Item 2: Team Recommendation Image -->
@@ -132,7 +134,7 @@
                 <div class="vision-text" style="text-align: left;">
                     <div class="tech-point" style="margin: 0;">
                         <strong>스포츠 전문 챗봇</strong>
-                        <p>경기 규칙부터 선수 정보까지, 궁금한 점은 언제든 챗봇에게 물어볼 수 있도록 프롬프트 엔지니어링을 적용했습니다.</p>
+                        <p>경기 규칙부터 선수 정보까지, 궁금한 점은 언제든 파트너 챗봇에게 물어볼 수 있습니다.</p>
                     </div>
                 </div>
                 <!-- Item 4: Chatbot Image -->
@@ -148,7 +150,9 @@
     <section class="slide t-feature-slide" style="background: linear-gradient(135deg, #0f172a 0%, #531e15 100%);">
         <div class="slide-container">
             <span class="slide-tag white">03. KEY CONTRIBUTIONS</span>
-            <h2 class="slide-title white">핵심 프로젝트 기여</h2>
+            <div class="quote-box reveal">
+                <h3 class="white">기여의 핵심,<br><span style="color:var(--text-everymatch);">주요 기술적 기여</span></h3>
+            </div>
             
             <div class="t-feature-container reveal">
                 <!-- Item 1 -->
@@ -167,11 +171,10 @@
                 <div class="t-feature-row">
                     <div class="t-feature-num">02</div>
                     <div class="t-feature-content">
-                        <h3 class="t-feature-title">Spring Scheduler 활용 비동기 이메일 알림 배치 처리</h3>
-                        <p class="t-feature-desc">경기 시작 1시간 전 알림을 위해 `@Scheduled`로 배치 작업을 구성하고, JavaMailSender를 비동기 스레드 풀(`@Async`)에서 실행시켜 대량 메일 발송 시 메인 스레드가 블로킹되는 문제를 해결했습니다.</p>
+                        <h3 class="t-feature-title">Spring Scheduler 활용 이메일 알림 배치 처리</h3>
+                        <p class="t-feature-desc">경기 시작 1시간 전 알림을 위해 @Scheduled로 배치 작업을 구성하고, JavaMailSender를 활용하여 메일을 발송하도록 구현했습니다.</p>
                         <div class="t-tech-badges">
                             <span class="t-tech-badge">Spring Scheduler</span>
-                            <span class="t-tech-badge">Async Thread Pool</span>
                             <span class="t-tech-badge">JavaMailSender</span>
                         </div>
                     </div>
@@ -185,7 +188,7 @@
         <div class="slide-container">
             <span class="slide-tag">04. SECURITY</span>
             <div class="quote-box reveal">
-                <h3>로그인부터 데이터 보호까지,<br><span style="color:var(--text-everymatch);">사용자의 신뢰</span>를 설계했습니다</h3>
+                <h3>기본부터 확실하게,<br><span style="color:var(--text-everymatch);">보안과 데이터 보호</span></h3>
             </div>
 
             <div class="tech-focus-grid reveal">
@@ -214,11 +217,11 @@ public SecurityFilterChain filterChain(HttpSecurity http) {
                 <div class="tech-desc-side">
                     <div class="desc-item">
                         <h5>Spring Security + JWT</h5>
-                        <p>Session 대신 <strong>JWT(Json Web Token)</strong> 기반의 Stateless 인증을 구현하여 확장성 있는 인가(Authorization) 처리를 설계했습니다.</p>
+                        <p>Spring Security와 <strong>JWT</strong>를 연동해 보며, 토큰을 사용한 인증 및 인가 처리 과정을 직접 경험하고 구현해 보았습니다.</p>
                     </div>
                     <div class="desc-item">
                         <h5>BCrypt 암호화</h5>
-                        <p>사용자 비밀번호는 <strong>BCrypt</strong> 해싱 알고리즘을 적용하여 DB 유출 시에도 복호화가 불가능하도록 강력하게 보호했습니다.</p>
+                        <p>사용자 비밀번호는 <strong>BCrypt</strong> 해싱 알고리즘을 적용하여 DB 유출 시에도 복호화가 불가능하도록 보호했습니다.</p>
                     </div>
                 </div>
             </div>
@@ -229,7 +232,9 @@ public SecurityFilterChain filterChain(HttpSecurity http) {
     <section class="slide role-slide" style="background: linear-gradient(135deg, var(--theme-everymatch) 0%, #851e0c 90%);">
         <div class="slide-container">
             <span class="slide-tag white">05. UI/UX & GROWTH</span>
-            <h2 class="slide-title white">10일간의 몰입</h2>
+            <div class="quote-box reveal">
+                <h3 class="white">10일간의 몰입,<br><span style="color:var(--text-everymatch);">성장의 기록</span></h3>
+            </div>
             
             <div class="grid-2col reveal">
                 <div class="culture-box" style="text-align: left; padding: 40px;">
@@ -263,7 +268,7 @@ public SecurityFilterChain filterChain(HttpSecurity http) {
         <div class="slide-container full-height align-center-vh">
             <div class="outro-content reveal">
                 <div class="award-badge" style="background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 100px; color: white; margin-bottom: 20px; font-weight: 800;">SSAFY 우수상 🏆</div>
-                <h2 class="slide-title white" style="margin-bottom: 30px;">모든 경기를 한 곳에서, EveryMatch</h2>
+                <h2 class="slide-title white" style="margin-bottom: 30px;">모든 경기를 한 곳에서,<br/>EveryMatch</h2>
                 <div class="link-row">
                     <a href="https://github.com/seohye-ki/EVERY-MATCH" target="_blank" class="btn btn-outline white-border">GitHub</a>
                     <a href="../assets/everymatch/presentation.pdf" class="btn btn-outline white-border" download style="margin-left: 10px;">𐠮 Presentation</a>

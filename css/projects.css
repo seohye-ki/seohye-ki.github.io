@@ -208,7 +208,7 @@
 }
 
 /* Quote Box Standard (Global Title Style) */
-.quote-box h3, h2.quote-box {
+.quote-box h2, .quote-box h3, h2.quote-box {
     font-size: 3rem;
     line-height: 1.2;
     margin-bottom: 50px;
@@ -216,11 +216,12 @@
     word-break: keep-all;
     font-family: 'Outfit', sans-serif;
 }
-.quote-box h3.white, h2.quote-box.white { color: var(--text-inverse); }
+.quote-box h2.white, .quote-box h3.white, h2.quote-box.white { color: var(--text-inverse); }
 
 @media (max-width: 900px) {
-    .quote-box h3, h2.quote-box, .slide-title {
-        font-size: 2rem;
+    .quote-box h2, .quote-box h3, h2.quote-box, .slide-title {
+        font-size: 1.85rem;
+        line-height: 1.3;
         margin-bottom: 30px;
     }
     

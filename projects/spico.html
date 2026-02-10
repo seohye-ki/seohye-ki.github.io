@@ -60,7 +60,7 @@
             <div class="hero-detail-right reveal">
                 <h2>내 손안의 AI 발표 코치</h2>
                 <p>학교 발표, 면접 등 다양한 상황에서 말하기는 필수가 되었지만,<br>혼자 연습하긴 어렵고 민망한 발표.</p>
-				<p>Spico는 누구나 혼자서도 발표 실력을 키울 수 있도록, 실시간 피드백과 청중 모드와 같은 실전 연습 환경을 제공합니다.</p>
+				<p>Spico는 혼자서도 발표 실력을 키울 수 있도록, 실시간 피드백, 청중 모드, 발화내용에 따른 예상질문 등 실전 연습 환경을 제공합니다.</p>
             </div>
         </div>
     </header>
@@ -74,8 +74,10 @@
                 </div>
                 <div class="vision-text reveal">
                     <span class="slide-tag">01. MISSION & VISION</span>
-                    <h2 class="quote-box">준비와 실전 사이의<br><span style="color: var(--text-spico);">간극을 메우다</span></h2>
-                    <p class="slide-p">발표가 무서운 이유는 "준비 부족"이 아니라, 준비한 대본과 실제 입 밖으로 나오는 말 사이의 괴리 때문입니다. Spico는 이 찰나의 순간을 기술로 포착합니다.</p>
+					<div class="quote-box reveal">
+						<h3 class="quote-box">준비와 실전 사이의<br><span style="color: var(--text-spico);">간극을 메우다</span></h3>
+					</div>
+                    <p class="slide-p">발표가 두려운 진짜 이유는 준비가 부족해서가 아니라, 머릿속 생각과 입 밖으로 나오는 말이 다르기 때문입니다. Spico는 그 차이를 줄여 실전 감각을 키워줍니다.</p>
                     <div class="vision-cards">
                         <div class="small-card">
                             <span class="card-label">Problem</span>
@@ -87,7 +89,7 @@
                         </div>
                         <div class="small-card blue">
                             <span class="card-label">Solution</span>
-                            <p>말하는 즉시 반응하는 실시간 가이드</p>
+                            <p>실시간 가이드와 피드백 리포트</p>
                             <div class="tag-cloud">
                                 <span class="tag" style="background: rgba(255,255,255,0.2); color: white; border:none;">실시간 분석</span>
                                 <span class="tag" style="background: rgba(255,255,255,0.2); color: white; border:none;">맞춤형 코칭</span>
@@ -103,7 +105,9 @@
     <section class="slide practice-slide">
         <div class="slide-container">
             <span class="slide-tag">02. PRACTICE MODES</span>
-            <h2 class="slide-title">완벽한 발표를 위한<br>3가지 연습 모드</h2>
+            <div class="quote-box reveal">
+                <h3>완벽한 발표를 위한<br><span style="color:var(--text-spico);">3가지 연습 모드</span></h3>
+            </div>
             <div class="practice-grid reveal">
                 <div class="step-card">
                     <span class="step-num">01</span>
@@ -114,14 +118,14 @@
                 <div class="step-card">
                     <span class="step-num highlight">02</span>
                     <div class="step-img"><img src="../assets/spico/final_qna.gif" alt="Spico Final Mode"></div>
-                    <h4>실전 모드</h4>
-                    <p>실제 청중 앞에서 하듯, 예상 질문(Q&A)과 타이머를 포함한 리허설 모드입니다.</p>
+                    <h4>파이널 모드</h4>
+                    <p>실제 청중 앞에서 하듯, 예상 질문(Q&A)과 타이머를 포함한 실전에 가까운 모드입니다.</p>
                 </div>
                 <div class="step-card">
                     <span class="step-num">03</span>
                     <div class="step-img"><video src="../assets/spico/random_speech_mode_report.mp4" autoplay loop muted playsinline></video></div>
                     <h4>랜덤 스피치</h4>
-                    <p>랜덤한 주제에 대해 순발력 있게 답변하는 훈련을 할 수 있습니다.</p>
+                    <p>선택한 카테고리의 최신 기사 1개와 AI가 생성하는 질문에 대해 순발력 있게 답변하는 모드입니다.</p>
                 </div>
             </div>
         </div>
@@ -131,7 +135,9 @@
     <section class="slide t-feature-slide bg-spico-grad">
         <div class="slide-container">
             <span class="slide-tag white">03. KEY CONTRIBUTIONS</span>
-            <h2 class="slide-title white">핵심 프로젝트 기여</h2>
+            <div class="quote-box reveal">
+                <h3 class="white">기여의 핵심,<br><span style="color:var(--text-spico);">주요 기술적 기여</span></h3>
+            </div>
             
             <div class="t-feature-container reveal">
                 <!-- Item 1 -->
@@ -139,7 +145,7 @@
                     <div class="t-feature-num">01</div>
                     <div class="t-feature-content">
                         <h3 class="t-feature-title">실시간 STT 결과와 대본 문단 매칭 로직 구현</h3>
-                        <p class="t-feature-desc">Android SpeechRecognizer의 Partial Result를 활용한 정밀한 하이라이팅과 실시간 RMS 파형 시각화로 몰입감 있는 발표 연습 환경을 구축했습니다.</p>
+                        <p class="t-feature-desc">Android SpeechRecognizer로 실시간 발화 내용을 분석하여 대본 위치를 정밀하게 추적하고, 음성 파형(RMS)을 시각화하여 몰입감 있는 발표 환경을 구현했습니다.</p>
                         <div class="t-tech-badges">
                             <span class="t-tech-badge">Android SpeechRecognizer</span>
                             <span class="t-tech-badge">Levenshtein Distance</span>
@@ -152,7 +158,7 @@
                     <div class="t-feature-num">02</div>
                     <div class="t-feature-content">
                         <h3 class="t-feature-title">Jetpack Compose 기반 대본 편집 제스처 로직 구현</h3>
-                        <p class="t-feature-desc">롱프레스(이동), 스와이프(삭제) 등 직관적 제스처를 통해 사용자가 흐름을 끊지 않고 빠르고 편안하게 대본을 수정할 수 있는 UX를 구현했습니다.</p>
+                        <p class="t-feature-desc">롱프레스-드래그(순서 변경) 및 스와이프(삭제) 등 직관적인 제스처를 도입하여, 사용자가 흐름을 끊지 않고 빠르고 편리하게 대본을 수정할 수 있는 UX를 구현했습니다.</p>
                         <div class="t-tech-badges">
                             <span class="t-tech-badge">Jetpack Compose</span>
                             <span class="t-tech-badge">Custom Gestures</span>
@@ -177,7 +183,7 @@
                     <div class="t-feature-num">04</div>
                     <div class="t-feature-content">
                         <h3 class="t-feature-title">Jira 기반 이슈 관리 및 커밋 메시지 자동화</h3>
-                        <p class="t-feature-desc">Gitlab Hook 기반의 Jira 상태 자동 전환 및 GPT 커밋 메시지 생성기를 도입하여 개발 외적인 커뮤니케이션 비용을 최소화했습니다.</p>
+                        <p class="t-feature-desc">GitLab Hook과 Jira를 연동하여 이슈 상태 관리를 자동화하고, 팀 컨벤션에 맞춘 GPT 기반 커밋 메시지 생성기를 도입해 개발 커뮤니케이션 효율을 극대화했습니다.</p>
                         <div class="t-tech-badges">
                             <span class="t-tech-badge">Gitlab Hooks</span>
                             <span class="t-tech-badge">Jira Automation</span>
@@ -193,7 +199,9 @@
     <section class="slide core-slide bg-light">
         <div class="slide-container">
             <span class="slide-tag">04. INTERACTIVE COACHING</span>
-            <h2 class="slide-title align-center">말하는 순간,<br>화면이 반응합니다</h2>
+            <div class="quote-box reveal align-center">
+                <h3>말하는 순간,<br><span style="color:var(--text-spico);">화면이 반응합니다</span></h3>
+            </div>
             <div class="core-showcase reveal">
                 <div class="core-info left">
                     <div class="info-pod">
@@ -228,10 +236,12 @@
         <div class="slide-container">
             <div class="feature-spotlight reveal">
                 <div class="fs-text">
-                    <span class="slide-tag">05. GESTURE ENGINE</span>
-                    <h2 class="slide-title">손끝에서 완성되는<br>직관적 편집 경험</h2>
+                    <span class="slide-tag">05. GESTURE	UX</span>
+            <div class="quote-box reveal">
+                <h3>손끝에서 완성되는<br><span style="color:var(--text-spico);">직관적 편집 경험</span></h3>
+            </div>
                     <p class="slide-p" style="color: var(--text-muted);">
-                        단순한 클릭을 넘어, <strong>롱프레스(Long-Press)로 문단을 이동</strong>하고 <strong>스와이프(Swipe)로 삭제</strong>하는 직관적인 편집 흐름을 설계했습니다. 복잡한 메뉴 조작 없이 직관적인 제스처만으로 대본을 수정할 수 있어, 사용자가 흐름을 끊지 않고 보다 빠르고 편안하게 편집할 수 있습니다.
+                        메뉴를 찾아 들어갈 필요 없이, <strong>롱프레스(Long-Press)로 문단을 이동</strong>하고 <strong>스와이프(Swipe)로 즉시 삭제</strong>할 수 있습니다. 모바일 환경에 최적화된 제스처 시스템 덕분에, 사용자는 흐름 끊김 없이 생각하는 속도 그대로 대본을 수정할 수 있습니다.
                     </p>
                 </div>
                 <div class="fs-visual">
@@ -245,7 +255,9 @@
     <section class="slide engineering-slide bg-blue-grad">
         <div class="slide-container">
             <span class="slide-tag white">06. ARCHITECTURE</span>
-            <h2 class="slide-title white">Clean Architecture<br>설계</h2>
+			<div class="quote-box reveal">
+				<h3 class="white">Clean Architecture 설계</h3>
+			</div>
             <div class="tech-grid reveal">
                 <div class="tech-box">
                     <div class="tech-icon">📐</div>
@@ -270,7 +282,9 @@
     <section class="slide automation-slide">
         <div class="slide-container">
             <span class="slide-tag">07. COLLABORATION & OPS</span>
-            <h2 class="slide-title">협업 자동화<br>환경 설계</h2>
+            <div class="quote-box reveal">
+                <h3>팀을 위한 효율적인 선택,<br><span style="color:var(--text-spico);">협업 자동화</span></h3>
+            </div>
 
             <div class="automation-flow reveal">
                 <!-- Step 1: Jira -->
@@ -278,7 +292,7 @@
                     <div class="auto-img"><img src="../assets/spico/jira.png" alt="Jira Automation"></div>
                     <div class="auto-info">
                         <h5>Jira 자동화 트리거</h5>
-                        <p>브랜치 생성 시 상태 자동 전환<br>MR 완료 시 이슈 상태 이동 자동화</p>
+                        <p>브랜치 생성 시 이슈 상태가 자동 전환되고, MR 완료까지 모든 과정이 동기화되는 <strong>Zero-Click 이슈 관리 환경</strong>을 구현했습니다.</p>
                     </div>
                 </div>
 
@@ -287,7 +301,7 @@
                     <div class="auto-img"><img src="../assets/spico/commit.png" alt="GPT Commit Generator"></div>
                     <div class="auto-info">
                         <h5>GPT 커밋 메시지 생성기</h5>
-                        <p>팀 규칙 기반 메시지 자동 생성<br>작성 부담 감소 및 컨벤션 준수</p>
+                        <p>이슈 키워드만 입력하면 <strong>브랜치명, MR 템플릿, 커밋 메시지</strong>까지 팀 컨벤션에 맞춰 자동으로 생성해주는 생성기를 제작했습니다.</p>
                     </div>
                 </div>
             </div>
@@ -299,7 +313,9 @@
         <div class="slide-container full-height align-center-vh">
             <div class="outro-content reveal">
                 <div class="award-badge" style="background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 100px; color: white; margin-bottom: 20px; font-weight: 800;">SSAFY 우수상 🏆</div>
-                <h2 class="slide-title white" style="margin-bottom: 30px;">발표에 확신을 더하다, Spico</h2>
+            <div class="quote-box reveal">
+                <h3 class="white">발표에 확신을 더하다,<br>Spico</h3>
+            </div>
                 <div class="link-row">
                     <a href="https://github.com/YoungdanNoh/Spico" target="_blank" class="btn btn-outline white-border">GitHub</a>
                     <a href="https://www.youtube.com/watch?v=kVqDxbPYqXk" target="_blank" class="btn btn-outline white-border" style="margin-left: 10px;">YouTube</a>
@@ -316,7 +332,7 @@
     <!-- Navigation Footer -->
     <footer class="project-nav">
         <!-- Spico is first, so no Prev button -->
-         <div class="nav-prev"></div> 
+        <div class="nav-prev"></div> 
         <a href="lufin.html" class="nav-next">
             <span class="nav-label">Next Project</span>
             <span class="nav-name">LuFin</span>

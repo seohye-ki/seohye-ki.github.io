@@ -62,7 +62,7 @@
             <div class="hero-detail-right reveal">
                 <h2>경험으로 배우는 금융</h2>
 				<p>초등학교 교실 속에서 어려운 금융 지식을 게임처럼 경험하며,<br>자산 관리 능력을 키우는 교육 플랫폼입니다.</p>
-				<p>가상의 화폐와 신용 등급을 활용해 대출, 주식, 소비를 경험하고<br>올바른 경제 관념을 형성하는데 도움을 줍니다.</p>
+				<p>경제활동을 통해 소득을 얻고 다양한 투자(주식)와 소비를 경험하며, 신용 등급 관리와 대출 등 현실적인 금융 시스템을 통해 올바른 경제 관념을 형성하도록 돕습니다.</p>
             </div>
         </div>
     </header>
@@ -73,7 +73,7 @@
             <span class="slide-tag">01. MISSION & VISION</span>
             
             <div class="quote-box reveal">
-                <h3>금융은 주입식 교육이 아니라,<br><span style="color:var(--text-lufin);">직접 살아보는</span> 경험이어야 합니다</h3>
+                <h3>금융은 주입식 교육이 아니라,<br><span style="color:var(--text-lufin);">스스로 깨우치는</span> 경험이어야 합니다</h3>
             </div>
 
             <div class="tech-focus-grid reveal" style="align-items: stretch; gap: 40px; margin-top: 40px;">
@@ -86,9 +86,9 @@
                 <div class="vision-cards-v" style="display: flex; flex-direction: column; gap: 20px; height: 100%;">
                     <div class="small-card" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
                         <span class="card-label">Problem</span>
-                        <p>체감하기 힘든 금융 교육과<br>추상적인 경제 개념</p>
+                        <p>체감하기 힘든 추상적인 경제 개념</p>
                         <div class="tag-cloud">
-                            <span class="tag">금융맹 증가</span>
+                            <span class="tag">금융문맹 증가</span>
                             <span class="tag">이론 위주 교육</span>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                     </div>
                     <div class="f-content">
                         <h4>신용 등급별 대출 시스템</h4>
-                        <p>신용 점수에 따라 이자율과 한도가 변동되는 현실적인 대출 로직 및 연체/회복 시스템 구현</p>
+                        <p>신용 점수에 따라 이자율과 한도가 변동되는 현실적인 대출 로직 및 신용 회복 시스템 구현</p>
                     </div>
                 </div>
                 <div class="feature-card">
@@ -128,8 +128,8 @@
                         <img src="../assets/LuFin/itempurchase_student.gif" alt="Store">
                     </div>
                     <div class="f-content">
-                        <h4>아이템 상점 도메인</h4>
-                        <p>구매부터 사용, 환불까지 이어지는 아이템 생명주기 로직 구축</p>
+                        <h4>아이템 상점</h4>
+                        <p>선착순 구매부터 사용, 환불까지 이어지는 아이템 생명주기 로직 구축</p>
                     </div>
                 </div>
                 <div class="feature-card">
@@ -149,7 +149,9 @@
     <section class="slide t-feature-slide bg-lufin-grad">
         <div class="slide-container">
             <span class="slide-tag white">03. KEY CONTRIBUTIONS</span>
-            <h2 class="slide-title white">핵심 프로젝트 기여</h2>
+            <div class="quote-box reveal">
+                <h3 class="white">기여의 핵심,<br><span style="color:var(--text-lufin);">주요 기술적 기여</span></h3>
+            </div>
             
             <div class="reveal">
                 <!-- Item 1 -->
@@ -157,7 +159,7 @@
                     <div class="t-feature-num">01</div>
                     <div class="t-feature-content">
                         <h3 class="t-feature-title">JPA 비관적 락(Pessimistic Lock) 적용 동시성 제어</h3>
-                        <p class="t-feature-desc">선착순 아이템 구매 시 발생할 수 있는 Race Condition을 해결하기 위해 `SELECT ... FOR UPDATE` 쿼리를 발생하는 비관적 락을 적용하여 트랜잭션 충돌 없이 재고 데이터의 정합성을 보장했습니다.</p>
+                        <p class="t-feature-desc">선착순 아이템 구매 시 발생할 수 있는 Race Condition을 해결하기 위해 비관적 락을 적용하여, 트랜잭션 충돌 없이 재고 데이터의 정합성을 보장했습니다.</p>
                         <div class="t-tech-badges">
                             <span class="t-tech-badge">JPA Locking</span>
                             <span class="t-tech-badge">Transaction ACID</span>
@@ -169,10 +171,10 @@
                 <div class="t-feature-row">
                     <div class="t-feature-num">02</div>
                     <div class="t-feature-content">
-                        <h3 class="t-feature-title">Spring AOP 기반 교사 전용 기능 권한 제어</h3>
+                        <h3 class="t-feature-title">Spring AOP 기반 교사 및 학생 전용 기능 권한 제어</h3>
                         <p class="t-feature-desc">커스텀 어노테이션(@TeacherOnly)과 Aspect를 활용하여 컨트롤러마다 반복되는 권한 검증 로직을 깔끔하게 분리하고 모듈화했습니다.</p>
                         <div class="t-tech-badges">
-                            <span class="t-tech-badge">Aspect Oriented Prog</span>
+                            <span class="t-tech-badge">Aspect Oriented Programming</span>
                             <span class="t-tech-badge">Custom Annotation</span>
                         </div>
                     </div>
@@ -216,7 +218,7 @@
                 <h3>데이터는 정직해야 하니까,<br><span style="color:var(--text-lufin);">정합성</span>을 설계했습니다</h3>
             </div>
 
-            <div class="tech-focus-grid reveal">
+            <div class="tech-focus-grid vertical reveal">
                 <div class="tech-card-large">
                     <div class="code-header">
                         <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
@@ -230,13 +232,20 @@
 Optional&lt;Item&gt; findByIdWithPessimisticLock(@Param("itemId") Integer itemId);</code></pre>
                 </div>
                 <div class="tech-desc-side">
-                    <div class="desc-item">
-                        <h5>🛡️ 비관적 Lock (Pessimistic Lock)</h5>
-                        <p>선착순 아이템 구매와 같이 충돌 빈도가 높은 핵심 로직에 <strong>DB 수준의 Lock</strong>을 적용하여, 동일 자원에 대한 동시 접근을 원천적으로 차단하고 데이터 정합성을 보장했습니다.</p>
+                    <div class="small-card">
+                        <div class="card-icon">💵</div>
+                        <h5>100명이 동시에 구매한다면?</h5>
+                        <p>금융 시뮬레이션의 핵심인 <strong>'신뢰'</strong>를 지키기 위해, 수많은 트래픽이 몰리는 순간에도 <strong>데이터 오차 0%</strong>를 보장하는 것을 최우선 설계 원칙으로 삼았습니다.</p>
                     </div>
-                    <div class="desc-item">
-                        <h5>⏱️ Lock Timeout 설정</h5>
-                        <p>무한 대기(Deadlock)를 방지하기 위해 1초(`1000ms`)의 타임아웃을 설정하여 시스템의 가용성과 안정성을 동시에 확보했습니다.</p>
+                    <div class="small-card">
+                        <div class="card-icon">🛡️</div>
+                        <h5>왜 비관적 락(Pessimistic)인가?</h5>
+                        <p>충돌이 잦은 선착순 이벤트에서 낙관적 락은 <strong>불필요한 재시도(Retry)</strong>를 반복하며 자원을 낭비합니다. DB에서 즉시 순서를 보장하는 <strong>비관적 락</strong>으로 시스템 부하를 줄였습니다.</p>
+                    </div>
+                    <div class="small-card">
+                        <div class="card-icon">⏱️</div>
+                        <h5>Timeout으로 데드락 방지</h5>
+                        <p>강력한 락은 시스템 마비(Deadlock)를 유발할 수 있어 <strong>1초의 타임아웃</strong>을 설정하여, <strong>정합성과 가용성</strong>을 모두 챙겼습니다.</p>
                     </div>
                 </div>
             </div>
@@ -248,27 +257,45 @@ Optional&lt;Item&gt; findByIdWithPessimisticLock(@Param("itemId") Integer itemId
         <div class="slide-container">
             <span class="slide-tag white">05. INFRA & AOP</span>
             <div class="quote-box reveal">
-                <h3 class="white">반복되는 확인은 도구에 맡기고,<br>로직에만 집중할 수 있도록</h3>
+                <h3 class="white">자동화로 효율을 높이고,<br>설계로 품질을 완성하다</h3>
             </div>
-
-            <div class="role-grid reveal">
-                <div class="role-card">
-                    <div class="role-icon">⚙️</div>
-                    <h4>CI/CD & Infra</h4>
-                    <ul>
-                        <li><strong>GitLab + Jenkins</strong>: 푸시 시 자동 빌드/테스트 파이프라인 가동</li>
-                        <li><strong>AWS EC2 + Docker</strong>: 멀티 컨테이너 환경 구성으로 배포 효율화</li>
-                    </ul>
-                    <p style="margin-top:15px; font-size:0.9rem; opacity:0.8;">비즈니스 로직에만 몰입할 수 있는 자동화 환경을 구축하여 개발 생산성을 극대화했습니다.</p>
-                </div>
-                <div class="role-card">
-                    <div class="role-icon">🔐</div>
-                    <h4>AOP 권한 제어</h4>
-                    <div class="code-header" style="background:rgba(0,0,0,0.4); margin-top:10px;">
-                        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
-                        <span>RoleCheckAspect.java</span>
+			<!-- 1. CI/CD Section -->
+			<h4 class="section-subtitle">- CI/CD & Infrastructure</h4>
+			<p class="infra-desc">
+				반복되는 수동 배포 대신 <b>자동화 시스템</b>을 구축했습니다. 코드를 올릴 때마다 테스트가 자동으로 진행되어, 실수 걱정 없이 오직 <b>개발</b>에만 몰입할 수 있습니다.
+			</p>
+			<div class="pipeline-container">
+                    <div class="pipeline-step">
+                        <div class="step-icon">📩</div>
+                        <div class="step-label">Merge Request</div>
+                        <div class="step-desc">코드 리뷰 및 병합</div>
                     </div>
-                    <pre style="background:rgba(0,0,0,0.3); padding:15px; border-radius:0 0 10px 10px; margin-top:0;"><code class="language-java" style="background:transparent; padding:0; font-size:0.75rem;">@Aspect @Component
+                    <div class="pipeline-step">
+                        <div class="step-icon">🤖</div>
+                        <div class="step-label">Auto Verify</div>
+                        <div class="step-desc">Jenkins 빌드 & 테스트</div>
+                    </div>
+                    <div class="pipeline-step">
+                        <div class="step-icon">📦</div>
+                        <div class="step-label">Docker Build</div>
+                        <div class="step-desc">이미지 패키징</div>
+                    </div>
+                    <div class="pipeline-step">
+                        <div class="step-icon">🚀</div>
+                        <div class="step-label">Safe Deploy</div>
+                        <div class="step-desc">무중단 실배포</div>
+                    </div>
+                </div>
+
+                <!-- 2. AOP Section -->
+                <h4 class="section-subtitle">- Aspect Oriented Programming</h4>
+                <div class="aop-simple-container">
+                    <div class="role-card aop-code-card">
+                        <div class="code-header aop-code-header">
+                            <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+                            <span class="aop-code-filename">RoleCheckAspect.java</span>
+                        </div>
+                        <pre class="aop-code-block"><code class="language-java">@Aspect @Component
 public class RoleCheckAspect {
     @Before("@annotation(TeacherOnly)")
     public void checkTeacherRole() {
@@ -278,11 +305,21 @@ public class RoleCheckAspect {
         }
     }
 }</code></pre>
-                    <div style="margin-top:15px;">
-                        <ul style="font-size:1rem; opacity:0.9; padding-left:15px;">
-                            <li><strong>코드 응집도 향상</strong>: API 컨트롤러 단에서 권한 체크 코드 중복 제거</li>
-                            <li><strong>유지보수 용이</strong>: 권한 로직 변경 시 Aspect 클래스 한 곳만 수정</li>
-                            <li><strong>실수 방지</strong>: 어노테이션 하나로 누락 없는 보안 정책 적용 가능</li>
+                    </div>
+                    <div class="aop-benefits">
+                        <ul class="aop-benefits-grid">
+                            <li class="aop-benefit-item">
+                                <b class="aop-benefit-title">핵심 로직에만 집중</b>
+                                <span class="aop-benefit-desc">코드에 반복되던 보안 로직을 분리해, 기능 구현 자체에만 더 신경 쓸 수 있습니다.</span>
+                            </li>
+                            <li class="aop-benefit-item">
+                                <b class="aop-benefit-title">빈틈 없는 보안 관리</b>
+                                <span class="aop-benefit-desc">권한 체크 방식을 하나로 통일해서, 실수로 보안이 누락되는 일을 확실히 막았습니다.</span>
+                            </li>
+                            <li class="aop-benefit-item">
+                                <b class="aop-benefit-title">편리한 유지보수</b>
+                                <span class="aop-benefit-desc">정책이 바뀌어도 여기저기 수정할 필요 없이, 파일 하나로 모든 규칙을 관리합니다.</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -295,7 +332,7 @@ public class RoleCheckAspect {
         <div class="slide-container">
             <span class="slide-tag">06. COLLABORATION</span>
             <div class="quote-box reveal">
-                <h3>정리가 되어야<br>협업도, 구현도 흔들리지 않습니다</h3>
+                <h3><span style="color:var(--text-lufin);">복잡한 도메인</span>은 단순하게,<br><span style="color:var(--text-lufin);">협업의 기준</span>은 명확하게</h3>
             </div>
 
             <div class="reveal" style="display: flex; flex-direction: column; gap: 30px;">
@@ -308,9 +345,9 @@ public class RoleCheckAspect {
                 <div class="f-media" style="width: 100%; height: auto; background:transparent; box-shadow:none; overflow:visible;">
                     <!-- Image Grid: 3 Columns for compact height -->
                     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
-                        <img src="../assets/LuFin/event_storming1.jpeg" alt="Event Storming Overview" style="width:100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                        <img src="../assets/LuFin/event_storming2.png" alt="Event Storming Detail 1" style="width:100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+						<img src="../assets/LuFin/event_storming2.png" alt="Event Storming Detail 1" style="width:100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
                         <img src="../assets/LuFin/event_storming3.png" alt="Event Storming Detail 2" style="width:100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                        <img src="../assets/LuFin/event_storming1.jpeg" alt="Event Storming Overview" style="width:100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
                     </div>
                 </div>
                  <div class="vision-text" style="width: 100%; max-width: 100%; margin-top: 0;">
@@ -330,7 +367,7 @@ public class RoleCheckAspect {
         <div class="slide-container full-height align-center-vh">
             <div class="outro-content reveal">
                 <div class="award-badge" style="background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 100px; color: white; margin-bottom: 20px; font-weight: 800;">SSAFY 우수상 🏆</div>
-                <h2 class="slide-title white">교실 속 작은 경제, LuFin</h2>
+                <h2 class="slide-title white">교실 속 작은 경제,<br/>LuFin</h2>
                 <div class="link-row">
                     <a href="https://github.com/seohye-ki/LuFin" target="_blank" class="btn btn-outline white-border">GitHub</a>
                     <a href="../assets/LuFin/presentation.pdf" class="btn btn-outline white-border" download style="margin-left: 10px;">𐠮 Presentation</a>
