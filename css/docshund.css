@@ -1,7 +1,6 @@
 /* DocshunD Specific Styles */
 .theme-docshund { 
 	--accent: var(--theme-docshund);
-	--accent-soft: #fdf2f8;
 	--text-docshund: #B97E65;
 }
 .bg-light { background-color: var(--bg-alt); }

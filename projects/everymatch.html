@@ -67,10 +67,116 @@
         </div>
     </header>
 
-    <!-- SLIDE 1: CORE FUNCTION 01 -->
+    <!-- SLIDE 1: MISSION & VISION -->
+    <section class="slide vision-slide">
+        <div class="slide-container">
+            <span class="slide-tag">01. KEY FOCUS</span>
+            
+            <div class="quote-box reveal">
+                <h3>나의 관심 팀만 쏙!<br><span style="color:var(--text-everymatch);">모든 경기 일정</span>을 한 캘린더에서</h3>
+            </div>
+
+            <div class="tech-focus-grid reveal" style="align-items: stretch; gap: 40px; margin-top: 40px;">
+                <!-- GIF/Image side -->
+                <div class="f-media" style="width: 100%; height: 100%; background: transparent; box-shadow: none; overflow: visible;">
+                    <img src="../assets/everymatch/home_view.png" alt="EveryMatch Calendar Layout" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
+                </div>
+                
+                <!-- Cards side -->
+                <div class="vision-cards-v" style="display: flex; flex-direction: column; gap: 20px; height: 100%;">
+                    <div class="small-card" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                        <span class="card-label">Focus 1</span>
+                        <p>내 응원 팀의 일정만 쏙쏙,<br>관심 팀 맞춤형 캘린더</p>
+                        <div class="tag-cloud">
+                            <span class="tag">스포츠 캘린더</span>
+                            <span class="tag">경기 알림</span>
+                        </div>
+                    </div>
+                    <div class="small-card accent" style="flex: 1; display: flex; flex-direction: column; justify-content: center; background: var(--theme-everymatch); color: white;">
+                        <span class="card-label" style="opacity: 0.9; color: white;">Focus 2</span>
+                        <p>경기 규칙부터 팀 추천까지,<br>팬심을 넓히는 스마트한 파트너</p>
+                        <div class="tag-cloud">
+                            <span class="tag" style="background: rgba(255,255,255,0.2); color: white; border:none;">AI 팀 추천</span>
+                            <span class="tag" style="background: rgba(255,255,255,0.2); color: white; border:none;">스포츠 전문가 챗봇</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 2: SITE STRUCTURE -->
+    <section class="slide ia-slide">
+        <div class="slide-container" style="max-width: 1200px;">
+            <span class="slide-tag">02. SITE STRUCTURE</span>
+            <div class="quote-box reveal">
+                <h3>서비스 구성도 및<br><span style="color:var(--text-everymatch);">담당 개발 파트</span></h3>
+            </div>
+            
+
+            <div class="ia-tree-wrapper reveal">
+                <div class="ia-tree">
+                    <div class="ia-root" style="border-color: var(--theme-everymatch); color: var(--theme-everymatch);">EveryMatch</div>
+                    <div class="ia-branches">
+                        <div class="ia-horizontal-line" style="left: 8.45%; right: 8.8%;"></div>
+                        
+                        <!-- Col 1 (FE) -->
+                        <div class="ia-branch" style="--accent: #3b82f6;">
+                            <div class="ia-branch-lines"></div>
+                            <div class="ia-group highlight-group" data-badge="FE 담당 파트">
+                                <div class="ia-node highlight-node level-1">챗봇</div>
+								<div class="ia-node highlight-node">AI팀 추천</div>
+                            </div>
+                        </div>
+						
+						<div class="ia-multi-branch-group highlight-group" data-badge="BE 담당 파트" style="flex: 5; --accent: var(--theme-everymatch);">
+                        <!-- Col 2 (BE / FE mixed) -->
+                        <div class="ia-branch">
+                            <div class="ia-branch-lines"></div>
+                            <div class="ia-node highlight-node level-1">관심 팀 설정</div>
+                            <div class="ia-node highlight-node">관심팀 추가/삭제</div>
+                        </div>
+
+                        <!-- Col 3 (BE) -->
+                        <div class="ia-branch">
+                            <div class="ia-branch-lines"></div>
+                            <div class="ia-node highlight-node level-1">캘린더</div>
+                            <div class="ia-node highlight-node">당일경기조회</div>
+                        </div>
+
+						<!-- Col 4 -->
+						<div class="ia-branch">
+							<div class="ia-branch-lines"></div>
+							<div class="ia-node highlight-node level-1">마이페이지</div> 
+							<div class="ia-node highlight-node">회원정보 수정</div>
+							<div class="ia-node highlight-node">비밀번호 변경</div>
+						</div>
+
+						<!-- Col 5 -->
+						<div class="ia-branch">
+							<div class="ia-branch-lines"></div>
+							<div class="ia-node highlight-node level-1">회원가입</div>
+							<div class="ia-node highlight-node level-1" style="margin-top: 5px;">로그인/아웃</div>
+							<div class="ia-node highlight-node">비밀번호 찾기</div>
+							<div class="ia-node highlight-node">회원탈퇴</div>
+						</div>
+
+						<!-- Col 6 -->
+						<div class="ia-branch">
+							<div class="ia-branch-lines"></div>
+							<div class="ia-node highlight-node level-1">경기일정 알림</div>
+						</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3: CORE FUNCTION 01 -->
     <section class="slide feature-slide bg-light">
         <div class="slide-container">
-            <span class="slide-tag">01. SERVICE</span>
+            <span class="slide-tag">03. SERVICE</span>
             <div class="quote-box reveal">
                 <h3>단순한 달력이 아니라,<br><span style="color:var(--text-everymatch);">팀을 향한 애정</span>을 시각화했습니다</h3>
             </div>
@@ -107,10 +213,10 @@
         </div>
     </section>
 
-    <!-- SLIDE 2: CORE FUNCTION 02[AI] -->
+    <!-- SLIDE 4: CORE FUNCTION 02[AI] -->
     <section class="slide vision-slide">
         <div class="slide-container">
-            <span class="slide-tag">02. AI ASSISTANT</span>
+            <span class="slide-tag">04. AI ASSISTANT</span>
             <div class="quote-box reveal">
                 <h3>더 재밌게,<br><span style="color:var(--text-everymatch);">AI 기능</span></h3>
             </div>
@@ -146,12 +252,12 @@
         </div>
     </section>
 
-    <!-- SLIDE 3: CONTRIBUTION SUMMARY -->
+    <!-- SLIDE 5: CONTRIBUTION SUMMARY -->
     <section class="slide t-feature-slide" style="background: linear-gradient(135deg, #0f172a 0%, #531e15 100%);">
         <div class="slide-container">
-            <span class="slide-tag white">03. KEY CONTRIBUTIONS</span>
+            <span class="slide-tag white">05. KEY CONTRIBUTIONS</span>
             <div class="quote-box reveal">
-                <h3 class="white">기여의 핵심,<br><span style="color:var(--text-everymatch);">주요 기술적 기여</span></h3>
+                <h3 class="white">기여의 핵심,<br><span style="color:var(--text-everymatch);">주요 회고점 및 기술적 극복</span></h3>
             </div>
             
             <div class="t-feature-container reveal">
