@@ -52,11 +52,10 @@
 
         <div class="hero-bottom">
             <div class="hero-detail-left reveal">
-                <div class="meta-item"><label>PROJECT</label><span>LuFin</span></div>
-                <div class="meta-item"><label>OVERVIEW</label><span>신용도 기반 금융 시뮬레이션 플랫폼</span></div>
+                <div class="meta-item"><label>PROJECT</label><span>신용도 기반 금융 시뮬레이션 플랫폼</span></div>
                 <div class="meta-item"><label>PERIOD</label><span>2025.02.24 ~ 04.11 (7주)</span></div>
                 <div class="meta-item"><label>MEMBERS</label><span>6명 (프론트엔드 3, 백엔드 3)</span></div>
-                <div class="meta-item"><label>ROLE</label><span>백엔드, UI/UX디자인, 인프라</span></div>
+                <div class="meta-item"><label>MY ROLE</label><span>백엔드, UI/UX디자인, 인프라</span></div>
                 <div class="meta-item"><label>TECH</label><span>Java, React, MySQL, TypeScript, Spring Boot, JPA</span></div>
             </div>
             <div class="hero-detail-right reveal">
@@ -68,7 +67,7 @@
     </header>
     
     <!-- SLIDE 2: MISSION & VISION -->
-    <section class="slide vision-slide">
+    <section class="slide vision-slide bg-light">
         <div class="slide-container">
             <span class="slide-tag">01. MISSION & VISION</span>
             
@@ -106,7 +105,7 @@
     </section>
 
     <!-- SLIDE 2.5: SITE STRUCTURE -->
-    <section class="slide ia-slide">
+    <section class="slide" style="background-color: var(--bg-main);">
         <div class="slide-container" style="max-width: 1200px;">
             <span class="slide-tag">02. SITE STRUCTURE</span>
             <div class="quote-box reveal">
@@ -376,7 +375,10 @@ Optional&lt;Item&gt; findByIdWithPessimisticLock(@Param("itemId") Integer itemId
                 </div>
 
                 <!-- 2. AOP Section -->
-                <h4 class="section-subtitle">- Aspect Oriented Programming</h4>
+                <h4 class="section-subtitle">- AOP (aspect oriented programming)</h4>
+				<p class="infra-desc">
+				컨트롤러마다 반복되는 권한 검증 코드를 <b>커스텀 어노테이션</b>으로 대체했습니다. 핵심 비즈니스 로직과 부가적인 보안 로직을 분리하여 <b>코드의 가독성</b>을 높이고 휴먼 에러를 방지했습니다.
+				</p>
                 <div class="aop-simple-container">
                     <div class="role-card aop-code-card">
                         <div class="code-header aop-code-header">
