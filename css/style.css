@@ -59,6 +59,11 @@ nav {
     transition: var(--transition);
 }
 
+.contact-link:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 1px currentColor;
+}
+
 .contact-icon {
     width: 18px;
     height: 18px;
@@ -1130,6 +1135,33 @@ section {
     transform: translateY(-2px);
 }
 
+.btn-outline {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-default);
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn-outline:hover {
+    background: var(--text-primary);
+    color: var(--bg-main);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-outline.white-border {
+    border-color: var(--text-primary);
+}
+
 .modal {
     position: fixed;
     top: 0; left: 0;
@@ -1378,6 +1410,48 @@ footer {
     /* Contact Stack */
     .contact-row { flex-direction: column; align-items: flex-start; gap: 20px; }
     .contact-item { width: 100%; justify-content: center; }
+}
+
+/* --- Custom Hover Tooltip Premium --- */
+.custom-tooltip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    white-space: nowrap;
+}
+
+.custom-tooltip-text {
+    visibility: hidden;
+    width: max-content;
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--text-primary);
+    border: 1px solid var(--border-overlay);
+    text-align: center;
+    border-radius: 12px;
+    position: absolute;
+    z-index: 1000;
+    top: 40%; 
+    left: calc(100% + 5px);
+    transform: translateY(-50%) translateX(-10px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 0.8rem;
+    font-family: 'Outfit', 'Noto Sans KR', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    white-space: nowrap;
+}
+
+.custom-tooltip:hover .custom-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
 }
 
 /* --- Mobile Landscape / Tablet Portrait (max-width: 768px) --- */

@@ -99,50 +99,59 @@ const DATA = {
     ],
     projects: [
         {
-            title: "Spico",
+            title: "Spico <span class='custom-tooltip'>🏆<span class='custom-tooltip-text' style='font-size: 0.65rem;'>SSAFY 우수상 수상</span></span>",
             subtitle: "발표 연습 및 코칭 안드로이드 앱",
             link: "./projects/spico.html",
             logo: "./assets/spico/logo.png",
             tags: ["Kotlin", "Android (Jetpack Compose)", "Google Speech API"],
             details: [
-                "<strong>Jetpack Compose</strong>를 활용하여 직관적인 모바일 UI, 커스텀 제스쳐 구현",
-                "<strong>Google STT</strong> 기반의 실시간 발화 분석 및 대본 추적 기능 구현"
+                "<strong>Kotlin, Jetpack Compose</strong>를 이용한 Android 애플리케이션 개발",
+                "<strong>Clean Architecture</strong>(Presentation-Domain-Data) 구축을 통해 의존성 단방향 관리 규칙을 적용하고 테스트 용이성 극대화",
+                "실시간 <strong>STT(Speech To Text)</strong> 분석 결괏값을 바탕으로 Levenshtein Distance 유사도를 측정하여 발화 지점(대본 문단) 매칭 로직 개발",
+                "GitLab Webhook과 Jira를 연동하여 브랜치 생성 및 MR 과정에서 이슈 상태가 자동 전환되는 <strong>Zero-Click 협업 환경</strong> 구축",
+                "팀 컨벤션에 맞춘 <strong>GPT 기반 커밋 메시지 자동 생성기</strong> 도입"
             ]
         },
         {
-            title: "LuFin",
+            title: "LuFin <span class='custom-tooltip'>🏆<span class='custom-tooltip-text' style='font-size: 0.65rem;'>SSAFY 우수상 수상</span></span>",
             subtitle: "신용도 기반 금융 시뮬레이션 플랫폼",
             link: "./projects/lufin.html",
             logo: "./assets/LuFin/logo.png",
             tags: ["Java", "Spring Boot", "Spring Data JPA", "MySQL"],
             details: [
-                "<strong>JPA Pessimistic Lock</strong>을 적용하여 선착순 아이템 구매 시 동시성 문제 해결",
-                "<strong>AOP</strong>를 도입하여 권한(@TeacherOnly, @StudentOnly) 확인 코드 중복과 누락을 해소하고, 유지보수성과 코드 가독성 개선",
-                "<strong>Docker & Jenkins</strong>를 활용한 CI/CD 파이프라인 구축 및 무중단 배포 구현"
+                "Java, Spring Boot, JPA, MySQL 환경에서의 <strong>REST API 서버 개발</strong>",
+                "선착순 아이템 구매 시 발생하는 Race Condition(동시성 문제)을 해결하기 위해 <strong>DB 비관적 락(Pessimistic Lock) 적용</strong>. 오차율 0% 보장 및 1초 Timeout 설정으로 데드락 방지",
+                "<strong>Spring AOP</strong> 및 커스텀 어노테이션(@TeacherOnly/@StudentOnly)을 이용하여 교사/학생 역할별 권한 검증 로직 분할 및 모듈화로 코드 중복 및 검증 누락 방지, 유지보수 용이",
+                "GitLab, Jenkins, Docker 기반의 <strong>CI 자동화 파이프라인</strong> 구축",
+                "Jenkins와 <strong>Discord Webhook</strong>을 연동하여 CI/CD 파이프라인의 빌드 및 배포 처리 결과(성공/실패)를 팀 채널에 실시간으로 전송하는 알림(Notification) 자동화 구축",
+                "<strong>Nginx</strong> 웹 서버 세팅 및 리버스 프록시 구성",
+                "<strong>SSL 인증서(Certbot)</strong> 발급 및 HTTPS 적용, 방화벽(UFW) 포트 설정 등 서버 초기 보안 세팅"
             ]
         },
         {
-            title: "DocshunD",
+            title: "DocshunD <span class='custom-tooltip'>🏆<span class='custom-tooltip-text' style='font-size: 0.65rem;'>SSAFY 우수상 수상</span></span>",
             subtitle: "IT 공식 문서 공동 번역 플랫폼",
             link: "./projects/docshund.html",
             logo: "./assets/docshund/small_logo.png",
             tags: ["React", "Zustand", "Tailwind CSS"],
             details: [
-                "<strong>Zustand</strong>를 사용하여 전역 상태(테마, 유저 세션, 토스트 메시지)를 효율적으로 관리",
-                "<strong>Router Guard & Axios Interceptor</strong>를 구현하여 사용자 권한 인증 및 토큰 관리 로직 일원화",
-                "<strong>Tailwind CSS</strong>를 활용한 반응형 UI 구축"
+                "<strong>React</strong>이용한 SPA Web 개발, <strong>Tailwind CSS</strong>를 이용한 반응형 레이아웃 설계",
+                "<strong>Zustand</strong>를 이용하여 전역 상태 관리 구현",
+                "<strong>STOMP.js + SockJS</strong>를 활용하여 문서 번역방(Topic)별 다채널 Pub/Sub 실시간 채팅 시스템 아키텍처 구현",
+                "<strong>Axios Interceptor</strong>를 구현해 JWT 토큰 자동 주입 및 예외(Error) 통합 관리 설정",
+                "<strong>Figma</strong>를 활용하여 서비스 전반의 UI/UX 디자인 및 사용자 흐름(User Flow) 직접 설계"
             ]
         },
         {
-            title: "EveryMatch",
+            title: "EveryMatch <span class='custom-tooltip'>🏆<span class='custom-tooltip-text' style='font-size: 0.65rem;'>SSAFY 우수상 수상</span></span>",
             subtitle: "프로스포츠 경기 일정 통합 캘린더",
             link: "./projects/everymatch.html",
             logo: "./assets/everymatch/small_logo.png",
             tags: ["Vue.js", "Spring Boot", "JWT", "SMTP"],
             details: [
-                "<strong>JavaMailSender</strong>를 연동하여 경기 시작 1시간 전 알림 메일 발송 서비스 구현",
-                "<strong>Spring Scheduler</strong>를 활용하여 알림 메일 발송 작업을 안정적으로 스케줄링",
-                "<strong>Vue.js</strong>를 활용해 캘린더 UI 컴포넌트 개발 및 사용자 경험 개선"
+                "<strong>Java, Spring Boot</strong>(Back-end) 개발",
+                "<strong>Spring Scheduler(@Scheduled)</strong> 및 <strong>JavaMailSender</strong>를 활용해 경기 시작 특정 시간 전 사용자에게 스케줄링 이메일을 발송하는 배치 작업 구현",
+                "<strong>Vue.js</strong> 기반 프론트엔드 레이아웃 구현 및 <strong>Pinia</strong>를 활용한 전역 상태 관리 로직 구축"
             ]
         },
         {
@@ -164,7 +173,7 @@ const DATA = {
             title: "삼성 청년 SW・AI 아카데미",
             period: "2024.07 ~ 2025.06",
             desc: "Java, Spring, React, Vue.js, MySQL 기반 실무 프로젝트와 인공지능(AI) 활용 개발 경험을 통해 SW개발 역량, AI 실무, 협업 능력을 강화",
-            subList: ["알고리즘 모의 A형 취득"]
+            subList: ["알고리즘 모의 A형 취득", "우수 수료자(상위 30%)"]
         },
         {
             title: "42서울",
