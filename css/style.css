@@ -553,6 +553,13 @@ section {
     to { transform: translateY(0); opacity: 1; }
 }
 
+.profile-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
 /* =========================================
    5. CORE VALUES SECTION
    ========================================= */
@@ -1325,8 +1332,7 @@ footer {
 
 /* --- Tablet / Small Desktop (max-width: 900px) --- */
 @media (max-width: 900px) {
-    #profile { overflow: hidden; }
-
+    
     nav {
         max-width: 500px; 
         padding: 12px 25px; 
@@ -1465,6 +1471,7 @@ footer {
     }
     .profile-image-wrapper { max-width: 280px; margin: 0 auto; overflow: visible; }
     .profile-title { font-size: 3.2rem; margin-top: 0; }
+    .profile-actions { justify-content: center; }
     .section-title { font-size: 1.9rem; }
     .profile-aura { display: none; }
     #profile { overflow: visible; }
@@ -1520,7 +1527,7 @@ footer {
 @media (max-width: 480px) {
     /* Layout & container */
     .container { padding: 0 24px; }
-    #profile { overflow: hidden; width: 100%; box-sizing: border-box; position: relative; }
+    #profile { width: 100%; box-sizing: border-box; position: relative; }
     
     .carousel-card { width: 95vw; }
     .carousel-card-inner { padding: 20px 15px; }

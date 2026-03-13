@@ -55,22 +55,21 @@ const DATA = {
             category: "Languages",
             items: [
                 { name: "Java", icon: "./assets/skill_icon/java.png" },
-                { name: "Kotlin", icon: "./assets/skill_icon/kotlin.png" },
                 { name: "C", icon: "./assets/skill_icon/c.png" },
-                { name: "C++", icon: "./assets/skill_icon/c++.png" }
+                { name: "C++", icon: "./assets/skill_icon/c++.png" },
+                { name: "Kotlin", icon: "./assets/skill_icon/kotlin.png" }
             ]
         },
         {
             category: "Frontend & Mobile",
             items: [
                 { name: "React", icon: "./assets/skill_icon/react.png" },
-                { name: "Vue.js", icon: "./assets/skill_icon/vuejs.png" },
-                { name: "Android", icon: "./assets/skill_icon/android.png" },
-                { name: "Compose", icon: "./assets/skill_icon/jetpack_compose.png" },
-                { name: "Tailwind", icon: "./assets/skill_icon/tailwind.png" },
                 { name: "Zustand", icon: "./assets/skill_icon/zustand.svg" },
                 { name: "Vite", icon: "./assets/skill_icon/vite.png" },
-                { name: "Axios", icon: "./assets/skill_icon/Axios.png" }
+                { name: "Axios", icon: "./assets/skill_icon/Axios.png" },
+                { name: "Tailwind CSS", icon: "./assets/skill_icon/tailwind.png" },
+                { name: "Android", icon: "./assets/skill_icon/android.png" },
+                { name: "Jetpack Compose", icon: "./assets/skill_icon/jetpack_compose.png" }
             ]
         },
         {
@@ -86,14 +85,13 @@ const DATA = {
         {
             category: "DevOps & Tools",
             items: [
-                { name: "Docker", icon: "./assets/skill_icon/docker.png" },
-                { name: "Jenkins", icon: "./assets/skill_icon/jenkins.png" },
-                { name: "Nginx", icon: "./assets/skill_icon/nginx.png" },
-                { name: "Git", icon: "./assets/skill_icon/git.png" },
-                { name: "Postman", icon: "./assets/skill_icon/postman.png" },
+				{ name: "Git", icon: "./assets/skill_icon/git.png" },
                 { name: "Jira", icon: "./assets/skill_icon/jira.webp" },
+                { name: "Figma", icon: "./assets/skill_icon/figma.png" },
                 { name: "Notion", icon: "./assets/skill_icon/notion.png" },
-                { name: "Figma", icon: "./assets/skill_icon/figma.png" }
+                { name: "Postman", icon: "./assets/skill_icon/postman.png" },
+                { name: "Docker", icon: "./assets/skill_icon/docker.png" },
+                { name: "Jenkins", icon: "./assets/skill_icon/jenkins.png" }
             ]
         }
     ],
@@ -124,7 +122,6 @@ const DATA = {
                 "<strong>Spring AOP</strong> 및 커스텀 어노테이션(@TeacherOnly/@StudentOnly)을 이용하여 교사/학생 역할별 권한 검증 로직 분할 및 모듈화로 코드 중복 및 검증 누락 방지, 유지보수 용이",
                 "GitLab, Jenkins, Docker 기반의 <strong>CI 자동화 파이프라인</strong> 구축",
                 "Jenkins와 <strong>Discord Webhook</strong>을 연동하여 CI/CD 파이프라인의 빌드 및 배포 처리 결과(성공/실패)를 팀 채널에 실시간으로 전송하는 알림(Notification) 자동화 구축",
-                "<strong>Nginx</strong> 웹 서버 세팅 및 리버스 프록시 구성",
                 "<strong>SSL 인증서(Certbot)</strong> 발급 및 HTTPS 적용, 방화벽(UFW) 포트 설정 등 서버 초기 보안 세팅"
             ]
         },
@@ -162,9 +159,9 @@ const DATA = {
             logoInvert: true,
             tags: ["C Language", "System Programming", "OS Architecture"],
             details: [
-                "<strong>Multi-threading & Mutex:</strong> '식사하는 철학자 문제' 해결을 통해 스레드 동기화와 교착 상태(Deadlock) 방지 로직 구현",
-                "<strong>Low-level System:</strong> 라이브러리 없이 C언어로 Shell, 시그널 기반 통신 등을 구현하며 시스템의 내부 동작 원리 학습",
-                "<strong>Peer Review:</strong> 논리적인 코드 디펜스로 설득력을 높이고, 타인의 코드를 분석하며 코드 파악 및 문제 해결 능력 함양"
+                "<strong>클린코드:</strong> 함수 25줄 제한 등 극한의 제약(Norminette)을 설계 가이드로 삼아, 비대해진 로직을 최소 단위로 분리하고 재사용성을 고민하며 구조가 한눈에 들어오는 가독성 높은 코드 작성",
+                "<strong>개발태도:</strong> 모든 코드에 대해 기술적 근거를 논리적으로 설명하는 피어 리뷰(Peer Review) 과정을 통해 자신의 로직을 객관적으로 바라보고 기술적 선택에 책임을 지는 태도 및 커뮤니케이션 역량 함양",
+                "<strong>완성도:</strong> 모든 동적 할당에 대해 메모리 누수(Memory Leak) 0을 달성하고 엣지 케이스를 사전에 차단하는 방어적 프로그래밍을 실천하며 어떤 환경에서도 신뢰할 수 있는 서비스를 만드는 엔지니어링 마인드 확립"
             ]
         }
     ],
