@@ -14,7 +14,7 @@ const DATA = {
             role: ["Android 개발", "UI/UX 디자인"],
             period: "25.04 - 25.05",
             tool: ["Kotlin", "Jetpack Compose"],
-            mockup: "./assets/spico/mockup.png"
+            mockup: "./assets/spico/mockup.webp"
         },
         {
             id: "lufin",
@@ -25,7 +25,7 @@ const DATA = {
             role: ["Backend 개발", "UI/UX 디자인"],
             period: "25.02 - 25.04",
             tool: ["React", "Spring Boot"],
-            mockup: "./assets/LuFin/mockup.png"
+            mockup: "./assets/LuFin/mockup.webp"
         },
         {
             id: "docshund",
@@ -36,7 +36,7 @@ const DATA = {
             role: ["Frontend 개발", "UI/UX 디자인"],
             period: "25.01 - 25.02",
             tool: ["React", "Tailwind CSS"],
-            mockup: "./assets/docshund/mockup.png"
+            mockup: "./assets/docshund/mockup.webp"
         },
         {
             id: "everymatch",
@@ -47,7 +47,7 @@ const DATA = {
             role: ["Fullstack 개발", "UI/UX 디자인"],
             period: "24.11 - 24.11",
             tool: ["Vue.js", "Spring Boot"],
-            mockup: "./assets/everymatch/mockup.png"
+            mockup: "./assets/everymatch/mockup.webp"
         }
     ],
     skills: [

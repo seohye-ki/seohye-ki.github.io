@@ -19,10 +19,10 @@ function renderCarousel() {
     if (!track) return;
     
     track.innerHTML = DATA.carousel.map((item, index) => `
-        <div class="carousel-card ${item.className}">
+        <div class="carousel-card ${item.className} ${index === 0 ? 'active' : ''}">
             <div class="carousel-card-inner">
                 <div class="carousel-text-col">
-                    <img src="${item.logoSmall}" alt="${item.id} Logo" class="carousel-logo-small" />
+                    <img src="${item.logoSmall}" alt="${item.id} 프로젝트 로고" class="carousel-logo-small" width="100" height="50" />
                     <div class="carousel-slogan">${item.slogan}</div>
                     <div class="carousel-detail">${item.detail}</div>
 
@@ -43,7 +43,11 @@ function renderCarousel() {
                 </div>
 
                 <div class="carousel-image-col">
-                    <img src="${item.mockup}" alt="${item.id} Mockup" class="carousel-mockup" />
+                    <img src="${item.mockup}" 
+                         alt="${item.id} 서비스 목업 화면" 
+                         class="carousel-mockup" 
+                         width="600" 
+                         height="400" />
                 </div>
             </div>
         </div>
@@ -61,7 +65,7 @@ function renderSkills() {
             <div class="skill-grid">
                 ${category.items.map(skill => `
                     <div class="tech-chip">
-                        <img src="${skill.icon}" /> ${skill.name}
+                        <img src="${skill.icon}" alt="${skill.name} 개발 역량 아이콘" width="20" height="20" /> ${skill.name}
                     </div>
                 `).join('')}
             </div>
@@ -78,7 +82,7 @@ function renderProjects() {
         <div class="project-impact-card reveal">
             <div class="project-impact-header">
                 <div class="project-header-left">
-                    <img src="${project.logo}" class="project-impact-logo ${project.logoInvert ? 'logo-invert' : ''}" alt="${project.title} Logo"/>
+                    <img src="${project.logo}" class="project-impact-logo ${project.logoInvert ? 'logo-invert' : ''}" alt="${project.title} 프로젝트 대표 로고" width="52" height="52" />
                     <div class="project-impact-title-group">
                         <p class="project-impact-title">${project.title}</p>
                         <span class="project-impact-subtitle">${project.subtitle}</span>
@@ -101,8 +105,6 @@ function renderProjects() {
             </details>
         </div>
     `).join('');
-
-    observeReveal();
 }
 
 /* --- EXPERIENCE RENDERER --- */
@@ -128,8 +130,6 @@ function renderExperience() {
             ` : ''}
         </div>
     `).join('');
-    
-    observeReveal();
 }
 
 /* --- AWARDS RENDERER --- */
@@ -147,8 +147,6 @@ function renderAwards() {
             <div class="record-badge award">${award.rank}</div>
         </div>
     `).join('');
-
-    observeReveal();
 }
 
 /* --- CERTIFICATIONS RENDERER --- */
@@ -165,8 +163,6 @@ function renderCertifications() {
             </div>
         </div>
     `).join('');
-    
-    observeReveal();
 }
 
 /* --- REVIEWS RENDERER --- */
@@ -184,26 +180,14 @@ function renderReviews() {
         </div>
     `).join('');
     
-    observeReveal();
     initializeReviewModal();
     applyProjectColors();
 }
 
-/* --- HELPER: Re-attach intersection observer --- */
-function observeReveal() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('active');
-        });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-}
-
-/* --- HELPER: Modal Logic (Moved from main.js or re-bound here) --- */
+/* --- MODAL LOGIC & COLORS --- */
 function initializeReviewModal() {
     const modal = document.getElementById('review-modal');
     const modalBody = document.getElementById('modal-body');
-    // Events are often bound to static elements, but card clicks need binding dynamically
     
     document.querySelectorAll('.review-card').forEach(card => {
         card.addEventListener('click', () => {
