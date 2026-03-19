@@ -51,6 +51,7 @@
     /* Default Accent */
     --accent: var(--accent-blue);
     --accent-indigo: var(--accent-navy);
+    --accent-indigo-rgb: 0, 31, 63;
 
     /* --- Effects --- */
     --shadow-main: 0 10px 30px rgba(0,0,0,0.05);
@@ -90,6 +91,7 @@
         --shadow-subtle: 0 4px 12px rgba(0,0,0,0.2);
 
         --accent-indigo: #60a5fa;
+        --accent-indigo-rgb: 96, 165, 250;
         --accent-soft-blue: rgba(0, 102, 255, 0.1);
     }
 }

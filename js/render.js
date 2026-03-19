@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     renderCarousel();
+    renderCoreValues();
     renderSkills();
     renderProjects();
     renderExperience();
@@ -54,23 +55,101 @@ function renderCarousel() {
     `).join('');
 }
 
+/* --- CORE VALUES RENDERER --- */
+function renderCoreValues() {
+    const container = document.getElementById('core-values-grid');
+    if (!container) return;
+
+    container.innerHTML = DATA.coreValues.map(value => `
+        <div class="core-value-card">
+            <img src="${value.image}" alt="${value.title}" class="core-value-image" width="400" height="180" />
+            <div class="core-value-text">
+                <h3>${value.title}</h3>
+                <p>${value.desc}</p>
+            </div>
+        </div>
+    `).join('');
+}
+
 /* --- SKILLS RENDERER --- */
 function renderSkills() {
     const container = document.getElementById('skills-container');
-    if (!container) return;
+    const spotlight = document.getElementById('skills-spotlight');
+    if (!container || !spotlight) return;
 
     container.innerHTML = DATA.skills.map(category => `
         <div class="skill-category">
             <h3 class="skill-cat-title">${category.category}</h3>
             <div class="skill-grid">
-                ${category.items.map(skill => `
-                    <div class="tech-chip">
-                        <img src="${skill.icon}" alt="${skill.name} 개발 역량 아이콘" width="20" height="20" /> ${skill.name}
+                ${category.items.map(skill => {
+                    const skillData = JSON.stringify(skill).replace(/'/g, "&apos;");
+                    return `
+                    <div class="tech-chip" 
+                         onclick='updateSpotlight(${skillData}, this)'>
+                        <img src="${skill.icon}" alt="${skill.name} 아이콘" width="20" height="20" /> ${skill.name}
                     </div>
-                `).join('')}
+                `}).join('')}
             </div>
         </div>
     `).join('');
+}
+
+let isSticky = false;
+
+function updateSpotlight(skill, element) {
+    const spotlight = document.getElementById('skills-spotlight');
+    if (!spotlight) return;
+
+    if (element && element.classList.contains('active')) {
+        resetSpotlight();
+        return;
+    }
+
+    document.querySelectorAll('.tech-chip').forEach(chip => chip.classList.remove('active'));
+    if (element) element.classList.add('active');
+
+    const tierMap = { 5: '상급', 4: '중상', 3: '중급', 2: '초급', 1: '입문' };
+    const tierLabel = tierMap[skill.level] || '중급';
+    const subtitle = skill.subtitle || 'Technical Skill';
+    const summaryArr = (Array.isArray(skill.summary) ? skill.summary : [skill.summary]).slice(0, 3);
+    const summaryHtml = `<ul class="skill-detail-list">${summaryArr.map(item => `<li>${item}</li>`).join('')}</ul>`;
+    const dotsHtml = Array.from({ length: 5 }, (_, i) => `<span class="skill-dot ${i < skill.level ? 'filled' : ''}"></span>`).join('');
+
+    spotlight.innerHTML = `
+        <div class="skill-detail-card active">
+            <div class="skill-detail-row top">
+                <div class="skill-detail-profile">
+                    <div class="skill-detail-avatar">
+                        <img src="${skill.icon}" alt="${skill.name}" />
+                    </div>
+                    <div class="skill-detail-info">
+                        <h3 class="skill-detail-name">${skill.name}</h3>
+                        <span class="skill-detail-subtitle">${subtitle}</span>
+                        <div class="skill-detail-tags">
+                            <span class="skill-detail-tag tier-${skill.level}">${tierLabel}</span>
+                            <div class="skill-detail-dots">
+                                ${dotsHtml}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-detail-points">
+                    <span class="skill-detail-points-label">Key Points</span>
+                    ${summaryHtml}
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function resetSpotlight() {
+    const spotlight = document.getElementById('skills-spotlight');
+    if (!spotlight) return;
+
+    document.querySelectorAll('.tech-chip').forEach(chip => chip.classList.remove('active'));
+    spotlight.innerHTML = `
+        <div class="spotlight-placeholder">스킬을 선택하여 상세 역량을 확인해보세요.</div>
+    `;
 }
 
 /* --- PROJECTS RENDERER --- */

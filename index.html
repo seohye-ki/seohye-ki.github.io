@@ -123,40 +123,8 @@
           <span class="section-label">Identity</span>
           <h2 class="section-title">Core Values</h2>
         </div>
-        <div class="core-values-grid reveal">
-          <!-- Value 1: Multi-role Perspective -->
-          <div class="core-value-card">
-             <img src="./assets/value_fullcycle.webp" alt="Full-cycle Development" class="core-value-image" width="400" height="180" />
-             <div class="core-value-text">
-               <h3>풀사이클(Full-cycle) 개발 역량</h3>
-               <p>
-                 기획, 디자인, 프론트엔드, 백엔드까지 전 과정을 직접 경험하여 개발의 전체 흐름을 이해합니다.
-                 시스템 전체 구조를 이해하고 설계할 수 있습니다.
-               </p>
-             </div>
-          </div>
-          <!-- Value 2: Work style -->
-          <div class="core-value-card">
-             <img src="./assets/value_mvp.webp" alt="Agile Execution" class="core-value-image" width="400" height="180" />
-             <div class="core-value-text">
-                <h3>말보다 결과물로 대화하는 실행력</h3>
-                <p>
-                 모호한 논의보다 눈에 보이는 결과물을 먼저 만듭니다.
-				 프로토타입으로 빠르게 실체화하여 팀이 실제 제품을 보며 소통하도록 돕습니다.
-                </p>
-             </div>
-          </div>
-          <!-- Value 3: Collaboration -->
-          <div class="core-value-card">
-             <img src="./assets/value_collaboration.webp" alt="Collaboration" class="core-value-image" width="400" height="180" />
-             <div class="core-value-text">	
-				<h3>도구(Git, Jira)를 활용한 효율적인 협업과 명확한 소통</h3>
-				<p>
-				  Git, Jira, Notion 등 협업 도구를 능숙하게 다루며, 명확한 팀 소통과 문서화를 통해 
-                  협업 생산성과 시너지를 극대화합니다.
-				</p>
-			 </div>
-          </div>
+        <div class="core-values-grid reveal" id="core-values-grid">
+          <!-- Injected by JS -->
         </div>
       </section>
 
@@ -168,6 +136,13 @@
         </div>
         <!-- Skills injected by JS -->
         <div class="skills-wrapper reveal" id="skills-container"></div>
+        
+        <!-- Spotlight Area for Skill Details -->
+        <div class="skills-spotlight-wrapper reveal" id="skills-spotlight-container">
+          <div class="skills-spotlight" id="skills-spotlight">
+            <div class="spotlight-placeholder">스킬을 선택하여 상세 역량을 확인해보세요.</div>
+          </div>
+        </div>
       </section>
 
 	  <!-- PROJECTS -->
@@ -267,7 +242,6 @@
 
     <footer>ⓒ 2026. KIM SEO HYEON ALL RIGHTS RESERVED.</footer>
 
-    <!-- External Scripts -->
     <!-- External Scripts -->
     <script src="js/data.js?v=1.0" defer></script>
     <script src="js/render.js?v=1.0" defer></script>

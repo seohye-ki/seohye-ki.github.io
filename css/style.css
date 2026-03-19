@@ -663,12 +663,264 @@ section {
     transition: all 0.2s ease;
 }
 
-.tech-chip:hover {
+.tech-chip:hover,
+.tech-chip.active {
     background: var(--bg-card);
-    border-color: var(--text-primary);
+    border-color: var(--text-primary); /* Match peer review card hover */
     transform: translateY(-2px);
     box-shadow: var(--shadow-subtle);
     color: var(--text-primary);
+}
+
+.tech-chip.active {
+    background: var(--bg-card);
+    border-color: var(--text-primary);
+    box-shadow: inset 0 0 10px rgba(0, 102, 255, 0.05), var(--shadow-subtle);
+}
+
+.skills-spotlight-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 21px 48px;
+    background: var(--bg-alt);
+    border-radius: 24px;
+    border: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 160px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+#skills-spotlight {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .skills-spotlight-wrapper {
+        padding: 24px 20px;
+        min-height: auto;
+        height: auto;
+        max-height: none;
+    }
+}
+
+[data-theme='dark'] .skills-spotlight-wrapper {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.horizontal-spotlight {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 80px 220px 1fr;
+    align-items: center;
+    gap: 32px;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.horizontal-spotlight.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.spotlight-placeholder {
+    width: 100%;
+    text-align: center;
+    color: var(--text-subtle);
+    font-size: 0.95rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.spotlight-icon-col {
+    width: 72px; /* Adjusted scale */
+    height: 72px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle Shadow */
+    border: 1px solid var(--border-subtle);
+    transition: transform 0.3s ease;
+}
+
+.spotlight-icon-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.skill-detail-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.skill-detail-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.skill-detail-profile {
+    flex: 0 0 260px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.skill-detail-avatar {
+    width: 72px;
+    height: 72px;
+    background: var(--bg-alt);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.skill-detail-avatar img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.skill-detail-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.skill-detail-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.skill-detail-subtitle {
+    font-size: 0.8rem;
+    color: var(--text-subtle);
+    font-weight: 500;
+}
+
+.skill-detail-tags {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-detail-dots {
+    display: flex;
+    gap: 4px;
+}
+
+.skill-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(var(--accent-indigo-rgb), 0.1);
+    transition: all 0.3s ease;
+}
+
+.skill-dot.filled {
+    background: var(--accent-indigo);
+    box-shadow: 0 0 8px rgba(var(--accent-indigo-rgb), 0.3);
+}
+
+.skill-detail-tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 100px;
+}
+
+.skill-detail-tag.tier-5 { background: var(--accent-indigo); color: white; }
+.skill-detail-tag.tier-4 { background: rgba(var(--accent-indigo-rgb), 0.15); color: var(--accent-indigo); }
+.skill-detail-tag.tier-3 { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+.skill-detail-tag.tier-2 { background: rgba(100, 116, 139, 0.1); color: var(--text-subtle); }
+.skill-detail-tag.tier-1 { background: rgba(100, 116, 139, 0.07); color: var(--text-subtle); }
+
+/* Sections (Strengths/Tech Details) */
+.skill-detail-points {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skill-detail-points-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.skill-detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skill-detail-list li {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    position: relative;
+    padding-left: 14px;
+    font-weight: 500;
+}
+
+.skill-detail-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-indigo);
+    font-weight: 800;
+}
+
+.skill-detail-empty {
+    font-size: 0.85rem;
+    color: var(--text-subtle);
+    font-style: italic;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1000px) {
+    .skill-detail-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .skill-detail-profile {
+        flex: none;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .skill-detail-points {
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+    }
 }
 
 .tech-chip img {

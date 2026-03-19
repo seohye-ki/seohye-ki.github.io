@@ -4,6 +4,23 @@
  */
 
 const DATA = {
+    coreValues: [
+        {
+            title: "풀사이클(Full-cycle) 개발 역량",
+            image: "./assets/value_fullcycle.webp",
+            desc: "기획, 디자인, 프론트엔드, 백엔드까지 전 과정을 직접 경험하여 개발의 전체 흐름을 이해합니다. 시스템 전체 구조를 이해하고 설계할 수 있습니다."
+        },
+        {
+            title: "말보다 결과물로 대화하는 실행력",
+            image: "./assets/value_mvp.webp",
+            desc: "모호한 논의보다 눈에 보이는 결과물을 먼저 만듭니다. 프로토타입으로 빠르게 실체화하여 팀이 실제 제품을 보며 소통하도록 돕습니다."
+        },
+        {
+            title: "도구(Git, Jira)를 활용한 효율적인 협업과 명확한 소통",
+            image: "./assets/value_collaboration.webp",
+            desc: "Git, Jira, Notion 등 협업 도구를 능숙하게 다루며, 명확한 팀 소통과 문서화를 통해 협업 생산성과 시너지를 극대화합니다."
+        }
+    ],
     carousel: [
         {
             id: "spico",
@@ -54,44 +71,113 @@ const DATA = {
         {
             category: "Languages",
             items: [
-                { name: "Java", icon: "./assets/skill_icon/java.png" },
-                { name: "C", icon: "./assets/skill_icon/c.png" },
-                { name: "C++", icon: "./assets/skill_icon/c++.png" },
-                { name: "Kotlin", icon: "./assets/skill_icon/kotlin.png" }
+                { name: "Java", subtitle: "Enterprise Backend", icon: "./assets/skill_icon/java.png", level: 5, summary: [
+					"객체지향 설계 원칙(SOLID)을 의식하며 구조를 설계하고 코드를 작성",
+                    "Spring AOP로 공통 관심사를 분리하여 비즈니스 로직의 가독성과 유지보수성 향상",
+                    "DB 비관적 락으로 동시성 문제를 해결한 경험"
+				] },
+                { name: "C", subtitle: "System Programming", icon: "./assets/skill_icon/c.png", level: 4, summary: [
+					"포인터와 동적 메모리 관리를 직접 다루며 저수준 프로그래밍 경험",
+                    "POSIX 시스템 호출 기반으로 프로세스, 시그널, 파일 디스크립터 처리 구현",
+                    "pthread와 mutex로 멀티스레드 환경의 데드락·레이스 컨디션 방지 구조 설계"
+				] },
+                { name: "C++", subtitle: "Performance & Algorithms", icon: "./assets/skill_icon/c++.png", level: 3, summary: [
+					"STL 라이브러리를 활용한 자료구조 구현과 알고리즘 문제 풀이",
+  					"OOP기반으로 클래스 설계 및 코드 작성 가능"
+				] },
+                { name: "Kotlin", subtitle: "Android Development", icon: "./assets/skill_icon/kotlin.png", level: 3, summary: [
+					"Null-Safety와 확장 함수를 활용하여 안전하고 간결한 코드 작성",
+  					"Android SDK 기반 앱 개발 전반에 Kotlin을 주 언어로 사용"
+				] }
             ]
         },
         {
             category: "Frontend & Mobile",
             items: [
-                { name: "React", icon: "./assets/skill_icon/react.png" },
-                { name: "Zustand", icon: "./assets/skill_icon/zustand.svg" },
-                { name: "Vite", icon: "./assets/skill_icon/vite.png" },
-                { name: "Axios", icon: "./assets/skill_icon/Axios.png" },
-                { name: "Tailwind CSS", icon: "./assets/skill_icon/tailwind.png" },
-                { name: "Android", icon: "./assets/skill_icon/android.png" },
-                { name: "Jetpack Compose", icon: "./assets/skill_icon/jetpack_compose.png" }
+                { name: "React", subtitle: "Component-based UI", icon: "./assets/skill_icon/react.png", level: 3, summary: [
+					"컴포넌트 기반으로 UI를 구성하고 재사용 가능한 공통 컴포넌트 설계 가능",
+  					"React Hook을 활용한 상태 및 사이드 이펙트 관리",
+  					"STOMP.js와 연동하여 실시간 채팅 UI 구현 경험"
+				] },
+                { name: "Zustand", subtitle: "Global State Management", icon: "./assets/skill_icon/zustand.svg", level: 4, summary: [
+					"인증 정보, 사용자 상태 등 전역 상태를 목적에 맞게 구조화하여 관리",
+  					"비동기 흐름과 함께 상태를 설계하고 여러 컴포넌트에서 일관성 있게 활용"
+				] },
+                { name: "Vite", subtitle: "Build Pipeline", icon: "./assets/skill_icon/vite.png", level: 4, summary: [
+					"Vite 기반 프로젝트 환경 셋업 및 개발 서버 운용 경험"
+				] },
+                { name: "Axios", subtitle: "HTTP Communication", icon: "./assets/skill_icon/Axios.png", level: 5, summary: [
+					"인스턴스와 Interceptor를 구성해 JWT 자동 주입 및 공통 에러 핸들링 처리",
+  					"중복 요청 방지를 위한 debounce, Loading Lock 방어 로직 구현 경험",
+  					"API를 기능 단위로 모듈화하여 호출부와 설정부 분리"
+				] },
+                { name: "Tailwind CSS", subtitle: "Utility-first Styling", icon: "./assets/skill_icon/tailwind.png", level: 5, summary: [
+					"유틸리티 클래스 기반으로 빠르게 반응형 레이아웃 구성 가능",
+  					"팀 내 공통 스타일 패턴을 정의하여 UI 일관성 유지"
+				] },
+                { name: "Jetpack Compose", subtitle: "Declarative UI", icon: "./assets/skill_icon/jetpack_compose.png", level: 3, summary: [
+					"Activity 생명주기를 이해하고 Compose 기반 화면 상태를 안정적으로 관리",
+  					"ViewModel로 UI와 비즈니스 로직 분리",
+  					"롱프레스·드래그 등 제스처 인터랙션을 Modifier로 구현한 경험"
+				] }
             ]
         },
         {
             category: "Backend & Database",
             items: [
-                { name: "Spring", icon: "./assets/skill_icon/spring.png" },
-                { name: "Spring Boot", icon: "./assets/skill_icon/springboot.png" },
-                { name: "JPA", icon: "./assets/skill_icon/JPA.png" },
-                { name: "MyBatis", icon: "./assets/skill_icon/mybatis.png" },
-                { name: "MySQL", icon: "./assets/skill_icon/mysql.png" }
+                { name: "Spring Boot", subtitle: "REST API Development", icon: "./assets/skill_icon/springboot.png", level: 4, summary: [
+					"RESTful API 설계 및 전역 예외 처리 파이프라인 구성 경험",
+                    "Spring Scheduler를 활용한 배치성 자동화 로직 구현",
+                    "운영 환경 서버 세팅(Nginx, SSL, 방화벽)까지 직접 처리한 경험"
+                ] },
+                { name: "JPA", subtitle: "ORM & Persistence", icon: "./assets/skill_icon/JPA.png", level: 3, summary: [
+					"엔티티 설계와 연관관계 매핑을 활용한 도메인 모델 구성",
+                    "@Lock 어노테이션으로 비관적 락을 적용하여 동시성 제어 구현"
+                ] },
+                { name: "MyBatis", subtitle: "SQL Mapping", icon: "./assets/skill_icon/mybatis.png", level: 4, summary: [
+					"XML 기반 SQL 매핑 및 동적 쿼리 작성으로 복잡한 조인 쿼리 처리",
+                    "쿼리를 직접 제어하며 DB 구조와 실행 흐름을 명확하게 파악 가능"
+                ] },
+                { name: "MySQL", subtitle: "Relational Database", icon: "./assets/skill_icon/mysql.png", level: 4, summary: [
+					"요구사항에 맞는 스키마 설계와 연관관계 정의 경험",
+                    "트랜잭션 격리 수준과 락 메커니즘을 활용한 데이터 정합성 관리"
+				] }
             ]
         },
         {
             category: "DevOps & Tools",
             items: [
-				{ name: "Git", icon: "./assets/skill_icon/git.png" },
-                { name: "Jira", icon: "./assets/skill_icon/jira.webp" },
-                { name: "Figma", icon: "./assets/skill_icon/figma.png" },
-                { name: "Notion", icon: "./assets/skill_icon/notion.png" },
-                { name: "Postman", icon: "./assets/skill_icon/postman.png" },
-                { name: "Docker", icon: "./assets/skill_icon/docker.png" },
-                { name: "Jenkins", icon: "./assets/skill_icon/jenkins.png" }
+                { name: "Git", subtitle: "Version Control", icon: "./assets/skill_icon/git.png", level: 5, summary: [
+					"Git-Flow 전략을 팀에 제안하고 브랜치 관리 표준을 정착시킨 경험",
+                    "Webhook과 외부 서비스를 연동하여 이슈 상태 자동 전환 환경 구성",
+                    "팀 컨벤션 기반 커밋 메시지 자동 생성 도구를 직접 제작하여 팀 내 도입"
+                ] },
+                { name: "Jira", subtitle: "Agile Project Management", icon: "./assets/skill_icon/jira.webp", level: 4, summary: [
+					"스프린트 단위로 작업을 계획하고 이슈를 관리하며 애자일 개발 프로세스 경험",
+                    "Webhook 연동으로 MR·브랜치 이벤트에 따른 이슈 상태 자동 전환 구성"
+                ] },
+                { name: "Figma", subtitle: "UI/UX Design", icon: "./assets/skill_icon/figma.png", level: 5, summary: [
+					"와이어프레임부터 완성 시안까지 직접 제작하며 전체 프로젝트 UI/UX 설계 담당",
+  					"컴포넌트 라이브러리를 구성하여 팀 내 디자인 일관성 유지",
+                    "사용자 여정 및 인터랙션 구조를 고려한 논리적인 프로토타이핑"
+                ] },
+                { name: "Notion", subtitle: "Documentation & Wiki", icon: "./assets/skill_icon/notion.png", level: 5, summary: [
+					"요구사항 명세, API 문서, 기술 의사결정 등 프로젝트 산출물을 체계적으로 문서화",
+					"팀 공유 워크스페이스를 구성하고 표준 포맷을 정착시켜 팀 내 정보 접근성 향상"
+                ] },
+                { name: "Postman", subtitle: "API Testing & Docs", icon: "./assets/skill_icon/postman.png", level: 3, summary: [
+					"환경 변수를 활용한 인증 포함 API 흐름 테스트 경험",
+                    "API 문서화 표준 수립을 통한 프런트-백엔드 간 원활한 협업 주도",
+					"Mock Server를 운영하여 프론트엔드가 개발할 수 있는 환경 구성"
+                ] },
+                { name: "Docker", subtitle: "Containerization", icon: "./assets/skill_icon/docker.png", level: 3, summary: [
+					"Dockerfile 작성 및 컨테이너 기반 CI 파이프라인 구성 경험",
+  					"애플리케이션을 컨테이너 단위로 배포하는 기본 운영 흐름 이해"
+                ] },
+                { name: "Jenkins", subtitle: "CI/CD Automation", icon: "./assets/skill_icon/jenkins.png", level: 3, summary: [
+					"GitLab + Jenkins 기반 CI 파이프라인을 직접 설계하여 코드 푸시부터 빌드 테스트까지 자동화",
+  					"Webhook 연동으로 빌드·배포 결과를 팀 채널에 실시간 알림 전송"
+				] }
             ]
         }
     ],
@@ -105,8 +191,8 @@ const DATA = {
             details: [
                 "<strong>Kotlin, Jetpack Compose</strong>를 이용한 Android 애플리케이션 개발",
                 "<strong>Clean Architecture</strong>(Presentation-Domain-Data) 구축을 통해 의존성 단방향 관리 규칙을 적용하고 테스트 용이성 극대화",
-                "실시간 <strong>STT(Speech To Text)</strong> 분석 결괏값을 바탕으로 Levenshtein Distance 유사도를 측정하여 발화 지점(대본 문단) 매칭 로직 개발",
-                "GitLab Webhook과 Jira를 연동하여 브랜치 생성 및 MR 과정에서 이슈 상태가 자동 전환되는 <strong>Zero-Click 협업 환경</strong> 구축",
+                "실시간 <strong>STT(Speech To Text)</strong> 분석 결괏값을 바탕으로 <strong>Levenshtein Distance</strong> 유사도를 측정하여 발화 지점(대본 문단) 매칭 로직 개발",
+                "<strong>GitLab Webhook</strong>과 <strong>Jira</strong>를 연동하여 브랜치 생성 및 MR 과정에서 이슈 상태가 자동 전환되는 <strong>Zero-Click 협업 환경</strong> 구축",
                 "팀 컨벤션에 맞춘 <strong>GPT 기반 커밋 메시지 자동 생성기</strong> 도입"
             ]
         },
@@ -117,11 +203,11 @@ const DATA = {
             logo: "./assets/LuFin/logo.png",
             tags: ["Java", "Spring Boot", "Spring Data JPA", "MySQL"],
             details: [
-                "Java, Spring Boot, JPA, MySQL 환경에서의 <strong>REST API 서버 개발</strong>",
-                "선착순 아이템 구매 시 발생하는 Race Condition(동시성 문제)을 해결하기 위해 <strong>DB 비관적 락(Pessimistic Lock) 적용</strong>. 오차율 0% 보장 및 1초 Timeout 설정으로 데드락 방지",
+                "<strong>Java, Spring Boot, JPA, MySQL</strong> 환경에서의 REST API 서버 개발",
+                "선착순 아이템 구매 시 발생하는 Race Condition(동시성 문제)을 해결하기 위해 <strong>DB 비관적 락(Pessimistic Lock) 적용</strong>.",
                 "<strong>Spring AOP</strong> 및 커스텀 어노테이션(@TeacherOnly/@StudentOnly)을 이용하여 교사/학생 역할별 권한 검증 로직 분할 및 모듈화로 코드 중복 및 검증 누락 방지, 유지보수 용이",
                 "GitLab, Jenkins, Docker 기반의 <strong>CI 자동화 파이프라인</strong> 구축",
-                "Jenkins와 <strong>Discord Webhook</strong>을 연동하여 CI/CD 파이프라인의 빌드 및 배포 처리 결과(성공/실패)를 팀 채널에 실시간으로 전송하는 알림(Notification) 자동화 구축",
+                "<strong>Jenkins</strong>와 <strong>Discord Webhook</strong>을 연동하여 CI/CD 파이프라인의 빌드 및 배포 처리 결과(성공/실패)를 팀 채널에 실시간으로 전송하는 알림 자동화 구축",
                 "<strong>SSL 인증서(Certbot)</strong> 발급 및 HTTPS 적용, 방화벽(UFW) 포트 설정 등 서버 초기 보안 세팅"
             ]
         },
@@ -147,8 +233,10 @@ const DATA = {
             tags: ["Vue.js", "Spring Boot", "JWT", "SMTP"],
             details: [
                 "<strong>Java, Spring Boot</strong>(Back-end) 개발",
-                "<strong>Spring Scheduler(@Scheduled)</strong> 및 <strong>JavaMailSender</strong>를 활용해 경기 시작 특정 시간 전 사용자에게 스케줄링 이메일을 발송하는 배치 작업 구현",
-                "<strong>Vue.js</strong> 기반 프론트엔드 레이아웃 구현 및 <strong>Pinia</strong>를 활용한 전역 상태 관리 로직 구축"
+                "<strong>Vue.js</strong> 기반 프론트엔드 레이아웃 구현 및 <strong>Pinia</strong>를 활용한 전역 상태 관리 로직 구축",
+                "<strong>Spring Scheduler(@Scheduled)</strong>를 활용해 경기 시작 1시간 전 사용자에게 알림 이메일을 발송하는 배치 작업 구현",
+                "<strong>JavaMailSender</strong>를 이용한 임시비밀번호, 경기 알림 이메일 발송 기능 구현",
+                "외부 라이브러리를 사용하지 않고, <strong>vanilla CSS</strong>로 커스텀 디자인 시스템을 개발하여 UI 구현"
             ]
         },
         {
@@ -169,14 +257,14 @@ const DATA = {
         {
             title: "삼성 청년 SW・AI 아카데미",
             period: "2024.07 ~ 2025.06",
-            desc: "Java, Spring, React, Vue.js, MySQL 기반 실무 프로젝트와 인공지능(AI) 활용 개발 경험을 통해 SW개발 역량, AI 실무, 협업 능력을 강화",
+            desc: "알고리즘 및 코딩 집중 교육을 통해 문제 해결력의 기초를 다지고, 기획부터 배포까지 다루는 실무형 프로젝트를 경험하는 교육 과정",
             subList: ["알고리즘 모의 A형 취득", "우수 수료자(상위 30%)"]
         },
         {
             title: "42서울",
             period: "2023.08 ~ 2024.07",
-            desc: "정해진 강의나 교재, 교수 없이 과제와 동료평가를 통해 C/C++ 기반 시스템 프로그래밍, 알고리즘, 네트워크 등을 학습",
-            subList: ["C, C++, 시스템 프로그래밍, 알고리즘, 네트워크 등 CS 학습"],
+            desc: "정해진 강의나 교재, 교수 없이 전적으로 자기주도 학습과 동료 평가를 통해 성장하는 교육 과정",
+            subList: ["C/C++ 기반 시스템 프로그래밍, 알고리즘, 네트워크 등 CS 학습"],
             delay: "delay-100"
         },
         {
@@ -194,7 +282,7 @@ const DATA = {
         {
             date: "2025.05.22",
             title: "삼성 청년 SW•AI 아카데미 자율프로젝트(도메인: 오픈소스) 우수상",
-            sub: "AI 발표 코칭 애플리케이션 (Spico)",
+            sub: "AI 발표 코칭 안드로이드 앱 (Spico) 개발",
             link: "./projects/spico.html",
             rank: "3 위",
             delay: ""
@@ -202,7 +290,7 @@ const DATA = {
         {
             date: "2025.04.11",
             title: "삼성 청년 SW•AI 아카데미 특화프로젝트(도메인: 핀테크) 우수상",
-            sub: "신용도 기반 초등학생 금융교육 시뮬레이션 (LuFin)",
+            sub: "신용도 기반 초등학생 금융교육 시뮬레이션 (LuFin) 개발",
             link: "./projects/lufin.html",
             rank: "2 위",
             delay: "delay-100"
@@ -210,7 +298,7 @@ const DATA = {
         {
             date: "2025.02.21",
             title: "삼성 청년 SW•AI 아카데미 공통프로젝트(도메인: 웹디자인) 우수상",
-            sub: "IT 개발 공식 문서 공동 번역 및 커뮤니티 (DocshunD)",
+            sub: "IT 개발 공식 문서 공동 번역 및 커뮤니티 (DocshunD) 개발",
             link: "./projects/docshund.html",
             rank: "3 위",
             delay: "delay-200"
@@ -218,7 +306,7 @@ const DATA = {
         {
             date: "2024.11.28",
             title: "삼성 청년 SW•AI 아카데미 관통프로젝트(도메인: 스포츠) 우수상",
-            sub: "프로스포츠 경기일정 통합 캘린더 (EVERYMATCH)",
+            sub: "프로스포츠 경기일정 통합 캘린더 (EVERYMATCH) 개발",
             link: "./projects/everymatch.html",
             rank: "2 위",
             delay: "delay-300"
