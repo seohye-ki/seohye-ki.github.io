@@ -77,11 +77,10 @@ function renderSkills() {
     const spotlight = document.getElementById('skills-spotlight');
     if (!container || !spotlight) return;
 
-    container.innerHTML = DATA.skills.map(category => `
+    container.innerHTML = `
         <div class="skill-category">
-            <h3 class="skill-cat-title">${category.category}</h3>
             <div class="skill-grid">
-                ${category.items.map(skill => {
+                ${DATA.skills.map(skill => {
                     const skillData = JSON.stringify(skill).replace(/'/g, "&apos;");
                     return `
                     <div class="tech-chip" 
@@ -91,7 +90,7 @@ function renderSkills() {
                 `}).join('')}
             </div>
         </div>
-    `).join('');
+    `;
 }
 
 let isSticky = false;
@@ -110,7 +109,7 @@ function updateSpotlight(skill, element) {
 
     const tierMap = { 5: '상급', 4: '중상', 3: '중급', 2: '초급', 1: '입문' };
     const tierLabel = tierMap[skill.level] || '중급';
-    const subtitle = skill.subtitle || 'Technical Skill';
+    const category = skill.category || 'Technical Skill';
     const summaryArr = (Array.isArray(skill.summary) ? skill.summary : [skill.summary]).slice(0, 3);
     const summaryHtml = `<ul class="skill-detail-list">${summaryArr.map(item => `<li>${item}</li>`).join('')}</ul>`;
     const dotsHtml = Array.from({ length: 5 }, (_, i) => `<span class="skill-dot ${i < skill.level ? 'filled' : ''}"></span>`).join('');
@@ -124,7 +123,7 @@ function updateSpotlight(skill, element) {
                     </div>
                     <div class="skill-detail-info">
                         <h3 class="skill-detail-name">${skill.name}</h3>
-                        <span class="skill-detail-subtitle">${subtitle}</span>
+                        <span class="skill-detail-subtitle">${category}</span>
                         <div class="skill-detail-tags">
                             <span class="skill-detail-tag tier-${skill.level}">${tierLabel}</span>
                             <div class="skill-detail-dots">
@@ -287,7 +286,7 @@ function applyProjectColors() {
         "lufin": "#3b82f6",
         "docshund": "#B97E65",
         "everymatch": "#f1654c",
-        "42seoul": "#0f172a"
+        "42seoul": "#975ecf"
     };
 
     document.querySelectorAll('.review-project').forEach(el => {

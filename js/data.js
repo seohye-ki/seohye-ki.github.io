@@ -4,23 +4,6 @@
  */
 
 const DATA = {
-    coreValues: [
-        {
-            title: "풀사이클(Full-cycle) 개발 역량",
-            image: "./assets/value_fullcycle.webp",
-            desc: "기획, 디자인, 프론트엔드, 백엔드까지 전 과정을 직접 경험하여 개발의 전체 흐름을 이해합니다. 시스템 전체 구조를 이해하고 설계할 수 있습니다."
-        },
-        {
-            title: "말보다 결과물로 대화하는 실행력",
-            image: "./assets/value_mvp.webp",
-            desc: "모호한 논의보다 눈에 보이는 결과물을 먼저 만듭니다. 프로토타입으로 빠르게 실체화하여 팀이 실제 제품을 보며 소통하도록 돕습니다."
-        },
-        {
-            title: "도구(Git, Jira)를 활용한 효율적인 협업과 명확한 소통",
-            image: "./assets/value_collaboration.webp",
-            desc: "Git, Jira, Notion 등 협업 도구를 능숙하게 다루며, 명확한 팀 소통과 문서화를 통해 협업 생산성과 시너지를 극대화합니다."
-        }
-    ],
     carousel: [
         {
             id: "spico",
@@ -67,133 +50,75 @@ const DATA = {
             mockup: "./assets/everymatch/mockup.webp"
         }
     ],
-    skills: [
+    coreValues: [
         {
-            category: "Languages",
-            items: [
-                { name: "Java", subtitle: "Enterprise Backend", icon: "./assets/skill_icon/java.png", level: 5, summary: [
-					"객체지향 설계 원칙(SOLID)을 의식하며 구조를 설계하고 코드를 작성",
-                    "Spring AOP로 공통 관심사를 분리하여 비즈니스 로직의 가독성과 유지보수성 향상",
-                    "DB 비관적 락으로 동시성 문제를 해결한 경험"
-				] },
-                { name: "C", subtitle: "System Programming", icon: "./assets/skill_icon/c.png", level: 4, summary: [
-					"포인터와 동적 메모리 관리를 직접 다루며 저수준 프로그래밍 경험",
-                    "POSIX 시스템 호출 기반으로 프로세스, 시그널, 파일 디스크립터 처리 구현",
-                    "pthread와 mutex로 멀티스레드 환경의 데드락·레이스 컨디션 방지 구조 설계"
-				] },
-                { name: "C++", subtitle: "Performance & Algorithms", icon: "./assets/skill_icon/c++.png", level: 3, summary: [
-					"STL 라이브러리를 활용한 자료구조 구현과 알고리즘 문제 풀이",
-  					"OOP기반으로 클래스 설계 및 코드 작성 가능"
-				] },
-                { name: "Kotlin", subtitle: "Android Development", icon: "./assets/skill_icon/kotlin.png", level: 3, summary: [
-					"Null-Safety와 확장 함수를 활용하여 안전하고 간결한 코드 작성",
-  					"Android SDK 기반 앱 개발 전반에 Kotlin을 주 언어로 사용"
-				] }
-            ]
+            title: "풀사이클(Full-cycle) 개발 역량",
+            image: "./assets/value_fullcycle.webp",
+            desc: "기획, 디자인, 프론트엔드, 백엔드까지 전 과정을 직접 경험하여 개발의 전체 흐름을 이해합니다. 시스템 전체 구조를 이해하고 설계할 수 있습니다."
         },
         {
-            category: "Frontend & Mobile",
-            items: [
-                { name: "React", subtitle: "Component-based UI", icon: "./assets/skill_icon/react.png", level: 3, summary: [
-					"컴포넌트 기반으로 UI를 구성하고 재사용 가능한 공통 컴포넌트 설계 가능",
-  					"React Hook을 활용한 상태 및 사이드 이펙트 관리",
-  					"STOMP.js와 연동하여 실시간 채팅 UI 구현 경험"
-				] },
-                { name: "Zustand", subtitle: "Global State Management", icon: "./assets/skill_icon/zustand.svg", level: 4, summary: [
-					"인증 정보, 사용자 상태 등 전역 상태를 목적에 맞게 구조화하여 관리",
-  					"비동기 흐름과 함께 상태를 설계하고 여러 컴포넌트에서 일관성 있게 활용"
-				] },
-                { name: "Vite", subtitle: "Build Pipeline", icon: "./assets/skill_icon/vite.png", level: 4, summary: [
-					"Vite 기반 프로젝트 환경 셋업 및 개발 서버 운용 경험"
-				] },
-                { name: "Axios", subtitle: "HTTP Communication", icon: "./assets/skill_icon/Axios.png", level: 5, summary: [
-					"인스턴스와 Interceptor를 구성해 JWT 자동 주입 및 공통 에러 핸들링 처리",
-  					"중복 요청 방지를 위한 debounce, Loading Lock 방어 로직 구현 경험",
-  					"API를 기능 단위로 모듈화하여 호출부와 설정부 분리"
-				] },
-                { name: "Tailwind CSS", subtitle: "Utility-first Styling", icon: "./assets/skill_icon/tailwind.png", level: 5, summary: [
-					"유틸리티 클래스 기반으로 빠르게 반응형 레이아웃 구성 가능",
-  					"팀 내 공통 스타일 패턴을 정의하여 UI 일관성 유지"
-				] },
-                { name: "Jetpack Compose", subtitle: "Declarative UI", icon: "./assets/skill_icon/jetpack_compose.png", level: 3, summary: [
-					"Activity 생명주기를 이해하고 Compose 기반 화면 상태를 안정적으로 관리",
-  					"ViewModel로 UI와 비즈니스 로직 분리",
-  					"롱프레스·드래그 등 제스처 인터랙션을 Modifier로 구현한 경험"
-				] }
-            ]
+            title: "말보다 결과물로 대화하는 실행력",
+            image: "./assets/value_mvp.webp",
+            desc: "모호한 논의보다 눈에 보이는 결과물을 먼저 만듭니다. 프로토타입으로 빠르게 실체화하여 팀이 실제 제품을 보며 소통하도록 돕습니다."
         },
         {
-            category: "Backend & Database",
-            items: [
-                { name: "Spring Boot", subtitle: "REST API Development", icon: "./assets/skill_icon/springboot.png", level: 4, summary: [
-					"RESTful API 설계 및 전역 예외 처리 파이프라인 구성 경험",
-                    "Spring Scheduler를 활용한 배치성 자동화 로직 구현",
-                    "운영 환경 서버 세팅(Nginx, SSL, 방화벽)까지 직접 처리한 경험"
-                ] },
-                { name: "JPA", subtitle: "ORM & Persistence", icon: "./assets/skill_icon/JPA.png", level: 3, summary: [
-					"엔티티 설계와 연관관계 매핑을 활용한 도메인 모델 구성",
-                    "@Lock 어노테이션으로 비관적 락을 적용하여 동시성 제어 구현"
-                ] },
-                { name: "MyBatis", subtitle: "SQL Mapping", icon: "./assets/skill_icon/mybatis.png", level: 4, summary: [
-					"XML 기반 SQL 매핑 및 동적 쿼리 작성으로 복잡한 조인 쿼리 처리",
-                    "쿼리를 직접 제어하며 DB 구조와 실행 흐름을 명확하게 파악 가능"
-                ] },
-                { name: "MySQL", subtitle: "Relational Database", icon: "./assets/skill_icon/mysql.png", level: 4, summary: [
-					"요구사항에 맞는 스키마 설계와 연관관계 정의 경험",
-                    "트랜잭션 격리 수준과 락 메커니즘을 활용한 데이터 정합성 관리"
-				] }
-            ]
-        },
-        {
-            category: "DevOps & Tools",
-            items: [
-                { name: "Git", subtitle: "Version Control", icon: "./assets/skill_icon/git.png", level: 5, summary: [
-					"Git-Flow 전략을 팀에 제안하고 브랜치 관리 표준을 정착시킨 경험",
-                    "Webhook과 외부 서비스를 연동하여 이슈 상태 자동 전환 환경 구성",
-                    "팀 컨벤션 기반 커밋 메시지 자동 생성 도구를 직접 제작하여 팀 내 도입"
-                ] },
-                { name: "Jira", subtitle: "Agile Project Management", icon: "./assets/skill_icon/jira.webp", level: 4, summary: [
-					"스프린트 단위로 작업을 계획하고 이슈를 관리하며 애자일 개발 프로세스 경험",
-                    "Webhook 연동으로 MR·브랜치 이벤트에 따른 이슈 상태 자동 전환 구성"
-                ] },
-                { name: "Figma", subtitle: "UI/UX Design", icon: "./assets/skill_icon/figma.png", level: 5, summary: [
-					"와이어프레임부터 완성 시안까지 직접 제작하며 전체 프로젝트 UI/UX 설계 담당",
-  					"컴포넌트 라이브러리를 구성하여 팀 내 디자인 일관성 유지",
-                    "사용자 여정 및 인터랙션 구조를 고려한 논리적인 프로토타이핑"
-                ] },
-                { name: "Notion", subtitle: "Documentation & Wiki", icon: "./assets/skill_icon/notion.png", level: 5, summary: [
-					"요구사항 명세, API 문서, 기술 의사결정 등 프로젝트 산출물을 체계적으로 문서화",
-					"팀 공유 워크스페이스를 구성하고 표준 포맷을 정착시켜 팀 내 정보 접근성 향상"
-                ] },
-                { name: "Postman", subtitle: "API Testing & Docs", icon: "./assets/skill_icon/postman.png", level: 3, summary: [
-					"환경 변수를 활용한 인증 포함 API 흐름 테스트 경험",
-                    "API 문서화 표준 수립을 통한 프런트-백엔드 간 원활한 협업 주도",
-					"Mock Server를 운영하여 프론트엔드가 개발할 수 있는 환경 구성"
-                ] },
-                { name: "Docker", subtitle: "Containerization", icon: "./assets/skill_icon/docker.png", level: 3, summary: [
-					"Dockerfile 작성 및 컨테이너 기반 CI 파이프라인 구성 경험",
-  					"애플리케이션을 컨테이너 단위로 배포하는 기본 운영 흐름 이해"
-                ] },
-                { name: "Jenkins", subtitle: "CI/CD Automation", icon: "./assets/skill_icon/jenkins.png", level: 3, summary: [
-					"GitLab + Jenkins 기반 CI 파이프라인을 직접 설계하여 코드 푸시부터 빌드 테스트까지 자동화",
-  					"Webhook 연동으로 빌드·배포 결과를 팀 채널에 실시간 알림 전송"
-				] }
-            ]
+            title: "도구(Git, Jira)를 활용한 효율적인 협업과 명확한 소통",
+            image: "./assets/value_collaboration.webp",
+            desc: "Git, Jira, Notion 등 협업 도구를 능숙하게 다루며, 명확한 팀 소통과 문서화를 통해 협업 생산성과 시너지를 극대화합니다."
         }
     ],
+    skills: [
+		{ name: "React", category: "Frontend", icon: "./assets/skill_icon/react.png", level: 3, summary: [
+            "STOMP.js와 연동하여 안정적인 실시간 다채널 채팅 UI 및 상태 동기화 로직 구현",
+            "재사용성과 유지보수성을 고려한 디자인 시스템 기반 공통 컴포넌트 라이브러리 설계",
+            "Axios Interceptor를 통한 전역 예외 처리 및 토큰 관리 파이프라인 구축"
+        ] },
+        { name: "Zustand", category: "Frontend", icon: "./assets/skill_icon/zustand.svg", level: 4, summary: [
+            "인증 정보 및 실시간 알림 등 복잡한 전역 상태를 목적에 맞게 구조화하여 최적의 성능으로 관리",
+            "비동기 작업 흐름(Async Flow)과 연동된 상태 설계 및 다수의 컴포넌트 간 데이터 일관성 보장"
+        ] },
+        { name: "Java", category: "Languages", icon: "./assets/skill_icon/java.png", level: 5, summary: [
+            "객체지향 설계 원칙(SOLID)을 기반으로 확장 가능하고 유연한 모듈 구조 설계",
+            "Spring AOP를 활용한 공통 관심사(보안, 로깅 등) 분리로 비즈니스 로직의 순수성 유지",
+            "DB 락 메커니즘을 활용한 데이터 동시성 문제 해결 경험"
+        ] },
+        { name: "C", category: "Languages", icon: "./assets/skill_icon/c.png", level: 4, summary: [
+            "포인터 기반 메모리 직접 관리 및 POSIX 시스템 호출을 통한 저수준 프로그래밍 이해",
+            "pthread와 mutex를 활용한 멀티스레드 환경의 동기화 및 데드락 방지 구조 설계"
+        ] },
+        { name: "Spring Boot", category: "Backend", icon: "./assets/skill_icon/springboot.png", level: 4, summary: [
+            "RESTful API 설계 표준 준수 및 전역 예외 처리 체계를 통한 견고한 서버 아키텍처 구축",
+            "Spring Scheduler를 활용한 대규모 배치 데이터 처리 및 자동화 로직 구현"
+        ] },
+        { name: "JPA", category: "Backend", icon: "./assets/skill_icon/JPA.png", level: 3, summary: [
+            "엔티티 설계와 연관관계 매핑을 활용한 도메인 모델 구성",
+            "@Lock 어노테이션으로 비관적 락을 적용하여 동시성 제어 구현"
+        ] },
+        { name: "MyBatis", category: "Backend", icon: "./assets/skill_icon/mybatis.png", level: 4, summary: [
+            "XML 기반 SQL 매핑 및 동적 쿼리 작성으로 복잡한 조인 쿼리 처리",
+            "쿼리를 직접 제어하며 DB 구조와 실행 흐름을 명확하게 파악 가능"
+        ] },
+        { name: "MySQL", category: "Database", icon: "./assets/skill_icon/mysql.png", level: 4, summary: [
+            "정규화 및 인덱스 설계를 통한 데이터 정합성 확보와 쿼리 성능 최적화",
+            "트랜잭션 격리 수준 및 락 메커니즘을 활용한 안정적인 데이터베이스 운영"
+        ] },
+		{ name: "Git", category: "Tool", icon: "./assets/skill_icon/git.png", level: 5, summary: [
+            "Git-Flow 전략 수립 및 브랜치 관리 컨벤션을 통한 팀 프로젝트 형상 관리 표준화",
+            "CI/CD 파이프라인 연동 및 Webhook/API를 활용한 이슈 트래킹 프로세스 자동화"
+        ] }
+    ],
     projects: [
-        {
+		{
             title: "Spico <span class='custom-tooltip'>🏆<span class='custom-tooltip-text' style='font-size: 0.65rem;'>SSAFY 우수상 수상</span></span>",
-            subtitle: "발표 연습 및 코칭 안드로이드 앱",
+            subtitle: "AI 기반 발표 연습 및 코칭 안드로이드 앱",
             link: "./projects/spico.html",
             logo: "./assets/spico/logo.png",
             tags: ["Kotlin", "Android (Jetpack Compose)", "Google Speech API"],
             details: [
-                "<strong>Kotlin, Jetpack Compose</strong>를 이용한 Android 애플리케이션 개발",
-                "<strong>Clean Architecture</strong>(Presentation-Domain-Data) 구축을 통해 의존성 단방향 관리 규칙을 적용하고 테스트 용이성 극대화",
-                "실시간 <strong>STT(Speech To Text)</strong> 분석 결괏값을 바탕으로 <strong>Levenshtein Distance</strong> 유사도를 측정하여 발화 지점(대본 문단) 매칭 로직 개발",
-                "<strong>GitLab Webhook</strong>과 <strong>Jira</strong>를 연동하여 브랜치 생성 및 MR 과정에서 이슈 상태가 자동 전환되는 <strong>Zero-Click 협업 환경</strong> 구축",
-                "팀 컨벤션에 맞춘 <strong>GPT 기반 커밋 메시지 자동 생성기</strong> 도입"
+                "실시간 <strong>STT(Speech To Text)</strong> 데이터와 <strong>Levenshtein Distance</strong> 알고리즘을 결합하여, 사용자의 발화 지점을 대본 문단 단위로 정밀하게 추적하는 매칭 로직 설계 및 구현",
+                "<strong>Clean Architecture</strong> 기반의 모듈화로 Presentation-Domain-Data 계층 간 의존성을 분리하여 기능 확장성과 단위 테스트 효율성 확보",
+                "<strong>GitLab Webhook</strong>과 <strong>Jira API</strong>를 연동하여 가상 브랜치 생성 및 MR 시 이슈 상태가 자동 동기화되는 <strong>Zero-Click 개발 협업 환경</strong> 구축",
+                "팀의 생산성 향상을 위해 <strong>LLM(GPT) 기반의 커밋 메시지 자동 생성 도구</strong>를 개발하여 프로젝트 전반의 커밋 컨벤션 준수 자동화"
             ]
         },
         {
@@ -203,12 +128,10 @@ const DATA = {
             logo: "./assets/LuFin/logo.png",
             tags: ["Java", "Spring Boot", "Spring Data JPA", "MySQL"],
             details: [
-                "<strong>Java, Spring Boot, JPA, MySQL</strong> 환경에서의 REST API 서버 개발",
-                "선착순 아이템 구매 시 발생하는 Race Condition(동시성 문제)을 해결하기 위해 <strong>DB 비관적 락(Pessimistic Lock) 적용</strong>.",
-                "<strong>Spring AOP</strong> 및 커스텀 어노테이션(@TeacherOnly/@StudentOnly)을 이용하여 교사/학생 역할별 권한 검증 로직 분할 및 모듈화로 코드 중복 및 검증 누락 방지, 유지보수 용이",
-                "GitLab, Jenkins, Docker 기반의 <strong>CI 자동화 파이프라인</strong> 구축",
-                "<strong>Jenkins</strong>와 <strong>Discord Webhook</strong>을 연동하여 CI/CD 파이프라인의 빌드 및 배포 처리 결과(성공/실패)를 팀 채널에 실시간으로 전송하는 알림 자동화 구축",
-                "<strong>SSL 인증서(Certbot)</strong> 발급 및 HTTPS 적용, 방화벽(UFW) 포트 설정 등 서버 초기 보안 세팅"
+                "한정 수량 아이템 구매 시 발생하는 동시성 문제를 해결하기 위해 <strong>Pessimistic Lock(비관적 락)</strong>을 적용하여 트랜잭션의 데이터 정합성 보장",
+                "<strong>Spring AOP</strong>와 커스텀 어노테이션을 활용하여 교사/학생별 권한 검증 로직을 비즈니스 로직과 분리하고 전역적으로 모듈화하여 보안 누락 방지 및 유지보수성 향상",
+                "<strong>Jenkins와 Discord Webhook</strong>을 연동하여 코드 푸시부터 배포까지의 파이프라인 상태를 실시간으로 팀원에게 공유하는 모니터링 자동화 체계 구축",
+                "<strong>SSL 인증서 보안 적용</strong> 및 Nginx 리버스 프록시 설정을 포함한 안정적인 운영 서버 인프라 환경 직접 구축"
             ]
         },
         {
@@ -218,11 +141,9 @@ const DATA = {
             logo: "./assets/docshund/small_logo.png",
             tags: ["React", "Zustand", "Tailwind CSS"],
             details: [
-                "<strong>React</strong>이용한 SPA Web 개발, <strong>Tailwind CSS</strong>를 이용한 반응형 레이아웃 설계",
-                "<strong>Zustand</strong>를 이용하여 전역 상태 관리 구현",
-                "<strong>STOMP.js + SockJS</strong>를 활용하여 문서 번역방(Topic)별 다채널 Pub/Sub 실시간 채팅 시스템 아키텍처 구현",
-                "<strong>Axios Interceptor</strong>를 구현해 JWT 토큰 자동 주입 및 예외(Error) 통합 관리 설정",
-                "<strong>Figma</strong>를 활용하여 서비스 전반의 UI/UX 디자인 및 사용자 흐름(User Flow) 직접 설계"
+                "<strong>STOMP.js + SockJS</strong>를 기반으로 번역방별 독립적인 Pub/Sub 채널을 구성하여 다수의 사용자가 실시간으로 협업할 수 있는 채팅 및 편집 알림 시스템 아키텍처 설계",
+                "<strong>Axios Interceptor</strong>와 전역 상태 관리를 통합하여 JWT 토큰 재발급 로직과 API 예외 처리를 모듈화하고 서비스 안정성 강화",
+                "Figma를 통해 사용자 여정(User Journey)을 분석하고, 번역 효율을 극대화할 수 있는 <strong>반응형 대시보드 UI 및 사용자 흐름 직접 설계</strong>"
             ]
         },
         {
@@ -247,9 +168,9 @@ const DATA = {
             logoInvert: true,
             tags: ["C Language", "System Programming", "OS Architecture"],
             details: [
-                "<strong>클린코드:</strong> 함수 25줄 제한 등 극한의 제약(Norminette)을 설계 가이드로 삼아, 비대해진 로직을 최소 단위로 분리하고 재사용성을 고민하며 구조가 한눈에 들어오는 가독성 높은 코드 작성",
-                "<strong>개발태도:</strong> 모든 코드에 대해 기술적 근거를 논리적으로 설명하는 피어 리뷰(Peer Review) 과정을 통해 자신의 로직을 객관적으로 바라보고 기술적 선택에 책임을 지는 태도 및 커뮤니케이션 역량 함양",
-                "<strong>완성도:</strong> 모든 동적 할당에 대해 메모리 누수(Memory Leak) 0을 달성하고 엣지 케이스를 사전에 차단하는 방어적 프로그래밍을 실천하며 어떤 환경에서도 신뢰할 수 있는 서비스를 만드는 엔지니어링 마인드 확립"
+                "함수 길이 및 변수 선언 등 극한의 제약(Norminette) 조건 아래에서 로직의 최소 단위 분리와 재사용성을 고민하며 <strong>가독성 높은 클린코드 작성 역량</strong> 내재화",
+                "동적 메모리 할당 시 발생할 수 있는 메모리 누수(Memory Leak)를 철저히 관리하고, 엣지 케이스를 사전에 차단하는 <strong>방어적 프로그래밍 습관</strong> 확립",
+                "모든 기술적 선택에 대해 논리적으로 설명하고 피격 평가를 받는 과정을 통해 <strong>객관적인 엔지니어링 사고방식</strong> 함양"
             ]
         }
     ],
