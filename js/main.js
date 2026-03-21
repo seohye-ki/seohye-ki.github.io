@@ -1,3 +1,15 @@
+console.log(`%c
+-------------------------------------------------
+
+    ( (      
+     ) )        RECRUITING?
+  ---------     Let's have a chat!
+ |         |]      ↓  ↓  ↓  ↓
+  \\       /     [ seohyeon.shkim@gmail.com ]
+   \`-----'      
+
+-------------------------------------------------
+`, "color: #f7971e; font-weight: bold;");
 
 document.addEventListener('DOMContentLoaded', () => {
     /* --- THEME TOGGLE --- */

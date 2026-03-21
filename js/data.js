@@ -6,17 +6,6 @@
 const DATA = {
     carousel: [
         {
-            id: "spico",
-            className: "card-spico",
-            logoSmall: "./assets/spico/small_logo.png",
-            slogan: "내 손 안에<br />AI 발표 코치",
-            detail: "누구나 혼자서도 발표 실력을 키울 수 있도록,<br />실시간 피드백과 청중 모드와 같은 실전 연습 환경을 제공합니다.<br />혼자서도 실전처럼, 재미있게, 그리고 스마트하게 연습하세요.",
-            role: ["Android 개발", "UI/UX 디자인"],
-            period: "25.04 - 25.05",
-            tool: ["Kotlin", "Jetpack Compose"],
-            mockup: "./assets/spico/mockup.webp"
-        },
-        {
             id: "lufin",
             className: "card-lufin",
             logoSmall: "./assets/LuFin/small_logo.png",
@@ -37,6 +26,17 @@ const DATA = {
             period: "25.01 - 25.02",
             tool: ["React", "Tailwind CSS"],
             mockup: "./assets/docshund/mockup.webp"
+        },
+        {
+            id: "spico",
+            className: "card-spico",
+            logoSmall: "./assets/spico/small_logo.png",
+            slogan: "내 손 안에<br />AI 발표 코치",
+            detail: "누구나 혼자서도 발표 실력을 키울 수 있도록,<br />실시간 피드백과 청중 모드와 같은 실전 연습 환경을 제공합니다.<br />혼자서도 실전처럼, 재미있게, 그리고 스마트하게 연습하세요.",
+            role: ["Android 개발", "UI/UX 디자인"],
+            period: "25.04 - 25.05",
+            tool: ["Kotlin", "Jetpack Compose"],
+            mockup: "./assets/spico/mockup.webp"
         },
         {
             id: "everymatch",
@@ -108,19 +108,6 @@ const DATA = {
         ] }
     ],
     projects: [
-		{
-            title: "Spico <span class='custom-tooltip'>🏆<span class='custom-tooltip-text' style='font-size: 0.65rem;'>SSAFY 우수상 수상</span></span>",
-            subtitle: "AI 기반 발표 연습 및 코칭 안드로이드 앱",
-            link: "./projects/spico.html",
-            logo: "./assets/spico/logo.png",
-            tags: ["Kotlin", "Android (Jetpack Compose)", "Google Speech API"],
-            details: [
-                "실시간 <strong>STT(Speech To Text)</strong> 데이터와 <strong>Levenshtein Distance</strong> 알고리즘을 결합하여, 사용자의 발화 지점을 대본 문단 단위로 정밀하게 추적하는 매칭 로직 설계 및 구현",
-                "<strong>Clean Architecture</strong> 기반의 모듈화로 Presentation-Domain-Data 계층 간 의존성을 분리하여 기능 확장성과 단위 테스트 효율성 확보",
-                "<strong>GitLab Webhook</strong>과 <strong>Jira API</strong>를 연동하여 가상 브랜치 생성 및 MR 시 이슈 상태가 자동 동기화되는 <strong>Zero-Click 개발 협업 환경</strong> 구축",
-                "팀의 생산성 향상을 위해 <strong>LLM(GPT) 기반의 커밋 메시지 자동 생성 도구</strong>를 개발하여 프로젝트 전반의 커밋 컨벤션 준수 자동화"
-            ]
-        },
         {
             title: "LuFin <span class='custom-tooltip'>🏆<span class='custom-tooltip-text' style='font-size: 0.65rem;'>SSAFY 우수상 수상</span></span>",
             subtitle: "신용도 기반 금융 시뮬레이션 플랫폼",
@@ -144,6 +131,19 @@ const DATA = {
                 "<strong>STOMP.js + SockJS</strong>를 기반으로 번역방별 독립적인 Pub/Sub 채널을 구성하여 다수의 사용자가 실시간으로 협업할 수 있는 채팅 및 편집 알림 시스템 아키텍처 설계",
                 "<strong>Axios Interceptor</strong>와 전역 상태 관리를 통합하여 JWT 토큰 재발급 로직과 API 예외 처리를 모듈화하고 서비스 안정성 강화",
                 "Figma를 통해 사용자 여정(User Journey)을 분석하고, 번역 효율을 극대화할 수 있는 <strong>반응형 대시보드 UI 및 사용자 흐름 직접 설계</strong>"
+            ]
+        },
+        {
+            title: "Spico <span class='custom-tooltip'>🏆<span class='custom-tooltip-text' style='font-size: 0.65rem;'>SSAFY 우수상 수상</span></span>",
+            subtitle: "AI 기반 발표 연습 및 코칭 안드로이드 앱",
+            link: "./projects/spico.html",
+            logo: "./assets/spico/logo.png",
+            tags: ["Kotlin", "Android (Jetpack Compose)", "Google Speech API"],
+            details: [
+                "실시간 <strong>STT(Speech To Text)</strong> 데이터와 <strong>Levenshtein Distance</strong> 알고리즘을 결합하여, 사용자의 발화 지점을 대본 문단 단위로 정밀하게 추적하는 매칭 로직 설계 및 구현",
+                "<strong>Clean Architecture</strong> 기반의 모듈화로 Presentation-Domain-Data 계층 간 의존성을 분리하여 기능 확장성과 단위 테스트 효율성 확보",
+                "<strong>GitLab Webhook</strong>과 <strong>Jira API</strong>를 연동하여 가상 브랜치 생성 및 MR 시 이슈 상태가 자동 동기화되는 <strong>Zero-Click 개발 협업 환경</strong> 구축",
+                "팀의 생산성 향상을 위해 <strong>LLM(GPT) 기반의 커밋 메시지 자동 생성 도구</strong>를 개발하여 프로젝트 전반의 커밋 컨벤션 준수 자동화"
             ]
         },
         {

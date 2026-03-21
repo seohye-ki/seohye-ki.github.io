@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://seohye-ki.github.io/sitemap.xml

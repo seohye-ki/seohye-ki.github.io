@@ -5,17 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Define Project Gradients (Light vs Dark)
     const brandGradients = [
-        ['#42D596', '#059669'], // Spico
         ['#3b82f6', '#2563eb'], // LuFin
         ['#B97E65', '#78350f'], // DocshunD
+        ['#42D596', '#059669'], // Spico
         ['#ee7f6bff', '#c2410c'], // EveryMatch
         ['#0f172a', '#312e81']  // 42Seoul
     ];
 
     const darkGradients = [
-        ['#020617', '#064e3b'], // Spico
         ['#020617', '#1e3a8a'], // LuFin
         ['#020617', '#451a03'], // DocshunD
+        ['#020617', '#064e3b'], // Spico
         ['#020617', '#7c2d12'], // EveryMatch
         ['#020617', '#1e1b4b']  // 42Seoul
     ];
@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Define Project Logos
     const projectLogos = [
-        './assets/spico/logo.png',
         './assets/LuFin/logo.png',
         './assets/docshund/logo.png',
+        './assets/spico/logo.png',
         './assets/everymatch/logo.png',
         './assets/42seoul/logo.png'
     ];
@@ -62,7 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
             bottomLogo.src = projectLogos[currentIndex];
             
             // Special sizing for DocshunD
-            if (currentIndex === 2) {
+            // In the new order, DocshunD is index 1
+            if (currentIndex === 1) {
                 bottomLogo.style.height = '120px'; // Bigger for DocshunD
             } else {
                 bottomLogo.style.height = '70px'; // Default
@@ -103,9 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     // If active, navigate to link
                     const links = [
-                        './projects/spico.html',
                         './projects/lufin.html',
                         './projects/docshund.html',
+                        './projects/spico.html',
                         './projects/everymatch.html',
                         './projects/42seoul.html'
                     ];
