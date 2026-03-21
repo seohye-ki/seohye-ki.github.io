@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | 김서현</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-917XB24J5L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-917XB24J5L');
+    </script>
     <link rel="icon" type="image/png" href="./assets/main_icon.png" />
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/style.css?v=2.2">
@@ -110,12 +119,12 @@
           <div class="profile-actions reveal delay-300">
             <a href="https://drive.google.com/file/d/1hln5Dcge-tOo_ytD3ropxCOGBVzMABWv/view?usp=sharing" 
                class="btn-outline white-border" target="_blank"
-              >
+               onclick="gtag('event', 'click_resume', {'event_category': 'Engagement', 'event_label': 'Google Drive'});">
               𐠮 Resume
             </a>
             <a href="https://drive.google.com/file/d/1ypAf-0DsRBozxx19JPKTRGT5VVXCDvTh/view?usp=sharing" 
                class="btn-outline white-border" target="_blank"
-              >
+               onclick="gtag('event', 'click_portfolio_pdf', {'event_category': 'Engagement', 'event_label': 'Google Drive'});">
               𐠮 Portfolio
             </a>
           </div>
@@ -217,7 +226,7 @@
         </div>
         <div class="contact-row reveal">
           <a href="mailto:seohyeon.shkim@gmail.com" class="contact-link" aria-label="이메일 보내기"
-            >
+             onclick="gtag('event', 'click_email', {'event_category': 'Contact'});">
             <img src="./assets/email.png" alt="Email Icon" class="contact-icon" width="18" height="18" />
             seohyeon.shkim@gmail.com
           </a>
@@ -226,7 +235,7 @@
             class="contact-link"
             target="_blank"
             aria-label="GitHub 프로필 방문"
-           
+            onclick="gtag('event', 'click_github', {'event_category': 'Social'});"
           >
             <img src="./assets/github.png" alt="GitHub Icon" class="contact-icon" width="18" height="18" />
             github.com/seohye-ki

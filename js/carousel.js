@@ -110,6 +110,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         './projects/everymatch.html',
                         './projects/42seoul.html'
                     ];
+                    const projectNames = ['LuFin', 'DocshunD', 'Spico', 'EveryMatch', '42Seoul'];
+                    gtag('event', 'view_project_carousel', {
+                        'event_category': 'Engagement',
+                        'project_name': projectNames[index]
+                    });
                     window.location.href = links[index];
                 }
             };

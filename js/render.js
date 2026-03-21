@@ -166,7 +166,10 @@ function renderProjects() {
                         <span class="project-impact-subtitle">${project.subtitle}</span>
                     </div>
                 </div>
-                <a href="${project.link}" class="project-view-cta">View More →</a>
+                <a href="${project.link}" class="project-view-cta" 
+                   onclick="gtag('event', 'view_project_card', {'event_category': 'Engagement', 'project_name': '${project.title}'});">
+                    View More →
+                </a>
             </div>
             
             <div class="project-impact-tags">
