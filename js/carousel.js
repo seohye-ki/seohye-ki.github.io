@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ['#B97E65', '#78350f'], // DocshunD
         ['#42D596', '#059669'], // Spico
         ['#ee7f6bff', '#c2410c'], // EveryMatch
-        ['#0f172a', '#312e81']  // 42Seoul
+        ['#7d539cff', '#3a387eff']  // 42Seoul
     ];
 
     const darkGradients = [
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ['#020617', '#451a03'], // DocshunD
         ['#020617', '#064e3b'], // Spico
         ['#020617', '#7c2d12'], // EveryMatch
-        ['#020617', '#1e1b4b']  // 42Seoul
+        ['#020617', '#2c286fff']  // 42Seoul
     ];
 
     function getGradients() {

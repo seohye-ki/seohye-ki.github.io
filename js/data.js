@@ -48,7 +48,18 @@ const DATA = {
             period: "24.11 - 24.11",
             tool: ["Vue.js", "Spring Boot"],
             mockup: "./assets/everymatch/mockup.webp"
-        }
+        },
+		{
+			id: "42seoul",
+			className: "card-42seoul",
+			logoSmall: "./assets/42seoul/logo.png",
+			slogan: "자기주도형<br />소프트웨어 교육",
+			detail: "정해진 강의나 교재 없이 동료 평가와 자기주도 학습을 통해<br />성장하는 혁신적인 교육 과정입니다.<br />C언어 기반 시스템 프로그래밍과 OS 구조를 깊이 있게 학습합니다.",
+			role: ["소프트웨어 개발"],
+			period: "23.08 - 24.06",
+			tool: ["C/C++", "System Programming"],
+			mockup: "./assets/42seoul/mockup.webp",
+		},
     ],
     coreValues: [
         {
