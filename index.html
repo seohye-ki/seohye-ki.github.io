@@ -100,21 +100,26 @@
       <section id="profile">
         <div class="profile-aura aura-1"></div>
         <div class="profile-aura aura-2"></div>
-        <div class="profile-image-wrapper reveal">
-          <img
-            src="./assets/profile.webp"
-            alt="김서현 프로필 사진"
-            class="profile-image"
-            width="600"
-            height="600"
-          />
-        </div>
+        <a href="https://kimseohyeon-ai.vercel.app/" 
+           target="_blank" 
+           class="profile-link"
+           onclick="gtag('event', 'click_ai_interview_photo', {'event_category': 'Engagement', 'event_label': 'AI Interview Photo'});">
+          <div class="profile-image-wrapper reveal">
+            <img
+              src="./assets/profile.webp"
+              alt="김서현 프로필 사진"
+              class="profile-image"
+              width="600"
+              height="600"
+            />
+          </div>
+        </a>
         <div class="profile-content">
           <h1 class="profile-title reveal delay-100">
             BUILDING <span>MEANINGFUL</span><br />PRODUCTS.
           </h1>
           <p class="profile-tag reveal delay-200">
-            기획의 의도를 구현으로 완성하는, <b>김서현</b>입니다.
+			프로필을 눌러 <b>AI 김서현</b>과 대화해보세요.
           </p>
           <div class="profile-actions reveal delay-300">
             <a href="https://drive.google.com/file/d/1hln5Dcge-tOo_ytD3ropxCOGBVzMABWv/view?usp=sharing" 
@@ -130,6 +135,9 @@
           </div>
         </div>
       </section>
+      
+      <!-- AI MARQUEE BANNER -->
+
 
       <!-- CORE VALUES -->
       <section id="core-values">
