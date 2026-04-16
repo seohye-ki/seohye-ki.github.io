@@ -48,7 +48,8 @@ function renderCarousel() {
                          alt="${item.id} 서비스 목업 화면" 
                          class="carousel-mockup" 
                          width="600" 
-                         height="400" />
+                         height="400"
+                         ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy"'} />
                 </div>
             </div>
         </div>
@@ -167,6 +168,7 @@ function renderProjects() {
                     </div>
                 </div>
                 <a href="${project.link}" class="project-view-cta" 
+                   aria-label="${project.title} 프로젝트 자세히 보기"
                    onclick="gtag('event', 'view_project_card', {'event_category': 'Engagement', 'project_name': '${project.title}'});">
                     View More →
                 </a>
@@ -251,18 +253,29 @@ function renderReviews() {
     const container = document.getElementById('review-grid');
     if (!container) return;
 
-    container.innerHTML = DATA.reviews.map(review => `
+    const projectColors = {
+        "spico": "#42D596",
+        "lufin": "#3b82f6",
+        "docshund": "#B97E65",
+        "everymatch": "#f1654c",
+        "42seoul": "#975ecf"
+    };
+
+    container.innerHTML = DATA.reviews.map(review => {
+        const pName = review.project.trim().toLowerCase();
+        const colorStyle = projectColors[pName] ? `color: ${projectColors[pName]};` : '';
+        return `
         <div class="review-card reveal ${review.hidden ? 'review-hidden' : ''} ${review.delay || ''}" data-review-id="${review.id}">
             <p class="review-text">${review.summary}</p>
             <div class="review-meta">
                 <span class="review-author">${review.author}</span>
-                <span class="review-project">${review.project}</span>
+                <span class="review-project" style="${colorStyle}">${review.project}</span>
             </div>
         </div>
-    `).join('');
+        `;
+    }).join('');
     
     initializeReviewModal();
-    applyProjectColors();
 }
 
 /* --- MODAL LOGIC & COLORS --- */
@@ -280,22 +293,5 @@ function initializeReviewModal() {
                 document.body.style.overflow = 'hidden';
             }
         });
-    });
-}
-
-function applyProjectColors() {
-    const projectColors = {
-        "spico": "#42D596",
-        "lufin": "#3b82f6",
-        "docshund": "#B97E65",
-        "everymatch": "#f1654c",
-        "42seoul": "#975ecf"
-    };
-
-    document.querySelectorAll('.review-project').forEach(el => {
-        const projectName = el.innerText.trim().toLowerCase();
-        if (projectColors[projectName]) {
-            el.style.color = projectColors[projectName];
-        }
     });
 }
